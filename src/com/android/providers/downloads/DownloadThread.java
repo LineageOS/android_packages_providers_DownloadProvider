@@ -21,6 +21,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.drm.mobile1.DrmRawContent;
 import android.net.http.AndroidHttpClient;
+import android.net.Proxy;
+import android.net.Uri;
 import android.os.FileUtils;
 import android.os.PowerManager;
 import android.os.Process;
@@ -32,6 +34,7 @@ import android.util.Pair;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.params.ConnRouteParams;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -161,6 +164,11 @@ public class DownloadThread extends Thread {
             boolean finished = false;
             while(!finished) {
                 Log.i(Constants.TAG, "Initiating request for download " + mInfo.mId);
+                // Set or unset proxy, which may have changed since last GET request.
+                // setDefaultProxy() supports null as proxy parameter.
+                ConnRouteParams.setDefaultProxy(client.getParams(),
+                        Proxy.getPreferredHttpHost(mContext, state.mRequestUri));
+                // Prepares the request and fires it.
                 HttpGet request = new HttpGet(state.mRequestUri);
                 try {
                     executeDownload(state, client, request);
