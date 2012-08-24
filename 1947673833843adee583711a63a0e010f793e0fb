@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAWn//+/k\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-08-24T22:03:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAWn///FU\u003d",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAWn///FQ\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2012-08-24T18:03:43Z",
       "side": 1,
       "message": "Zelfde",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn//+/g\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-08-24T22:03:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAWn///FQ\u003d",
       "revId": "1947673833843adee583711a63a0e010f793e0fb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAWn//+/c\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-08-24T22:03:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAWn///FE\u003d",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAWn///FA\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2012-08-24T18:03:43Z",
       "side": 1,
       "message": "Of hier bekijken?",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn//+/Y\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-08-24T22:03:52Z",
+      "side": 1,
+      "message": "tonen",
+      "parentUuid": "AAAAWn///FA\u003d",
       "revId": "1947673833843adee583711a63a0e010f793e0fb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -98,6 +170,24 @@
       "writtenOn": "2012-08-24T18:03:43Z",
       "side": 1,
       "message": "levensduur van de accu verkorten -\u003e accuduur verkorten? hiervoor kosten rekenen -\u003e kosten in rekening brengen?",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn//+/U\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-08-24T22:03:52Z",
+      "side": 1,
+      "message": "- Is niet precies hetzelfde, dus houd het liever op AOSP\n- Done",
+      "parentUuid": "AAAAWn///Eg\u003d",
       "revId": "1947673833843adee583711a63a0e010f793e0fb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
