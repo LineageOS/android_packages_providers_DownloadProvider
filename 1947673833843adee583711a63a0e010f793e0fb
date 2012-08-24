@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAWn///FU\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-24T18:03:43Z",
+      "side": 1,
+      "message": "Hiermee krijgt de app toegang?",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn///FQ\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-24T18:03:43Z",
+      "side": 1,
+      "message": "Zelfde",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn///FE\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-24T18:03:43Z",
+      "side": 1,
+      "message": "bekijken -\u003e tonen?",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn///FA\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-24T18:03:43Z",
+      "side": 1,
+      "message": "Of hier bekijken?",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn///E4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-24T18:03:43Z",
+      "side": 1,
+      "message": "Voluit? Past niet lijkt me",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn///Eg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 4297
+      },
+      "writtenOn": "2012-08-24T18:03:43Z",
+      "side": 1,
+      "message": "levensduur van de accu verkorten -\u003e accuduur verkorten? hiervoor kosten rekenen -\u003e kosten in rekening brengen?",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
