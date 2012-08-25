@@ -160,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAWn//+ts\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-08-25T13:19:27Z",
+      "side": 1,
+      "message": "Het is de app die het te zien krijgt, dan vind ik bij nader inzien \u0027bekijken\u0027 toch beter",
+      "parentUuid": "AAAAWn//+8M\u003d",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAWn//+5w\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
