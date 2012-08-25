@@ -160,6 +160,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAWn//+5w\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-08-25T00:53:46Z",
+      "side": 1,
+      "message": "r.31: Bestanden (hoofdletter)",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAWn///E4\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -223,6 +240,24 @@
       "writtenOn": "2012-08-25T00:26:37Z",
       "side": 1,
       "message": "Done",
+      "parentUuid": "AAAAWn//+/U\u003d",
+      "revId": "1947673833843adee583711a63a0e010f793e0fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWn//+5Y\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-08-25T00:53:46Z",
+      "side": 1,
+      "message": "Toch vind ik het vreemd om te praten over de levensduur van de accu....\nLevensduur: http://nl.wikipedia.org/wiki/Lithium-ion-accu#Levensduur\nDat gaat over hoe lang een accu meegaat in totaal, volgens mij gaat het hier om hoe lang een accu meegaat per lading.\n\nIk zou ook kiezen voor accuduur.",
       "parentUuid": "AAAAWn//+/U\u003d",
       "revId": "1947673833843adee583711a63a0e010f793e0fb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
