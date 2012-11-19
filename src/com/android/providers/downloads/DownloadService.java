@@ -19,6 +19,7 @@ package com.android.providers.downloads;
 import static com.android.providers.downloads.Constants.TAG;
 
 import android.app.AlarmManager;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.ComponentName;
@@ -38,7 +39,6 @@ import android.os.RemoteException;
 import android.provider.Downloads;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.Slog;
 
 import com.android.internal.util.IndentingPrintWriter;
 import com.google.android.collect.Maps;
@@ -66,6 +66,7 @@ public class DownloadService extends Service {
 
     /** Class to handle Notification Manager updates */
     private DownloadNotification mNotifier;
+    private NotificationManager mNotifManager;
 
     /**
      * The Service's view of the list of downloads, mapping download IDs to the corresponding info
@@ -222,7 +223,9 @@ public class DownloadService extends Service {
         mMediaScannerConnection = new MediaScannerConnection();
 
         mNotifier = new DownloadNotification(this, mSystemFacade);
-        mSystemFacade.cancelAllNotifications();
+        mNotifManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotifManager.cancelAll();
+
         mStorageManager = StorageManager.getInstance(getApplicationContext());
         updateFromProvider();
     }
@@ -465,7 +468,7 @@ public class DownloadService extends Service {
                 !Downloads.Impl.isStatusCompleted(oldStatus)
                 && Downloads.Impl.isStatusCompleted(info.mStatus);
         if (lostVisibility || justCompleted) {
-            mSystemFacade.cancelNotification(info.mId);
+            mNotifManager.cancel((int) info.mId);
         }
 
         info.startIfReady(now, mStorageManager);
@@ -476,17 +479,16 @@ public class DownloadService extends Service {
      */
     private void deleteDownloadLocked(long id) {
         DownloadInfo info = mDownloads.get(id);
-        if (info.shouldScanFile()) {
-            scanFile(info, false, false);
-        }
         if (info.mStatus == Downloads.Impl.STATUS_RUNNING) {
             info.mStatus = Downloads.Impl.STATUS_CANCELED;
         }
         if (info.mDestination != Downloads.Impl.DESTINATION_EXTERNAL && info.mFileName != null) {
-            Slog.d(TAG, "deleteDownloadLocked() deleting " + info.mFileName);
+            if (Constants.LOGVV) {
+                Log.d(TAG, "deleteDownloadLocked() deleting " + info.mFileName);
+            }
             new File(info.mFileName).delete();
         }
-        mSystemFacade.cancelNotification(info.mId);
+        mNotifManager.cancel((int) info.mId);
         mDownloads.remove(info.mId);
     }
 
@@ -559,7 +561,9 @@ public class DownloadService extends Service {
     private void deleteFileIfExists(String path) {
         try {
             if (!TextUtils.isEmpty(path)) {
-                Slog.d(TAG, "deleteFileIfExists() deleting " + path);
+                if (Constants.LOGVV) {
+                    Log.d(TAG, "deleteFileIfExists() deleting " + path);
+                }
                 File file = new File(path);
                 file.delete();
             }

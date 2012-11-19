@@ -33,7 +33,6 @@ import android.provider.Downloads;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
-import android.util.Slog;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
@@ -131,6 +130,21 @@ public class DownloadThread extends Thread {
     @Override
     public void run() {
         Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+        try {
+            runInternal();
+        } finally {
+            DownloadHandler.getInstance().dequeueDownload(mInfo.mId);
+        }
+    }
+
+    private void runInternal() {
+        // Skip when download already marked as finished; this download was
+        // probably started again while racing with UpdateThread.
+        if (DownloadInfo.queryDownloadStatus(mContext.getContentResolver(), mInfo.mId)
+                == Downloads.Impl.STATUS_SUCCESS) {
+            Log.d(TAG, "Download " + mInfo.mId + " already finished; skipping");
+            return;
+        }
 
         State state = new State(mInfo);
         AndroidHttpClient client = null;
@@ -211,7 +225,6 @@ public class DownloadThread extends Thread {
             notifyDownloadCompleted(finalStatus, state.mCountRetry, state.mRetryAfter,
                                     state.mGotData, state.mFilename,
                                     state.mNewUri, state.mMimeType, errorMsg);
-            DownloadHandler.getInstance().dequeueDownload(mInfo.mId);
 
             netPolicy.unregisterListener(mPolicyListener);
 
@@ -330,7 +343,9 @@ public class DownloadThread extends Thread {
 
         closeDestination(state);
         if (state.mFilename != null && Downloads.Impl.isStatusError(finalStatus)) {
-            Slog.d(TAG, "cleanupDestination() deleting " + state.mFilename);
+            if (Constants.LOGVV) {
+                Log.d(TAG, "cleanupDestination() deleting " + state.mFilename);
+            }
             new File(state.mFilename).delete();
             state.mFilename = null;
         }
@@ -847,8 +862,10 @@ public class DownloadThread extends Thread {
                 long fileLength = f.length();
                 if (fileLength == 0) {
                     // The download hadn't actually started, we can restart from scratch
-                    Slog.d(TAG, "setupDestinationFile() found fileLength=0, deleting "
-                            + state.mFilename);
+                    if (Constants.LOGVV) {
+                        Log.d(TAG, "setupDestinationFile() found fileLength=0, deleting "
+                                + state.mFilename);
+                    }
                     f.delete();
                     state.mFilename = null;
                     if (Constants.LOGV) {
@@ -857,8 +874,10 @@ public class DownloadThread extends Thread {
                     }
                 } else if (mInfo.mETag == null && !mInfo.mNoIntegrity) {
                     // This should've been caught upon failure
-                    Slog.d(TAG, "setupDestinationFile() unable to resume download, deleting "
-                            + state.mFilename);
+                    if (Constants.LOGVV) {
+                        Log.d(TAG, "setupDestinationFile() unable to resume download, deleting "
+                                + state.mFilename);
+                    }
                     f.delete();
                     throw new StopRequestException(Downloads.Impl.STATUS_CANNOT_RESUME,
                             "Trying to resume a download that can't be resumed");

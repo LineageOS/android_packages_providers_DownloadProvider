@@ -36,7 +36,6 @@ import android.util.Pair;
 
 import com.android.internal.util.IndentingPrintWriter;
 
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -316,11 +315,8 @@ public class DownloadInfo {
                 // is the media mounted?
                 return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
             case Downloads.Impl.STATUS_INSUFFICIENT_SPACE_ERROR:
-                // should check space to make sure it is worth retrying the download.
-                // but thats the first thing done by the thread when it retries to download
-                // it will fail pretty quickly if there is no space.
-                // so, it is not that bad to skip checking space availability here.
-                return true;
+                // avoids repetition of retrying download
+                return false;
         }
         return false;
     }
@@ -345,7 +341,7 @@ public class DownloadInfo {
      */
     public int checkCanUseNetwork() {
         final NetworkInfo info = mSystemFacade.getActiveNetworkInfo(mUid);
-        if (info == null) {
+        if (info == null || !info.isConnected()) {
             return NETWORK_NO_CONNECTION;
         }
         if (DetailedState.BLOCKED.equals(info.getDetailedState())) {
@@ -424,6 +420,9 @@ public class DownloadInfo {
 
             case ConnectivityManager.TYPE_WIFI:
                 return DownloadManager.Request.NETWORK_WIFI;
+
+            case ConnectivityManager.TYPE_BLUETOOTH:
+                return DownloadManager.Request.NETWORK_BLUETOOTH;
 
             default:
                 return 0;
@@ -575,5 +574,25 @@ public class DownloadInfo {
         DownloadThread downloader = new DownloadThread(mContext, mSystemFacade, this,
                 StorageManager.getInstance(mContext));
         mSystemFacade.startThread(downloader);
+    }
+
+    /**
+     * Query and return status of requested download.
+     */
+    public static int queryDownloadStatus(ContentResolver resolver, long id) {
+        final Cursor cursor = resolver.query(
+                ContentUris.withAppendedId(Downloads.Impl.ALL_DOWNLOADS_CONTENT_URI, id),
+                new String[] { Downloads.Impl.COLUMN_STATUS }, null, null, null);
+        try {
+            if (cursor.moveToFirst()) {
+                return cursor.getInt(0);
+            } else {
+                // TODO: increase strictness of value returned for unknown
+                // downloads; this is safe default for now.
+                return Downloads.Impl.STATUS_PENDING;
+            }
+        } finally {
+            cursor.close();
+        }
     }
 }

@@ -17,6 +17,7 @@
 package com.android.providers.downloads;
 
 import android.app.DownloadManager;
+import android.app.NotificationManager;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ContentUris;
@@ -27,12 +28,11 @@ import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.provider.BaseColumns;
 import android.provider.Downloads;
 import android.util.Log;
 
 import com.google.common.annotations.VisibleForTesting;
-
-import java.io.File;
 
 /**
  * Receives system broadcasts (boot, network connectivity)
@@ -120,7 +120,9 @@ public class DownloadReceiver extends BroadcastReceiver {
      * @param cursor Cursor for reading the download's fields
      */
     private void hideNotification(Context context, Uri uri, Cursor cursor) {
-        mSystemFacade.cancelNotification(ContentUris.parseId(uri));
+        final NotificationManager notifManager = (NotificationManager) context.getSystemService(
+                Context.NOTIFICATION_SERVICE);
+        notifManager.cancel((int) ContentUris.parseId(uri));
 
         int statusColumn = cursor.getColumnIndexOrThrow(Downloads.Impl.COLUMN_STATUS);
         int status = cursor.getInt(statusColumn);
@@ -141,23 +143,13 @@ public class DownloadReceiver extends BroadcastReceiver {
      * has been clicked.
      */
     private void openDownload(Context context, Cursor cursor) {
-        String filename = cursor.getString(cursor.getColumnIndexOrThrow(Downloads.Impl._DATA));
-        String mimetype =
-            cursor.getString(cursor.getColumnIndexOrThrow(Downloads.Impl.COLUMN_MIME_TYPE));
-        Uri path = Uri.parse(filename);
-        // If there is no scheme, then it must be a file
-        if (path.getScheme() == null) {
-            path = Uri.fromFile(new File(filename));
-        }
-
-        Intent activityIntent = new Intent(Intent.ACTION_VIEW);
-        mimetype = DownloadDrmHelper.getOriginalMimeType(context, filename, mimetype);
-        activityIntent.setDataAndType(path, mimetype);
-        activityIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        final long id = cursor.getLong(cursor.getColumnIndexOrThrow(BaseColumns._ID));
+        final Intent intent = OpenHelper.buildViewIntent(context, id);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         try {
-            context.startActivity(activityIntent);
+            context.startActivity(intent);
         } catch (ActivityNotFoundException ex) {
-            Log.d(Constants.TAG, "no activity for " + mimetype, ex);
+            Log.d(Constants.TAG, "no activity for " + intent, ex);
         }
     }
 
