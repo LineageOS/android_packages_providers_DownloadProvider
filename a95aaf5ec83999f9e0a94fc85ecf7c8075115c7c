@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAdH///aI\u003d",
+        "filename": "res/values-cs/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1558
+      },
+      "writtenOn": "2013-02-06T21:39:53Z",
+      "side": 1,
+      "message": "Mno... v GB jsem vsude psal WiFi... tak ted co je spravne??? Dame hlasovat? :)",
+      "parentUuid": "AAAAdH///hk\u003d",
+      "revId": "a95aaf5ec83999f9e0a94fc85ecf7c8075115c7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAdH///hg\u003d",
         "filename": "res/values-cs/strings.xml",
         "patchSetId": 1
