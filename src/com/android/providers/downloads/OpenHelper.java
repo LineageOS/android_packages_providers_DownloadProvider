@@ -18,6 +18,7 @@ package com.android.providers.downloads;
 
 import static android.app.DownloadManager.COLUMN_LOCAL_FILENAME;
 import static android.app.DownloadManager.COLUMN_LOCAL_URI;
+import static android.app.DownloadManager.COLUMN_MEDIAPROVIDER_URI;
 import static android.app.DownloadManager.COLUMN_MEDIA_TYPE;
 import static android.app.DownloadManager.COLUMN_URI;
 import static android.provider.Downloads.Impl.ALL_DOWNLOADS_CONTENT_URI;
@@ -63,6 +64,10 @@ public class OpenHelper {
                 intent.putExtra(Intent.EXTRA_ORIGINATING_URI, remoteUri);
                 intent.putExtra(Intent.EXTRA_REFERRER, getRefererUri(context, id));
                 intent.putExtra(Intent.EXTRA_ORIGINATING_UID, getOriginatingUid(context, id));
+            } else if (mimeType.startsWith("image/")) {
+                Uri mediaUri = getCursorUri(cursor, COLUMN_MEDIAPROVIDER_URI);
+                intent.setDataAndType(mediaUri, mimeType);
+                intent.putExtra("SingleItemOnly", true);
             } else if ("file".equals(localUri.getScheme())) {
                 intent.setDataAndType(
                         ContentUris.withAppendedId(ALL_DOWNLOADS_CONTENT_URI, id), mimeType);
