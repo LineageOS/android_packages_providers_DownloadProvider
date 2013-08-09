@@ -320,6 +320,8 @@ public class DownloadList extends Activity {
                     mDownloadList.mSelectedIds.clear();
                     // update the subtitle
                     onItemCheckedStateChanged(mode, 1, 0, false);
+                    // Update the live folders
+                    LiveFolderReceiver.updateFolders(mDownloadList.getBaseContext(), 0);
                     break;
                 case R.id.share_download:
                     mDownloadList.shareDownloadedFiles();
@@ -678,6 +680,7 @@ public class DownloadList extends Activity {
                 mQueuedDialog.cancel();
             }
         }
+        LiveFolderReceiver.updateFolders(this, 0);
     }
 
     private boolean isPausedForWifi(Cursor cursor) {

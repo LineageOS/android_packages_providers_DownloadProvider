@@ -25,5 +25,18 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".LiveFolderConfigActivity"
+                  android:theme="@android:style/Theme.NoDisplay">
+                <intent-filter>
+                   <action android:name="cyanogenmod.intent.action.CREATE_LIVE_FOLDER" />
+                </intent-filter>
+        </activity>
+
+        <receiver android:name=".LiveFolderReceiver"
+                  android:exported="true">
+                 <intent-filter>
+                    <action android:name="cyanogenmod.intent.action.LIVE_FOLDER_UPDATES" />
+                </intent-filter>
+        </receiver>
     </application>
 </manifest>
