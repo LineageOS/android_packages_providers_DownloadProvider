@@ -56,6 +56,7 @@
     <uses-permission android:name="android.permission.MODIFY_NETWORK_ACCOUNTING" />
 
     <application android:process="android.process.media"
+                 android:icon="@mipmap/ic_launcher_download"
                  android:label="@string/app_label">
 
         <provider android:name=".DownloadProvider"
@@ -88,6 +89,22 @@
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
                 <data android:scheme="file" />
             </intent-filter>
+        </receiver>
+
+        <activity android:name=".LiveFolderConfigActivity" android:label="@string/live_folder_drawer_label"
+                  android:permission="com.cyanogenmod.trebuchet.permission.MANAGE_LIVE_FOLDERS"
+                  android:theme="@android:style/Theme.NoDisplay">
+                <intent-filter>
+                   <action android:name="cyanogenmod.intent.action.CREATE_LIVE_FOLDER" />
+                </intent-filter>
+        </activity>
+
+        <receiver android:name=".LiveFolderReceiver"
+                  android:permission="com.cyanogenmod.trebuchet.permission.MANAGE_LIVE_FOLDERS"
+                  android:exported="true">
+                 <intent-filter>
+                    <action android:name="cyanogenmod.intent.action.LIVE_FOLDER_UPDATES" />
+                </intent-filter>
         </receiver>
 
         <activity android:name=".SizeLimitActivity"
