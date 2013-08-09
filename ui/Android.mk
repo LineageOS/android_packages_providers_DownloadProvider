@@ -8,6 +8,7 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src) \
     ../src/com/android/providers/downloads/Constants.java \
     ../src/com/android/providers/downloads/DownloadDrmHelper.java
 
+LOCAL_STATIC_JAVA_LIBRARIES := org.cyanogenmod.support
 LOCAL_PACKAGE_NAME := DownloadProviderUi
 LOCAL_CERTIFICATE := media
 
