@@ -1,0 +1,242 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dae975fb_ddc94eae",
+        "filename": "ui/src/com/android/providers/downloads/ui/DownloadList.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "Why getBaseContext()? Passing in mDownloadList seems sufficient.",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_1d5eb6e9",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderConfigActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "License header missing",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_3d529ade",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "License header missing.",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_9d4bc62b",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "ctx -\u003e context\n\n(consistency with other code)",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_7d48222e",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "isEmpty()?",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_5d555ec4",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "Is this guaranteed to work (IOW, is the drawable guaranteed to be a bitmap)? Otherwise: http://stackoverflow.com/questions/3035692/how-to-convert-a-drawable-to-a-bitmap\n\nOtherwise this could use a reformat:\n\nDrawable d \u003d list.get(0).activityInfo.loadIcon(pm);\nreturn ((BitmapDrawable) d).getBitmap();",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_5dbe7e00",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "m prefix is for members only.",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_3dbbba10",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "while (",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_bd456a18",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "fItem -\u003e folderItem",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_bdce8ab2",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "Suggestion:\n\nif (TextUtils.isEmpty(type)) {\n    return;\n}\n\n\n(reduces indention depth)",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_9dc4e692",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_1d37d6b1",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "Where is this ever set to false again?",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_fd3bf29a",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "intenta? Seems a bit weird naming...",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae975fb_dd402e0a",
+        "filename": "ui/src/com/android/providers/downloads/ui/LiveFolderReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2013-08-13T19:01:26Z",
+      "side": 1,
+      "message": "As above",
+      "revId": "3392f11b88c0974bc326acc87dbc824cbf0fd34a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
