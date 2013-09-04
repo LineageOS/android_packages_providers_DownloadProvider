@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa0d59b9_ca62a3ad",
+        "filename": "res/values-nb/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2013-09-04T07:23:42Z",
+      "side": 1,
+      "message": "Change to Nedlastingsmappe",
+      "revId": "6e2ffc51b15c8019e9d6377720ddfe4a251f1884",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
