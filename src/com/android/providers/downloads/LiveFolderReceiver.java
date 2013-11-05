@@ -126,9 +126,7 @@ public class LiveFolderReceiver extends BroadcastReceiver {
             updateFolders(context, 0);
         } else if (type.equals(LiveFolder.Constants.FOLDER_ITEM_SELECTED)) {
             int itemId = intent.getIntExtra(LiveFolder.Constants.FOLDER_ITEM_ID_EXTRA, 0);
-            final Intent viewIntent = OpenHelper.buildViewIntent(context, itemId);
-            viewIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(viewIntent);
+            OpenHelper.startViewIntent(context, itemId, Intent.FLAG_ACTIVITY_NEW_TASK);
         } else if (type.equals(LiveFolder.Constants.FOLDER_ITEM_REMOVED)) {
             // Get selected item id
             int itemId = intent.getIntExtra(LiveFolder.Constants.FOLDER_ITEM_ID_EXTRA, 0);
