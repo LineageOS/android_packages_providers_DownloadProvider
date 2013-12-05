@@ -769,7 +769,7 @@ public class DownloadThread implements Runnable {
                 Log.i(Constants.TAG, "have run thread before for id: " + mInfo.mId +
                         ", and state.mFilename: " + state.mFilename);
             }
-            if (!Helpers.isFilenameValid(state.mFilename,
+            if (!Helpers.isFilenameValid(mContext, state.mFilename,
                     mStorageManager.getDownloadDataDirectory())) {
                 // this should never happen
                 throw new StopRequestException(Downloads.Impl.STATUS_FILE_ERROR,
