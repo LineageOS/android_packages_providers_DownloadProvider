@@ -375,6 +375,18 @@ public class Helpers {
     }
 
     /**
+     * Checks whether the filename looks legitimate
+     */
+    static boolean isFilenameValid(Context context, String filename, File downloadsDataDir) {
+        filename = filename.replaceFirst("/+", "/"); // normalize leading slashes
+        return filename.startsWith(Environment.getDownloadCacheDirectory().toString())
+                || filename.startsWith(downloadsDataDir.toString())
+                || filename.startsWith(Environment.getExternalStorageDirectory().toString())
+                || (StorageManager.isSecondStorageSupported() && filename.startsWith(StorageManager
+                        .getExternalStorageDirectory(context)));
+    }
+
+    /**
      * Checks whether this looks like a legitimate selection parameter
      */
     public static void validateSelection(String selection, Set<String> allowedColumns) {

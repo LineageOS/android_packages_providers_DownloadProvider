@@ -710,14 +710,15 @@ public final class DownloadProvider extends ContentProvider {
         if (path == null) {
             throw new IllegalArgumentException("Invalid file URI: " + uri);
         }
-        try {
-            final String canonicalPath = new File(path).getCanonicalPath();
-            final String externalPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-            if (!canonicalPath.startsWith(externalPath)) {
-                throw new SecurityException("Destination must be on external storage: " + uri);
-            }
-        } catch (IOException e) {
-            throw new SecurityException("Problem resolving path: " + uri);
+
+        final String phoneStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        String sdCardStoragePath = null;
+        if (StorageManager.isSecondStorageSupported()) {
+            sdCardStoragePath = StorageManager.getExternalStorageDirectory(getContext());
+        }
+        if (!path.startsWith(phoneStoragePath)
+                && !(sdCardStoragePath != null && path.startsWith(sdCardStoragePath))) {
+            throw new SecurityException("Destination must be on external storage: " + uri);
         }
     }
 
@@ -1209,7 +1210,7 @@ public final class DownloadProvider extends ContentProvider {
         if (path == null) {
             throw new FileNotFoundException("No filename found.");
         }
-        if (!Helpers.isFilenameValid(path, mDownloadsDataDir)) {
+        if (!Helpers.isFilenameValid(getContext(), path, mDownloadsDataDir)) {
             throw new FileNotFoundException("Invalid filename: " + path);
         }
 
