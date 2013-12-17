@@ -114,6 +114,9 @@ public class DownloadReceiver extends BroadcastReceiver {
             NotificationManager notifManager = (NotificationManager) context.getSystemService(
                     Context.NOTIFICATION_SERVICE);
             notifManager.cancel(notifTag, 0);
+        } else if (Constants.ACTION_RESUME.equals(action)) {
+            final long id = intent.getLongExtra("id", -1);
+            Helpers.scheduleJob(context, DownloadInfo.queryDownloadInfo(context, id));
         }
     }
 

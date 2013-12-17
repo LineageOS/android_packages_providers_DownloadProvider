@@ -193,9 +193,29 @@ public class DownloadNotifier {
             }
             builder.setWhen(firstShown);
 
+            // Check the download status of all downloads. If any of them is paused,
+            // update the icon and content title and text in the notification.
+            boolean hasPausedStatus = false;
+            int pausedStatus = -1;
+            for (int j = 0; j < cluster.size(); j++) {
+                cursor.moveToPosition(cluster.get(j));
+
+                final int status = cursor.getInt(UpdateQuery.STATUS);
+                if (status == Downloads.Impl.STATUS_WAITING_FOR_NETWORK ||
+                        status == Downloads.Impl.STATUS_PAUSED_MANUAL) {
+                    hasPausedStatus = true;
+                    pausedStatus = status;
+                    break;
+                }
+            }
+
             // Show relevant icon
             if (type == TYPE_ACTIVE) {
-                builder.setSmallIcon(android.R.drawable.stat_sys_download);
+                if (hasPausedStatus) {
+                    builder.setSmallIcon(R.drawable.download_pause);
+                } else {
+                    builder.setSmallIcon(android.R.drawable.stat_sys_download);
+                }
             } else if (type == TYPE_WAITING) {
                 builder.setSmallIcon(android.R.drawable.stat_sys_warning);
             } else if (type == TYPE_COMPLETE) {
@@ -327,7 +347,13 @@ public class DownloadNotifier {
                 builder.setContentTitle(getDownloadTitle(res, cursor));
 
                 if (type == TYPE_ACTIVE) {
-                    if (speedAsSizeText != null) {
+                    if (hasPausedStatus) {
+                        if (pausedStatus == Downloads.Impl.STATUS_PAUSED_MANUAL) {
+                            builder.setContentText(res.getText(R.string.download_paused));
+                        } else {
+                            builder.setContentText(res.getText(R.string.download_queued));
+                        }
+                    } else if (speedAsSizeText != null) {
                         builder.setContentText(res.getString(R.string.download_speed_text,
                                 remainingText, speedAsSizeText));
                     } else {
@@ -365,8 +391,12 @@ public class DownloadNotifier {
                 }
 
                 if (type == TYPE_ACTIVE) {
-                    builder.setContentTitle(res.getQuantityString(
-                            R.plurals.notif_summary_active, cluster.size(), cluster.size()));
+                    if (hasPausedStatus) {
+                        builder.setContentTitle(res.getString(R.string.download_queued));
+                    } else {
+                        builder.setContentTitle(res.getQuantityString(
+                                R.plurals.notif_summary_active, cluster.size(), cluster.size()));
+                    }
                     builder.setContentText(remainingText);
                     builder.setContentInfo(res.getString(R.string.download_speed_text,
                             percentText, speedAsSizeText));
@@ -465,7 +495,7 @@ public class DownloadNotifier {
     }
 
     private static boolean isActiveAndVisible(int status, int visibility) {
-        return status == STATUS_RUNNING &&
+        return Downloads.Impl.isStatusInformational(status) &&
                 (visibility == VISIBILITY_VISIBLE
                 || visibility == VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
     }
