@@ -303,20 +303,31 @@ public class DownloadStorageProvider extends DocumentsProvider {
             size = null;
         }
 
+        final long progress = cursor.getLong(cursor.getColumnIndexOrThrow(
+                DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
         final int status = cursor.getInt(
                 cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_STATUS));
+        final int reason = cursor.getInt(
+                cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_REASON));
         switch (status) {
             case DownloadManager.STATUS_SUCCESSFUL:
                 break;
             case DownloadManager.STATUS_PAUSED:
-                summary = getContext().getString(R.string.download_queued);
+                if (size != null) {
+                    final long percent = progress * 100 / size;
+                    summary = (reason == DownloadManager.PAUSED_BY_MANUAL) ?
+                            getContext().getString(R.string.download_paused_percent, percent) :
+                            getContext().getString(R.string.download_queued_percent, percent);
+                } else {
+                    summary = (reason == DownloadManager.PAUSED_BY_MANUAL) ?
+                            getContext().getString(R.string.download_paused) :
+                            getContext().getString(R.string.download_queued);
+                }
                 break;
             case DownloadManager.STATUS_PENDING:
                 summary = getContext().getString(R.string.download_queued);
                 break;
             case DownloadManager.STATUS_RUNNING:
-                final long progress = cursor.getLong(cursor.getColumnIndexOrThrow(
-                        DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
                 if (size != null) {
                     String percent =
                             NumberFormat.getPercentInstance().format((double) progress / size);
