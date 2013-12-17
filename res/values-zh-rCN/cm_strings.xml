@@ -15,7 +15,11 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="live_folder_drawer_label">下载文件夹</string>
   <string name="live_folder_label">下载</string>
+
+  <string name="download_paused">"已暂停"</string>
+  <string name="download_paused_percent">"已暂停：<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
+  <string name="download_queued_percent">"已加入队列：<xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
 </resources>
