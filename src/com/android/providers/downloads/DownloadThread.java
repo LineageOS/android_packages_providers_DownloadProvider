@@ -116,6 +116,11 @@ public class DownloadThread implements Runnable {
 
     private volatile boolean mPolicyDirty;
 
+    // Add for carrier feature - download breakpoint continuing.
+    // Support continuing download after the download is broken
+    // although HTTP Server doesn't contain etag in its response.
+    private final static String QRD_ETAG = "qrd_magic_etag";
+
     /**
      * Local changes to {@link DownloadInfo}. These are kept local to avoid
      * racing with the thread that updates based on change notifications.
@@ -686,6 +691,11 @@ public class DownloadThread implements Runnable {
             if (mInfo.mStatus == Downloads.Impl.STATUS_CANCELED || mInfo.mDeleted) {
                 throw new StopRequestException(Downloads.Impl.STATUS_CANCELED, "download canceled");
             }
+            if (mInfo.mStatus == Downloads.Impl.STATUS_PAUSED_BY_MANUAL) {
+                // user pauses the download by manual, here send exception and stop data transfer.
+                throw new StopRequestException(Downloads.Impl.STATUS_PAUSED_BY_MANUAL,
+                        "download paused by manual");
+            }
         }
 
         // if policy has been changed, trigger connectivity check
@@ -767,6 +777,10 @@ public class DownloadThread implements Runnable {
 
         mInfoDelta.mETag = conn.getHeaderField("ETag");
 
+        if (mInfoDelta.mETag == null) {
+            mInfoDelta.mETag = QRD_ETAG;
+        }
+
         mInfoDelta.writeToDatabaseOrThrow();
 
         // Check connectivity again now that we know the total size
@@ -812,7 +826,9 @@ public class DownloadThread implements Runnable {
 
         if (resuming) {
             if (mInfoDelta.mETag != null) {
-                conn.addRequestProperty("If-Match", mInfoDelta.mETag);
+                if (!mInfoDelta.mETag.equals(QRD_ETAG)) {
+                    conn.addRequestProperty("If-Match", mInfoDelta.mETag);
+                }
             }
             conn.addRequestProperty("Range", "bytes=" + mInfoDelta.mCurrentBytes + "-");
         }
