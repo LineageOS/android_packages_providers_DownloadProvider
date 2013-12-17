@@ -77,14 +77,27 @@ public class TrampolineActivity extends Activity {
         Log.d(Constants.TAG, "Found " + id + " with status " + status + ", reason " + reason);
         switch (status) {
             case DownloadManager.STATUS_PENDING:
-            case DownloadManager.STATUS_RUNNING:
                 sendRunningDownloadClickedBroadcast(id);
+                finish();
+                break;
+
+            case DownloadManager.STATUS_RUNNING:
+                // Add for carrier feature - pause and resume download by manual.
+                dm.pauseDownload(id);
                 finish();
                 break;
 
             case DownloadManager.STATUS_PAUSED:
                 if (reason == DownloadManager.PAUSED_QUEUED_FOR_WIFI) {
                     PausedDialogFragment.show(getFragmentManager(), id);
+                } else if (reason == DownloadManager.PAUSED_BY_MANUAL) {
+                    // Add for carrier feature - pause and resume download by manual.
+                    dm.resumeDownload(id);
+                    Intent intent = new Intent(Constants.ACTION_RESUME);
+                    intent.setClassName("com.android.providers.downloads",
+                            "com.android.providers.downloads.DownloadReceiver");
+                    sendBroadcast(intent);
+                    finish();
                 } else {
                     sendRunningDownloadClickedBroadcast(id);
                     finish();
