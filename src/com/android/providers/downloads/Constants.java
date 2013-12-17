@@ -57,6 +57,9 @@ public class Constants {
     /** the intent that gets sent when deleting the notification of a completed download */
     public static final String ACTION_HIDE = "android.intent.action.DOWNLOAD_HIDE";
 
+    /** the intent that gets sent when choosing to resume the paused download */
+    public static final String ACTION_RESUME = "android.intent.action.DOWNLOAD_RESUME";
+
     /** The default base name for downloaded files if we can't get one at the HTTP level */
     public static final String DEFAULT_DL_FILENAME = "downloadfile";
 
