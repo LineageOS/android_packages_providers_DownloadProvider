@@ -17,4 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="live_folder_drawer_label">Downloads folder</string>
     <string name="live_folder_label">Downloads</string>
+    
+    <!-- Transfer speed for current download/s. -->
+    <string name="download_speed"><xliff:g id="duration">%s</xliff:g>/s</string>
 </resources>
