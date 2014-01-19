@@ -42,6 +42,7 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -58,6 +59,10 @@ public class DownloadNotifier {
     private static final int TYPE_ACTIVE = 1;
     private static final int TYPE_WAITING = 2;
     private static final int TYPE_COMPLETE = 3;
+
+    private static final int SPEED_KB = 1024;
+    private static final int SPEED_MB = 1048576;
+    private static final int SPEED_GB = 1073741824;
 
     private final Context mContext;
     private final NotificationManager mNotifManager;
@@ -84,6 +89,13 @@ public class DownloadNotifier {
      */
     @GuardedBy("mDownloadSpeed")
     private final LongSparseLongArray mDownloadTouch = new LongSparseLongArray();
+
+    /**
+     * Formatter for giving transfer speeds with maximum of one decimal places
+     */
+    private static final DecimalFormat mFormatter = new DecimalFormat("#.#");
+
+    private static final String SPEED_PLACEHOLDER = "%s %cB/s";
 
     public DownloadNotifier(Context context) {
         mContext = context;
@@ -201,7 +213,9 @@ public class DownloadNotifier {
 
             // Calculate and show progress
             String remainingText = null;
+            String durationText = null;
             String percentText = null;
+            String speedText = null;
             if (type == TYPE_ACTIVE) {
                 long current = 0;
                 long total = 0;
@@ -221,9 +235,42 @@ public class DownloadNotifier {
                     percentText = res.getString(R.string.download_percent, percent);
 
                     if (speed > 0) {
+                        // Decide prefix character for speed string
+                        char preFix;
+                        double speedNormalized = speed;
+
+                        if (speed < SPEED_KB) {
+                            preFix = '\0';
+                        } else if (speed < SPEED_MB) {
+                            preFix = 'K';
+                            speedNormalized /= SPEED_KB;
+                        } else if (speed < SPEED_GB) {
+                            preFix = 'M';
+                            speedNormalized /= SPEED_MB;
+                        } else {
+                            preFix = 'G';
+                            speedNormalized /= SPEED_GB;
+                        }
+
+                        // Format the String
+                        speedText = String.format(
+                            SPEED_PLACEHOLDER,
+                            mFormatter.format(speedNormalized).toString(),
+                            preFix
+                        );
+
                         final long remainingMillis = ((total - current) * 1000) / speed;
-                        remainingText = res.getString(R.string.download_remaining,
-                                DateUtils.formatDuration(remainingMillis));
+                        if(remainingMillis>=DateUtils.HOUR_IN_MILLIS){
+                            final int hours = (int) ((remainingMillis + 1800000) / DateUtils.HOUR_IN_MILLIS);
+                            durationText = res.getQuantityString(R.plurals.duration_hours, hours, hours);
+                        } else if (remainingMillis >= DateUtils.MINUTE_IN_MILLIS) {
+                            final int minutes = (int) ((remainingMillis + 30000) / DateUtils.MINUTE_IN_MILLIS);
+                            durationText = res.getQuantityString(R.plurals.duration_minutes, minutes, minutes);
+                        } else {
+                            final int seconds = (int) ((remainingMillis + 500) / DateUtils.SECOND_IN_MILLIS);
+                            durationText = res.getQuantityString(R.plurals.duration_seconds, seconds, seconds);
+                        }
+                        remainingText = res.getString(R.string.download_remaining, durationText);
                     }
 
                     builder.setProgress(100, percent, false);
@@ -235,17 +282,23 @@ public class DownloadNotifier {
             // Build titles and description
             final Notification notif;
             if (cluster.size() == 1) {
+
                 final DownloadInfo info = cluster.iterator().next();
 
                 builder.setContentTitle(getDownloadTitle(res, info));
 
+                String contentText = null;
+
                 if (type == TYPE_ACTIVE) {
                     if (!TextUtils.isEmpty(info.mDescription)) {
                         builder.setContentText(info.mDescription);
-                    } else {
-                        builder.setContentText(remainingText);
                     }
-                    builder.setContentInfo(percentText);
+
+                    if (speedText != null) {
+                        builder.setContentInfo(remainingText + ", " + speedText + ", " + percentText);
+                    } else {
+                        builder.setContentInfo(percentText);
+                    }
 
                 } else if (type == TYPE_WAITING) {
                     builder.setContentText(
@@ -253,10 +306,14 @@ public class DownloadNotifier {
 
                 } else if (type == TYPE_COMPLETE) {
                     if (Downloads.Impl.isStatusError(info.mStatus)) {
-                        builder.setContentText(res.getText(R.string.notification_download_failed));
+                        
+                        contentText = res.getString(R.string.notification_download_failed);
+
+                        builder.setContentText(contentText);
                     } else if (Downloads.Impl.isStatusSuccess(info.mStatus)) {
-                        builder.setContentText(
-                                res.getText(R.string.notification_download_complete));
+                        contentText = res.getString(R.string.notification_download_complete);
+
+                        builder.setContentText(contentText);
                     }
                 }
 
@@ -273,7 +330,7 @@ public class DownloadNotifier {
                     builder.setContentTitle(res.getQuantityString(
                             R.plurals.notif_summary_active, cluster.size(), cluster.size()));
                     builder.setContentText(remainingText);
-                    builder.setContentInfo(percentText);
+                    builder.setContentInfo(speedText + ", " + percentText);
                     inboxStyle.setSummaryText(remainingText);
 
                 } else if (type == TYPE_WAITING) {
