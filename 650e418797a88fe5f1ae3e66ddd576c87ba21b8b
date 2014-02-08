@@ -16,6 +16,24 @@
       "revId": "650e418797a88fe5f1ae3e66ddd576c87ba21b8b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fade3982_935f030e",
+        "filename": "src/com/android/providers/downloads/DownloadInfo.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2014-02-08T05:18:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fade3982_d3786b92",
+      "revId": "650e418797a88fe5f1ae3e66ddd576c87ba21b8b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
