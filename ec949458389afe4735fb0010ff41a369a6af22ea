@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fade3982_73419f39",
+        "filename": "src/com/android/providers/downloads/DownloadInfo.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2014-02-08T05:00:00Z",
+      "side": 1,
+      "message": "8 spaces required wrap in if clause",
+      "revId": "ec949458389afe4735fb0010ff41a369a6af22ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
