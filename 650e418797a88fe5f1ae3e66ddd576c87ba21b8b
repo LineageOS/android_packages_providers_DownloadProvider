@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fade3982_d3786b92",
+        "filename": "src/com/android/providers/downloads/DownloadInfo.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 1579
+      },
+      "writtenOn": "2014-02-08T05:10:34Z",
+      "side": 1,
+      "message": "I think he meant 100 chars, how\u0027s like this?\n\n        if (mVisibility \u003d\u003d Downloads.Impl.VISIBILITY_VISIBLE_NOTIFY_COMPLETED ||\n                mVisibility \u003d\u003d DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_ONLY_COMPLETION) {",
+      "revId": "650e418797a88fe5f1ae3e66ddd576c87ba21b8b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
