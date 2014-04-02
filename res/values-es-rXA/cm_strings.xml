@@ -16,6 +16,6 @@
      limitations under the License.
 -->
 <resources>
-  <string name="live_folder_drawer_label">Downloads-map</string>
-  <string name="live_folder_label">Downloads</string>
+  <string name="live_folder_drawer_label">Carpeta de descargues</string>
+  <string name="live_folder_label">Descargues</string>
 </resources>
