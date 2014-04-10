@@ -16,6 +16,6 @@
      limitations under the License.
 -->
 <resources>
-  <string name="live_folder_drawer_label">Carpeta de baixades</string>
-  <string name="live_folder_label">Baixades</string>
+  <string name="live_folder_drawer_label">Pasta de Transferências</string>
+  <string name="live_folder_label">Transferências</string>
 </resources>
