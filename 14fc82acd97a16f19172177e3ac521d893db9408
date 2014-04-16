@@ -34,6 +34,24 @@
       "revId": "14fc82acd97a16f19172177e3ac521d893db9408",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7af24918_145f6173",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 12
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2014-04-16T23:09:40Z",
+      "side": 1,
+      "message": "Ok, then it makes sense.",
+      "parentUuid": "7af24918_546a891b",
+      "revId": "14fc82acd97a16f19172177e3ac521d893db9408",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
