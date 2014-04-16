@@ -16,6 +16,24 @@
       "revId": "14fc82acd97a16f19172177e3ac521d893db9408",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7af24918_546a891b",
+        "filename": "res/values/cm_strings.xml",
+        "patchSetId": 12
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-04-16T23:06:18Z",
+      "side": 1,
+      "message": "Not sure, especially for languages with non-latin alphabets: those might have a different letter for \u0027s\u0027 (looking at the RU strings in frameworks/base/core suggests it might look like \u0027200 ??/?\u0027 there). That\u0027s precisely the reason why I removed the hardcoded [K|M|G]B/s pattern.",
+      "parentUuid": "7af24918_7426a517",
+      "revId": "14fc82acd97a16f19172177e3ac521d893db9408",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
