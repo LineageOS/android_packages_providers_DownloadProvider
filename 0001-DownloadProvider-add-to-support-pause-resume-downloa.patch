@@ -1,0 +1,243 @@
+From 562cbaae52c5414df10a8679dadeed89b9a6f7a5 Mon Sep 17 00:00:00 2001
+From: qqzhou <qqzhou@codeaurora.org>
+Date: Tue, 17 Dec 2013 14:18:55 +0800
+Subject: [PATCH] DownloadProvider: add to support pause/resume download by
+ manual
+
+This feature contains below points:
+1. add to pause running download by manual.
+2. add to resume manuallly paused download by manual.
+3. add to show proper contents in notification and download-list
+   for manually paused status.
+4. add to support download breakpoint continuing when HTTP server
+   doesn't contain etag in response header. Android baseline only
+   supports this when etag is not null.
+5. add to show proper contents in notification and download-list
+   for status of waiting-for-network.
+
+Change-Id: I433cdee2de8b3add0248bbb0a9d02f8da4e5bb38
+---
+ res/values/strings.xml                             |  7 ++++
+ src/com/android/providers/downloads/Constants.java |  3 ++
+ .../providers/downloads/DownloadNotifier.java      | 40 +++++++++++++++++++---
+ .../providers/downloads/DownloadReceiver.java      |  3 +-
+ .../downloads/DownloadStorageProvider.java         | 17 +++++++--
+ .../providers/downloads/DownloadThread.java        |  4 +++
+ .../providers/downloads/ui/TrampolineActivity.java | 13 ++++++-
+ 7 files changed, 77 insertions(+), 10 deletions(-)
+
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index c571219..ab597c8 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -225,8 +225,15 @@
+     <!-- Status indicating that the download has ended without completing successfully.  Appears for
+          an individual item in the download list.  [CHAR LIMIT=24] -->
+     <string name="download_error">Unsuccessful</string>
++    <!-- Status indicating that the download has been paused to start in the future.  Appears for an
++        individual item in the download list.  [CHAR LIMIT=24] -->
++    <string name="download_paused">Paused</string>
+ 
+     <!-- Representation of download progress percentage when running. [CHAR LIMIT=24] -->
+     <string name="download_running_percent">In progress, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
++    <!-- Representation of download progress percentage when paused. [CHAR LIMIT=24] -->
++    <string name="download_paused_percent">Paused, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
++    <!-- Representation of download progress percentage when queued. [CHAR LIMIT=24] -->
++    <string name="download_queued_percent">Queued, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+ 
+ </resources>
+diff --git a/src/com/android/providers/downloads/Constants.java b/src/com/android/providers/downloads/Constants.java
+index 89210a2..1128afc 100644
+--- a/src/com/android/providers/downloads/Constants.java
++++ b/src/com/android/providers/downloads/Constants.java
+@@ -60,6 +60,9 @@ public class Constants {
+     /** the intent that gets sent when deleting the notification of a completed download */
+     public static final String ACTION_HIDE = "android.intent.action.DOWNLOAD_HIDE";
+ 
++    /** the intent that gets sent when choosing to resume the paused download */
++    public static final String ACTION_RESUME = "android.intent.action.DOWNLOAD_RESUME";
++
+     /** The default base name for downloaded files if we can't get one at the HTTP level */
+     public static final String DEFAULT_DL_FILENAME = "downloadfile";
+ 
+diff --git a/src/com/android/providers/downloads/DownloadNotifier.java b/src/com/android/providers/downloads/DownloadNotifier.java
+index b0ed8ea..71ddca4 100644
+--- a/src/com/android/providers/downloads/DownloadNotifier.java
++++ b/src/com/android/providers/downloads/DownloadNotifier.java
+@@ -151,9 +151,25 @@ public class DownloadNotifier {
+             }
+             builder.setWhen(firstShown);
+ 
++            // Check paused status about these downloads. If exists, will
++            // update icon and content title/content text in notification.
++            boolean hasPausedStatus = false;
++            int pausedStatus = -1;
++            for (DownloadInfo info : cluster) {
++                if (isPausedStatus(info.mStatus)) {
++                    hasPausedStatus = true;
++                    pausedStatus = info.mStatus;
++                    break;
++                }
++            }
++
+             // Show relevant icon
+             if (type == TYPE_ACTIVE) {
+-                builder.setSmallIcon(android.R.drawable.stat_sys_download);
++                if (hasPausedStatus) {
++                    builder.setSmallIcon(android.R.drawable.stat_sys_warning);
++                } else {
++                    builder.setSmallIcon(android.R.drawable.stat_sys_download);
++                }
+             } else if (type == TYPE_WAITING) {
+                 builder.setSmallIcon(android.R.drawable.stat_sys_warning);
+             } else if (type == TYPE_COMPLETE) {
+@@ -259,7 +275,12 @@ public class DownloadNotifier {
+                 builder.setContentTitle(getDownloadTitle(res, info));
+ 
+                 if (type == TYPE_ACTIVE) {
+-                    if (speedAsSizeText != null) {
++                    if (hasPausedStatus) {
++                        if (pausedStatus == Downloads.Impl.STATUS_PAUSED_BY_MANUAL)
++                            builder.setContentText(res.getText(R.string.download_paused));
++                        else
++                            builder.setContentText(res.getText(R.string.download_queued));
++                    } else if (speedAsSizeText != null) {
+                         builder.setContentText(res.getString(R.string.download_speed_text,
+                                 remainingText, speedAsSizeText));
+                     }
+@@ -288,8 +309,12 @@ public class DownloadNotifier {
+                 }
+ 
+                 if (type == TYPE_ACTIVE) {
+-                    builder.setContentTitle(res.getQuantityString(
+-                            R.plurals.notif_summary_active, cluster.size(), cluster.size()));
++                    if (hasPausedStatus) {
++                        builder.setContentTitle(res.getString(R.string.download_queued));
++                    } else {
++                        builder.setContentTitle(res.getQuantityString(
++                                R.plurals.notif_summary_active, cluster.size(), cluster.size()));
++                    }
+                     builder.setContentText(remainingText);
+                     builder.setContentInfo(res.getString(R.string.download_speed_text,
+                                 percentText, speedAsSizeText));
+@@ -375,7 +400,7 @@ public class DownloadNotifier {
+     }
+ 
+     private static boolean isActiveAndVisible(DownloadInfo download) {
+-        return download.mStatus == STATUS_RUNNING &&
++        return Downloads.Impl.isStatusInformational(download.mStatus) &&
+                 (download.mVisibility == VISIBILITY_VISIBLE
+                 || download.mVisibility == VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+     }
+@@ -385,4 +410,9 @@ public class DownloadNotifier {
+                 (download.mVisibility == VISIBILITY_VISIBLE_NOTIFY_COMPLETED
+                 || download.mVisibility == VISIBILITY_VISIBLE_NOTIFY_ONLY_COMPLETION);
+     }
++
++    private static boolean isPausedStatus(int status) {
++        return status == Downloads.Impl.STATUS_WAITING_FOR_NETWORK ||
++                status == Downloads.Impl.STATUS_PAUSED_BY_MANUAL;
++    }
+ }
+diff --git a/src/com/android/providers/downloads/DownloadReceiver.java b/src/com/android/providers/downloads/DownloadReceiver.java
+index f3d2376..0855a4f 100644
+--- a/src/com/android/providers/downloads/DownloadReceiver.java
++++ b/src/com/android/providers/downloads/DownloadReceiver.java
+@@ -81,7 +81,8 @@ public class DownloadReceiver extends BroadcastReceiver {
+             if (info != null && info.isConnected()) {
+                 startService(context);
+             }
+-        } else if (action.equals(Constants.ACTION_RETRY)) {
++        } else if (action.equals(Constants.ACTION_RETRY)
++                || action.equals(Constants.ACTION_RESUME)) {
+             startService(context);
+         } else if (action.equals(Constants.ACTION_OPEN)
+                 || action.equals(Constants.ACTION_LIST)
+diff --git a/src/com/android/providers/downloads/DownloadStorageProvider.java b/src/com/android/providers/downloads/DownloadStorageProvider.java
+index ecef54e..4dfde80 100644
+--- a/src/com/android/providers/downloads/DownloadStorageProvider.java
++++ b/src/com/android/providers/downloads/DownloadStorageProvider.java
+@@ -306,20 +306,31 @@ public class DownloadStorageProvider extends DocumentsProvider {
+             size = null;
+         }
+ 
++        final long progress = cursor.getLong(cursor.getColumnIndexOrThrow(
++                DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
+         final int status = cursor.getInt(
+                 cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_STATUS));
++        final int reason = cursor.getInt(
++                cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_REASON));
+         switch (status) {
+             case DownloadManager.STATUS_SUCCESSFUL:
+                 break;
+             case DownloadManager.STATUS_PAUSED:
+-                summary = getContext().getString(R.string.download_queued);
++                if (size != null) {
++                    final long percent = progress * 100 / size;
++                    summary = (reason == DownloadManager.PAUSED_BY_MANUAL) ?
++                            getContext().getString(R.string.download_paused_percent, percent) :
++                            getContext().getString(R.string.download_queued_percent, percent);
++                } else {
++                    summary = (reason == DownloadManager.PAUSED_BY_MANUAL) ?
++                            getContext().getString(R.string.download_paused) :
++                            getContext().getString(R.string.download_queued);
++                }
+                 break;
+             case DownloadManager.STATUS_PENDING:
+                 summary = getContext().getString(R.string.download_queued);
+                 break;
+             case DownloadManager.STATUS_RUNNING:
+-                final long progress = cursor.getLong(cursor.getColumnIndexOrThrow(
+-                        DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
+                 if (size != null) {
+                     final long percent = progress * 100 / size;
+                     summary = getContext().getString(R.string.download_running_percent, percent);
+diff --git a/src/com/android/providers/downloads/DownloadThread.java b/src/com/android/providers/downloads/DownloadThread.java
+index 93f8d65..d38ce51 100644
+--- a/src/com/android/providers/downloads/DownloadThread.java
++++ b/src/com/android/providers/downloads/DownloadThread.java
+@@ -522,6 +522,10 @@ public class DownloadThread implements Runnable {
+             if (mInfo.mStatus == Downloads.Impl.STATUS_CANCELED || mInfo.mDeleted) {
+                 throw new StopRequestException(Downloads.Impl.STATUS_CANCELED, "download canceled");
+             }
++            if (mInfo.mStatus == Downloads.Impl.STATUS_PAUSED_BY_MANUAL) {
++                // user pauses the download by manual, here send exception and stop data transfer.
++                throw new StopRequestException(Downloads.Impl.STATUS_PAUSED_BY_MANUAL, "download paused by manual");
++            }
+         }
+ 
+         // if policy has been changed, trigger connectivity check
+diff --git a/ui/src/com/android/providers/downloads/ui/TrampolineActivity.java b/ui/src/com/android/providers/downloads/ui/TrampolineActivity.java
+index f96c04e..6c5a785 100644
+--- a/ui/src/com/android/providers/downloads/ui/TrampolineActivity.java
++++ b/ui/src/com/android/providers/downloads/ui/TrampolineActivity.java
+@@ -77,14 +77,25 @@ public class TrampolineActivity extends Activity {
+         Log.d(Constants.TAG, "Found " + id + " with status " + status + ", reason " + reason);
+         switch (status) {
+             case DownloadManager.STATUS_PENDING:
+-            case DownloadManager.STATUS_RUNNING:
+                 sendRunningDownloadClickedBroadcast(id);
+                 finish();
+                 break;
+ 
++            case DownloadManager.STATUS_RUNNING:
++                dm.pauseDownload(id);
++                finish();
++                break;
++
+             case DownloadManager.STATUS_PAUSED:
+                 if (reason == DownloadManager.PAUSED_QUEUED_FOR_WIFI) {
+                     PausedDialogFragment.show(getFragmentManager(), id);
++                } else if (reason == DownloadManager.PAUSED_BY_MANUAL) {
++                    dm.resumeDownload(id);
++                    Intent intent = new Intent(Constants.ACTION_RESUME);
++                    intent.setClassName("com.android.providers.downloads",
++                            "com.android.providers.downloads.DownloadReceiver");
++                    sendBroadcast(intent);
++                    finish();
+                 } else {
+                     sendRunningDownloadClickedBroadcast(id);
+                     finish();
+-- 
+1.8.3.2
+
