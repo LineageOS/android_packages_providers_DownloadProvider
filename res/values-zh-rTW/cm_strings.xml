@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="live_folder_drawer_label">下載資料夾</string>
   <string name="live_folder_label">下載</string>
 </resources>
