@@ -15,7 +15,11 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="live_folder_drawer_label">Priečinok pre prevzatia</string>
   <string name="live_folder_label">Prevzatia</string>
+  <string name="download_paused">Pozastavené</string>
+  <string name="download_paused_percent">Pozastavené, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="download_queued_percent">V poradí, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="download_speed_text"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
 </resources>
