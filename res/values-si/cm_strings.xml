@@ -16,7 +16,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="live_folder_drawer_label">下載資料夾</string>
-  <string name="live_folder_label">下載</string>
-  <string name="download_speed_text"><xliff:g id="text">%1$s</xliff:g>，<xliff:g id="size" example="230 kB">%2$s</xliff:g>/秒</string>
+  <string name="live_folder_drawer_label">භාගතකිරීම් ෆෝල්ඩරය</string>
+  <string name="live_folder_label">භාගතකිරීම්</string>
+  <string name="download_paused">විරාම වී</string>
+  <string name="download_paused_percent">විරාම වී, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="download_queued_percent">පෙළ ගැසී, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="download_speed_text"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/තත්</string>
 </resources>
