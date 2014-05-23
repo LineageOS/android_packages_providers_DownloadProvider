@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da0c15f0_76022040",
+        "filename": "ui/src/com/android/providers/downloads/ui/TrampolineActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 435
+      },
+      "writtenOn": "2014-05-23T20:55:14Z",
+      "side": 1,
+      "message": "packages/providers/DownloadProvider/ui/src/com/android/providers/downloads/ui/TrampolineActivity.java:91: duplicate case label\n            case DownloadManager.STATUS_RUNNING:\n            ^",
+      "revId": "b7d657476fd5f8d95e2c15e84f16ee8401b40e5f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_56ff1c34",
+        "filename": "ui/src/com/android/providers/downloads/ui/TrampolineActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 435
+      },
+      "writtenOn": "2014-05-23T20:55:14Z",
+      "side": 1,
+      "message": "packages/providers/DownloadProvider/ui/src/com/android/providers/downloads/ui/TrampolineActivity.java:99: cannot find symbol\nsymbol  : method show(android.app.FragmentManager,long)\nlocation: class com.android.providers.downloads.ui.TrampolineActivity.PausedDialogFragment\n                    PausedDialogFragment.show(getFragmentManager(), id);\n                                        ^",
+      "revId": "b7d657476fd5f8d95e2c15e84f16ee8401b40e5f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
