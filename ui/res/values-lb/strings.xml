@@ -15,7 +15,22 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="download_title_sorted_by_date">Downloads - Zortéiert no Datum</string>
+  <string name="download_title_sorted_by_size">Downloads - Zortéiert no Gréisst</string>
+  <string name="no_downloads">Keng Downloads.</string>
+  <string name="missing_title">&lt;Onbekannt&gt;</string>
+  <string name="button_sort_by_size">Zortéiert no Gréisst</string>
+  <string name="button_sort_by_date">Zortéiert no Datum</string>
+  <string name="download_queued">An der Waardeschläif</string>
+  <string name="download_running">Am Gaang</string>
+  <string name="download_success">Fäerdeg</string>
   <string name="download_no_application_title">Fichier kann net opgemaach ginn</string>
   <string name="remove_download">Ewechhuelen</string>
+  <string name="delete_download">Läschen</string>
+  <string name="keep_queued_download">Behalen</string>
+  <string name="cancel_running_download">Ofbriechen</string>
+  <string name="retry_download">Nach eemol probéieren</string>
+  <string name="deselect_all">Auswiel ophiewen</string>
+  <string name="select_all">Alles auswielen</string>
   <string name="download_share_dialog">Deelen iwwer</string>
 </resources>
