@@ -16,6 +16,16 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <plurals name="duration_seconds">
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> sekunda</item>
+    <item quantity="few"><xliff:g id="count">%d</xliff:g> sekundy</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> sekúnd</item>
+  </plurals>
+  <plurals name="duration_minutes">
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> minúta</item>
+    <item quantity="few"><xliff:g id="count">%d</xliff:g> minúty</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> minút</item>
+  </plurals>
   <plurals name="duration_hours">
     <item quantity="one"><xliff:g id="count">%d</xliff:g> hodina</item>
     <item quantity="few"><xliff:g id="count">%d</xliff:g> hodiny</item>
