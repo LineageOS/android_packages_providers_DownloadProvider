@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_label">Downloads</string>
   <string name="download_title_sorted_by_date">Downloads - Zortéiert no Datum</string>
   <string name="download_title_sorted_by_size">Downloads - Zortéiert no Gréisst</string>
   <string name="no_downloads">Keng Downloads.</string>
@@ -24,6 +25,8 @@
   <string name="download_queued">An der Waardeschläif</string>
   <string name="download_running">Am Gaang</string>
   <string name="download_success">Fäerdeg</string>
+  <string name="dialog_title_queued_body">Fichier an der Waardeschläif</string>
+  <string name="dialog_file_missing_body">Den erofgeluedene Fichier ass net méi do.</string>
   <string name="download_no_application_title">Fichier kann net opgemaach ginn</string>
   <string name="remove_download">Ewechhuelen</string>
   <string name="delete_download">Läschen</string>

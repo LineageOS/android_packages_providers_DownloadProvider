@@ -16,13 +16,39 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_label">دابەزاندن</string>
-  <string name="button_sort_by_size">جۆرکردنە بە قەبارە</string>
+  <string name="download_title_sorted_by_date">داگرتنەکان - ڕیزکراو بە بەروار</string>
+  <string name="download_title_sorted_by_size">داگرتنەکان - ڕیزکراو بە قەبارە</string>
+  <string name="no_downloads">هیچ داگرتنێک نییە.</string>
+  <string name="missing_title">&lt;نەزانراو&gt;</string>
+  <string name="button_sort_by_size">ڕیزکردن بە قەبارە</string>
+  <string name="button_sort_by_date">ڕیزکردن بە بەروار</string>
+  <string name="download_queued">لە نۆرەدایە</string>
+  <string name="download_running">لە کارادایە</string>
+  <string name="download_success">تەواو</string>
+  <string name="download_error">سه‌رکه‌وتوونه‌بوو</string>
+  <string name="dialog_title_not_available">نەیتوانی دایبەزێنێت</string>
+  <string name="dialog_failed_body">دەتەوێ فەیلەکە دووبارە دابەزێنییەوە یان 
+          لە نۆرەدا ئەیسڕیتەوە؟</string>
+  <string name="dialog_title_queued_body">فایل لە نۆرەدایە</string>
+  <string name="dialog_queued_body">ئەم فایلە لە نۆرەدایە بۆ داگرتن لە داهاتوودا کەواتە ئێستا بەر دەست نییە.</string>
+  <string name="dialog_file_missing_body">ناتوانێت فایلی دابەزێنراو بدۆزێتەوە.</string>
+  <string name="dialog_insufficient_space_on_external">نەیتوانی داگرتن تەواو بکات. بۆشایی
+        پێویست لە بیرگەی دەرەکی نییە.</string>
+  <string name="dialog_insufficient_space_on_cache">نەیتوانی داگرتن تەواو بکات. بۆشایی
+        پێویست لە بیرگەی داگرتنی ناوەکی نییە.</string>
+  <string name="dialog_cannot_resume">داگرتن قرتێنرا و ناتوانێت دەست پێ بکاتەوە.</string>
+  <string name="dialog_file_already_exists">ناتوانێت دایبەزێنێت. فایلی مەبەست لەمەو پێش هەیە.
+    </string>
+  <string name="dialog_media_not_found">ناتوانێت دایبەزێنێت. بیرگەی دەرەکی بەر دەست نییە.
+    </string>
   <string name="download_no_application_title">نه‌توانرا په‌ڕگه‌ بکرێته‌وه‌</string>
   <string name="remove_download">سڕینەوە</string>
   <string name="delete_download">سڕینه‌وه‌</string>
+  <string name="keep_queued_download">هێشتنەوە</string>
   <string name="cancel_running_download">هەڵوەشاندنەوە</string>
   <string name="retry_download">دوبارە هەوڵدانەوە</string>
   <string name="deselect_all">دیاری نەکردنی هەموو</string>
   <string name="select_all">دیاریکردنی هەموو</string>
+  <string name="selected_count">دیاریکراون <xliff:g id="number" example="3">%1$d</xliff:g> لە <xliff:g id="total" example="15">%2$d</xliff:g></string>
   <string name="download_share_dialog">به‌شداریپێکردن له‌ ڕێگه‌ی</string>
 </resources>
