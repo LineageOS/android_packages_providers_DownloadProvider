@@ -19,7 +19,7 @@
   <string name="live_folder_drawer_label">Фолдер преузимања</string>
   <string name="live_folder_label">Преузимања</string>
   <string name="download_paused">Паузирано</string>
-  <string name="download_paused_percent">Паузирано, <xliff:g id="број">%d</xliff:g><xliff:g id="процената">%%</xliff:g></string>
-  <string name="download_queued_percent">Уређено, <xliff:g id="број">%d</xliff:g><xliff:g id="процената">%%</xliff:g></string>
-  <string name="download_speed_text"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="величина" example="230 kB">%2$s</xliff:g>/s</string>
+  <string name="download_paused_percent">Паузирано, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="download_queued_percent">Уређено, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="download_speed_text"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/с</string>
 </resources>

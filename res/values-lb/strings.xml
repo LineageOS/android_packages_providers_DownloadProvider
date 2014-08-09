@@ -15,7 +15,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_label">Download-Manager</string>
+  <string name="permlab_downloadManager">Zougrëff op den Download-Manager.</string>
+  <string name="permlab_downloadCompletedIntent">Download-Notifikatioune schécken.</string>
   <string name="download_unknown_title">&lt;Ouni Titel&gt;</string>
+  <string name="notification_download_failed">Eroflueden net erfollegräich.</string>
   <string name="download_percent"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <string name="root_downloads">Downloads</string>
   <string name="download_queued">An der Waardeschläif</string>

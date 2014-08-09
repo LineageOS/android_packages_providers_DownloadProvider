@@ -25,8 +25,17 @@
   <string name="download_queued">An der Waardeschläif</string>
   <string name="download_running">Am Gaang</string>
   <string name="download_success">Fäerdeg</string>
+  <string name="download_error">Net erfollegräich</string>
+  <string name="dialog_title_not_available">Gouf net erofgelueden</string>
+  <string name="dialog_failed_body">Wëlls du méi spéit nees versichen de Fichier erofzelueden oder en aus der Waardeschläif läschen?</string>
   <string name="dialog_title_queued_body">Fichier an der Waardeschläif</string>
+  <string name="dialog_queued_body">Dëse Fichier ass an der Waardeschläif fir méi spéit erofgelueden ze ginn an ass dofir nach net disponibel.</string>
   <string name="dialog_file_missing_body">Den erofgeluedene Fichier ass net méi do.</string>
+  <string name="dialog_insufficient_space_on_external">D\'Erofluede kann net fäerdeggestallt ginn. Et ass net genuch Plaz um externe Späicher.</string>
+  <string name="dialog_insufficient_space_on_cache">D\'Erofluede kann net fäerdeggestallt ginn. Et ass net genuch Plaz um interne Späicher.</string>
+  <string name="dialog_cannot_resume">Den Download ass ofgebrach ginn a kann net nees weidergefouert ginn.</string>
+  <string name="dialog_file_already_exists">Kann net eroflueden. Den Destinatiounsfichier existéiert schon.</string>
+  <string name="dialog_media_not_found">Kann net eroflueden. Dat externt Medium ass net disponibel.</string>
   <string name="download_no_application_title">Fichier kann net opgemaach ginn</string>
   <string name="remove_download">Ewechhuelen</string>
   <string name="delete_download">Läschen</string>
@@ -35,5 +44,6 @@
   <string name="retry_download">Nach eemol probéieren</string>
   <string name="deselect_all">Auswiel ophiewen</string>
   <string name="select_all">Alles auswielen</string>
+  <string name="selected_count"><xliff:g id="number" example="3">%1$d</xliff:g> vu(n) <xliff:g id="total" example="15">%2$d</xliff:g> ausgewielt</string>
   <string name="download_share_dialog">Deelen iwwer</string>
 </resources>
