@@ -16,10 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="live_folder_drawer_label">Cartella download</string>
-  <string name="live_folder_label">Download</string>
-  <string name="download_paused">In pausa</string>
-  <string name="download_paused_percent">In pausa, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
-  <string name="download_queued_percent">In coda, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
-  <string name="download_speed_text"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
+  <string name="live_folder_drawer_label">Yükləmə qovluğu</string>
 </resources>
