@@ -713,7 +713,7 @@ public final class DownloadProvider extends ContentProvider {
 
         final String phoneStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
         String sdCardStoragePath = null;
-        if (StorageManager.isSecondStorageSupported()) {
+        if (StorageManager.isSecondStorageSupported(getContext())) {
             sdCardStoragePath = StorageManager.getExternalStorageDirectory(getContext());
         }
         if (!path.startsWith(phoneStoragePath)
