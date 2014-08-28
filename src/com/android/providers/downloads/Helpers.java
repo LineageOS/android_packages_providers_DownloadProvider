@@ -92,7 +92,7 @@ public class Helpers {
             path = chooseFilename(url, hint, contentDisposition, contentLocation,
                                              destination);
         }
-        storageManager.verifySpace(destination, path, contentLength);
+        storageManager.verifySpace(context, destination, path, contentLength);
         if (DownloadDrmHelper.isDrmConvertNeeded(mimeType)) {
             path = DownloadDrmHelper.modifyDrmFwLockFileExtension(path);
         }
@@ -382,7 +382,7 @@ public class Helpers {
         return filename.startsWith(Environment.getDownloadCacheDirectory().toString())
                 || filename.startsWith(downloadsDataDir.toString())
                 || filename.startsWith(Environment.getExternalStorageDirectory().toString())
-                || (StorageManager.isSecondStorageSupported() && filename.startsWith(StorageManager
+                || (StorageManager.isSecondStorageSupported(context) && filename.startsWith(StorageManager
                         .getExternalStorageDirectory(context)));
     }
 
