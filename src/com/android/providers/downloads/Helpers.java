@@ -382,7 +382,7 @@ public class Helpers {
         return filename.startsWith(Environment.getDownloadCacheDirectory().toString())
                 || filename.startsWith(downloadsDataDir.toString())
                 || filename.startsWith(Environment.getExternalStorageDirectory().toString())
-                || (StorageManager.isSecondStorageSupported() && filename.startsWith(StorageManager
+                || (StorageManager.isSecondStorageSupported(context) && filename.startsWith(StorageManager
                         .getExternalStorageDirectory(context)));
     }
 
