@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_33dd5443",
+        "filename": "src/com/android/providers/downloads/StorageManager.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2014-08-28T04:54:11Z",
+      "side": 1,
+      "message": "Maybe we should do this via overlay?",
+      "revId": "f668ad5ed0b6885052118725f360de5c68c96f36",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
