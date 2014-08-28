@@ -175,8 +175,10 @@ public class DownloadNotifier {
 
             // Show relevant icon
             if (type == TYPE_ACTIVE) {
-                if (hasPausedStatus || hasErrorStatus) {
+                if (hasPausedStatus) {
                     builder.setSmallIcon(R.drawable.download_pause);
+                } else if (hasErrorStatus) {
+                    builder.setSmallIcon(R.drawable.ic_stat_download_error);
                 } else {
                     builder.setSmallIcon(android.R.drawable.stat_sys_download);
                 }
