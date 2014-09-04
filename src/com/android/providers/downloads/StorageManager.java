@@ -508,7 +508,7 @@ class StorageManager {
                         .getSystemService(Context.STORAGE_SERVICE);
         StorageVolume[] volumes = storageManager.getVolumeList();
         for (int i = 0; i < volumes.length; i++) {
-            if (volumes[i].isRemovable() && volumes[i].allowMassStorage()) {
+            if (!volumes[i].isPrimary() && volumes[i].allowMassStorage()) {
                 sdCardDir = volumes[i].getPath();
                 break;
             }
