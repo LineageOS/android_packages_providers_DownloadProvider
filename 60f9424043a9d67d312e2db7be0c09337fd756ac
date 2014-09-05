@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_016d4d98",
+        "filename": "src/com/android/providers/downloads/StorageManager.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 501,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-09-05T07:38:27Z",
+      "side": 1,
+      "message": "The code is duplicate now. I would suggest nuke all this code and replace it with:\n\nreturn getExternalStorageDirectory(context) !\u003d null;",
+      "revId": "60f9424043a9d67d312e2db7be0c09337fd756ac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_a16f3991",
+        "filename": "src/com/android/providers/downloads/StorageManager.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-09-05T07:38:27Z",
+      "side": 1,
+      "message": "For better clarity, i would suggest don\u0027t use the sdCardDir variable and return directly the path when is found:\n\n\n        android.os.storage.StorageManager storageManager \u003d\n                (android.os.storage.StorageManager) context\n                        .getSystemService(Context.STORAGE_SERVICE);\n        StorageVolume[] volumes \u003d storageManager.getVolumeList();\n        for (int i \u003d 0; i \u003c volumes.length; i++) {\n            if (!volumes[i].isPrimary() \u0026\u0026 volumes[i].allowMassStorage()) {\n                return volumes[i].getPath();\n            }\n        }\n        return null;",
+      "revId": "60f9424043a9d67d312e2db7be0c09337fd756ac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
