@@ -28,6 +28,7 @@ import android.webkit.MimeTypeMap;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -92,7 +93,7 @@ public class Helpers {
             path = chooseFilename(url, hint, contentDisposition, contentLocation,
                                              destination);
         }
-        storageManager.verifySpace(context, destination, path, contentLength);
+        storageManager.verifySpace(destination, path, contentLength);
         if (DownloadDrmHelper.isDrmConvertNeeded(mimeType)) {
             path = DownloadDrmHelper.modifyDrmFwLockFileExtension(path);
         }
@@ -351,8 +352,9 @@ public class Helpers {
     /**
      * Checks whether the filename looks legitimate
      */
-    static boolean isFilenameValid(String filename, File downloadsDataDir) {
+    static boolean isFilenameValid(Context context, String filename, File downloadsDataDir) {
         final String[] whitelist;
+        final List<String> secondaryStoragePaths = StorageManager.getSecondaryStoragePaths(context);
         try {
             filename = new File(filename).getCanonicalPath();
             whitelist = new String[] {
@@ -371,19 +373,13 @@ public class Helpers {
             }
         }
 
-        return false;
-    }
+        for (String test : secondaryStoragePaths) {
+            if (filename.startsWith(test)) {
+                return true;
+            }
+        }
 
-    /**
-     * Checks whether the filename looks legitimate
-     */
-    static boolean isFilenameValid(Context context, String filename, File downloadsDataDir) {
-        filename = filename.replaceFirst("/+", "/"); // normalize leading slashes
-        return filename.startsWith(Environment.getDownloadCacheDirectory().toString())
-                || filename.startsWith(downloadsDataDir.toString())
-                || filename.startsWith(Environment.getExternalStorageDirectory().toString())
-                || (StorageManager.isSecondStorageSupported(context)
-                && filename.startsWith(StorageManager.getExternalStorageDirectory(context)));
+        return false;
     }
 
     /**

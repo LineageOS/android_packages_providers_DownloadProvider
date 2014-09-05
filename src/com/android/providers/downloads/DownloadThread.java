@@ -583,7 +583,7 @@ public class DownloadThread implements Runnable {
      */
     private void writeDataToDestination(State state, byte[] data, int bytesRead, OutputStream out)
             throws StopRequestException {
-        mStorageManager.verifySpaceBeforeWritingToFile(mContext,
+        mStorageManager.verifySpaceBeforeWritingToFile(
                 mInfo.mDestination, state.mFilename, bytesRead);
 
         boolean forceVerified = false;
@@ -595,8 +595,7 @@ public class DownloadThread implements Runnable {
                 // TODO: better differentiate between DRM and disk failures
                 if (!forceVerified) {
                     // couldn't write to file. are we out of space? check.
-                    mStorageManager.verifySpace(mContext, mInfo.mDestination,
-                            state.mFilename, bytesRead);
+                    mStorageManager.verifySpace(mInfo.mDestination, state.mFilename, bytesRead);
                     forceVerified = true;
                 } else {
                     throw new StopRequestException(Downloads.Impl.STATUS_FILE_ERROR,
