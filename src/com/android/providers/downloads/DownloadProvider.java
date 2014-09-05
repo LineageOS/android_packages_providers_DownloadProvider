@@ -710,15 +710,26 @@ public final class DownloadProvider extends ContentProvider {
         if (path == null) {
             throw new IllegalArgumentException("Invalid file URI: " + uri);
         }
-
-        final String phoneStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
-        String sdCardStoragePath = null;
-        if (StorageManager.isSecondStorageSupported(getContext())) {
-            sdCardStoragePath = StorageManager.getExternalStorageDirectory(getContext());
-        }
-        if (!path.startsWith(phoneStoragePath)
-                && !(sdCardStoragePath != null && path.startsWith(sdCardStoragePath))) {
-            throw new SecurityException("Destination must be on external storage: " + uri);
+        try {
+            boolean isValidExternalPath = false;
+            final String canonicalPath = new File(path).getCanonicalPath();
+            final String externalPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+            final List<String> secondaryPaths = StorageManager.getSecondaryStoragePaths(getContext());
+            if (canonicalPath.startsWith(externalPath)) {
+                isValidExternalPath = true;
+            } else {
+                for (String secondaryPath : secondaryPaths) {
+                    if (canonicalPath.startsWith(secondaryPath)) {
+                        isValidExternalPath = true;
+                        break;
+                    }
+                }
+            }
+            if (!isValidExternalPath) {
+                throw new SecurityException("Destination must be on external storage: " + uri);
+            }
+        } catch (IOException e) {
+            throw new SecurityException("Problem resolving path: " + uri);
         }
     }
 
