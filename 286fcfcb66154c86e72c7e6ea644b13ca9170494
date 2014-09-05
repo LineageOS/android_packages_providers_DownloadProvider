@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_ef7c7d22",
+        "filename": "src/com/android/providers/downloads/StorageManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 497,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2014-09-05T05:52:48Z",
+      "side": 1,
+      "message": "Won\u0027t this list the first removable volume that allows mass storage always?",
+      "revId": "286fcfcb66154c86e72c7e6ea644b13ca9170494",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
