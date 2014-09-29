@@ -29,7 +29,7 @@
   <string name="dialog_title_not_available">نەیتوانی دایبەزێنێت</string>
   <string name="dialog_failed_body">دەتەوێ فەیلەکە دووبارە دابەزێنییەوە یان 
           لە نۆرەدا ئەیسڕیتەوە؟</string>
-  <string name="dialog_title_queued_body">فایل لە نۆرەدایە</string>
+  <string name="dialog_title_queued_body">پەڕگە لە نۆرەدایە</string>
   <string name="dialog_queued_body">ئەم فایلە لە نۆرەدایە بۆ داگرتن لە داهاتوودا کەواتە ئێستا بەر دەست نییە.</string>
   <string name="dialog_file_missing_body">ناتوانێت فایلی دابەزێنراو بدۆزێتەوە.</string>
   <string name="dialog_insufficient_space_on_external">نەیتوانی داگرتن تەواو بکات. بۆشایی

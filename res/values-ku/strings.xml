@@ -52,7 +52,7 @@
     سیستەم</string>
   <string name="permdesc_accessAllDownloads">ڕێگە بە نەرمەواڵاکە بدە بۆ بینین و
     دەستکاری کردنی هەموو ئەو داگرتنانەی کە بە نەرمەواڵایەکی سیستەم ڕێکخراون.</string>
-  <string name="download_unknown_title">وlt;بێناونیشانوgt;</string>
+  <string name="download_unknown_title">&lt;بێ ناونیشان&gt;</string>
   <string name="notification_download_complete">داگرتن تەواو بوو.</string>
   <string name="notification_download_failed">داگرتن سەرکەوتوو نەبوو.</string>
   <string name="notification_need_wifi_for_size">قەبارەی داگرتن پێویستیی ئەکات بۆ Wi-Fi.</string>
@@ -75,12 +75,12 @@
   <string name="button_start_now">ئێستا ده‌ست پێبکه‌</string>
   <string name="download_percent"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <plurals name="notif_summary_active">
-    <item quantity="one">1 فایل دائەبەزێنرێت</item>
-    <item quantity="other"><xliff:g id="number">%d</xliff:g> فایل دائەبەزێنرێن</item>
+    <item quantity="one">1 پەڕگە دائەبەزێنرێت</item>
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە دائەبەزێنرێن</item>
   </plurals>
   <plurals name="notif_summary_waiting">
-    <item quantity="one">1 فایل چاوەڕوانە</item>
-    <item quantity="other"><xliff:g id="number">%d</xliff:g> فایل چاوەڕوانن</item>
+    <item quantity="one">1 پەڕگە چاوەڕوانە</item>
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە چاوەڕوانن</item>
   </plurals>
   <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> چەپ</string>
   <string name="download_no_application_title">نه‌توانرا په‌ڕگه‌ بکرێته‌وه‌</string>
