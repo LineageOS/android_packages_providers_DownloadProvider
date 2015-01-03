@@ -16,21 +16,21 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_label">Download-Manager</string>
-  <string name="permlab_downloadManager">Zougrëff op den Download-Manager.</string>
-  <string name="permdesc_downloadManager">Erméiglecht der App den Zougrëff op den Download-Manager fir Fichieren erofzelueden. Dës Funktioun ka vu béisaartegen Applikatiounen dozou benotzt ginn, d\'Erofluetvirgäng z\'ënnerbriechen an op privat Daten zouzegräifen.</string>
-  <string name="permlab_downloadManagerAdvanced">Erweidert Downloadmanager-Funktiounen.</string>
-  <string name="permdesc_downloadManagerAdvanced">Erméiglecht der App den Zougrëff op déi erweidert Funktioune vum Download-Manager. Béisaarteg Applikatioune kënnen dozou benotzt ginn, d\'Erofluetvirgäng z\'ënnerbriechen an op privat Daten zouzegräifen.</string>
-  <string name="permlab_downloadCompletedIntent">Download-Notifikatioune schécken.</string>
-  <string name="permdesc_downloadCompletedIntent">Erméiglecht der App, Notifikatiounen iwwer ofgeschloss Downloads ze schécken. Béisaarteg Appe kënnen dat benotze fir aner Appen déi Fichieren eroflueden auszetricksen.</string>
+  <string name="permlab_downloadManager">Zougrëff op den Download-Manager</string>
+  <string name="permdesc_downloadManager">Erlaabt der App den Zougrëff op den Download-Manager fir Fichieren erofzelueden. Dës Funktioun ka vu béisaartegen Applikatiounen dozou benotzt ginn, d\'Erofluetvirgäng z\'ënnerbriechen an op privat Daten zouzegräifen.</string>
+  <string name="permlab_downloadManagerAdvanced">Erweidert Downloadmanager-Funktiounen</string>
+  <string name="permdesc_downloadManagerAdvanced">Erlaabt der App den Zougrëff op déi erweidert Funktioune vum Download-Manager. Béisaarteg Applikatioune kënnen dozou benotzt ginn, d\'Erofluetvirgäng z\'ënnerbriechen an op privat Daten zouzegräifen.</string>
+  <string name="permlab_downloadCompletedIntent">Download-Notifikatioune schécken</string>
+  <string name="permdesc_downloadCompletedIntent">Erlaabt der App, Notifikatiounen iwwer ofgeschloss Downloads ze schécken. Béisaarteg Appe kënnen dat benotze fir aner Appen déi Fichieren eroflueden auszetricksen.</string>
   <string name="permlab_seeAllExternal" product="nosdcard">All d\'Downloads um USB-Späicher uweisen</string>
   <string name="permlab_seeAllExternal" product="default">All d\'Downloads op der SD-Kaart uweisen</string>
-  <string name="permdesc_seeAllExternal">Erméiglecht der App all déi erofgeluede Fichieren op der SD-Kaart ze gesinn, egal vu wéi enger App s\'erofgeluede goufen.</string>
+  <string name="permdesc_seeAllExternal">Erlaabt der App, all déi erofgeluede Fichieren op der SD-Kaart ze gesinn, egal vu wéi enger App s\'erofgeluede goufen.</string>
   <string name="permlab_downloadCacheNonPurgeable">Plaz am Download-Tëschespäicher reservéieren</string>
-  <string name="permdesc_downloadCacheNonPurgeable">Erméiglecht der App, Fichieren an en Tëschespäicher erofzelueden, deen net automatesch geläscht ka ginn, wann den Download-Manager méi Plaz brauch.</string>
+  <string name="permdesc_downloadCacheNonPurgeable">Erlaabt der App, Fichieren an en Tëschespäicher erofzelueden, deen net automatesch geläscht ka ginn, wann den Download-Manager méi Plaz brauch.</string>
   <string name="permlab_downloadWithoutNotification">Fichieren ouni Notifikatioun eroflueden</string>
-  <string name="permdesc_downloadWithoutNotification">Erméiglecht der App Fichieren duerch den Download-Manger erofzelueden ouni datt dem Benotzer eng Notifikatioun ugewise gëtt.</string>
+  <string name="permdesc_downloadWithoutNotification">Erlaabt der App, Fichieren duerch den Download-Manger erofzelueden ouni datt dem Benotzer eng Notifikatioun ugewise gëtt.</string>
   <string name="permlab_accessAllDownloads">Op all d\'System-Downloads zougräifen</string>
-  <string name="permdesc_accessAllDownloads">Erméiglecht der App all déi erofgeluede Fichieren ze kucken an z\'änneren, egal vu wéi enger App am System se gestart goufen.</string>
+  <string name="permdesc_accessAllDownloads">Erlaabt der App, all déi erofgeluede Fichieren ze kucken an z\'änneren, egal vu wéi enger App am System se gestart goufen.</string>
   <string name="download_unknown_title">&lt;Ouni Titel&gt;</string>
   <string name="notification_download_complete">Download ofgeschloss.</string>
   <string name="notification_download_failed">Eroflueden net erfollegräich.</string>
