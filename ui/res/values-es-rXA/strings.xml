@@ -42,9 +42,9 @@
   <string name="delete_download">Desaniciar</string>
   <string name="keep_queued_download">Caltener</string>
   <string name="cancel_running_download">Encaboxar</string>
-  <string name="retry_download">Repetir</string>
+  <string name="retry_download">Reintentar</string>
   <string name="deselect_all">Desmarcalo too</string>
-  <string name="select_all">Esbillar too</string>
+  <string name="select_all">Esbillalo too</string>
   <string name="selected_count">Esbillasti <xliff:g id="NUMBER">%1$d</xliff:g> de <xliff:g id="TOTAL">%2$d</xliff:g></string>
   <string name="download_share_dialog">Compartir a traviés de</string>
 </resources>

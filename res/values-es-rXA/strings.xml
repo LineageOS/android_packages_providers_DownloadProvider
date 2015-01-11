@@ -46,7 +46,7 @@
   <string name="button_queue_for_wifi">Cola</string>
   <string name="button_cancel_download">Encaboxar</string>
   <string name="button_start_now">Aniciar agora</string>
-  <string name="download_percent"><xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g></string>
+  <string name="download_percent"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <plurals name="notif_summary_active">
     <item quantity="one">1 ficheru descargándose</item>
     <item quantity="other"><xliff:g id="number">%d</xliff:g> ficheros descargándose</item>
