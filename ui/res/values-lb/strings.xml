@@ -41,7 +41,7 @@
   <string name="delete_download">Läschen</string>
   <string name="keep_queued_download">Behalen</string>
   <string name="cancel_running_download">Ofbriechen</string>
-  <string name="retry_download">Nach eemol probéieren</string>
+  <string name="retry_download">Nees probéieren</string>
   <string name="deselect_all">Auswiel ophiewen</string>
   <string name="select_all">Alles auswielen</string>
   <string name="selected_count"><xliff:g id="number" example="3">%1$d</xliff:g> vu(n) <xliff:g id="total" example="15">%2$d</xliff:g> ausgewielt</string>
