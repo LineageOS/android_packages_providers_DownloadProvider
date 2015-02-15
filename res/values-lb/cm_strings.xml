@@ -20,6 +20,6 @@
   <string name="live_folder_label">Downloads</string>
   <string name="download_paused">Pauséiert</string>
   <string name="download_paused_percent">Pauséiert, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
-  <string name="download_queued_percent">An der Waardeschläif, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+  <string name="download_queued_percent">An der Waardeschlaang, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <string name="download_speed_text"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
 </resources>

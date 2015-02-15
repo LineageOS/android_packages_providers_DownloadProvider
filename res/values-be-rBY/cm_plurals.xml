@@ -17,15 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="duration_seconds">
-    <item quantity="one"><xliff:g id="count">%d</xliff:g> seg</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> segs</item>
-  </plurals>
-  <plurals name="duration_minutes">
-    <item quantity="one"><xliff:g id="count">%d</xliff:g> m</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> m</item>
-  </plurals>
-  <plurals name="duration_hours">
-    <item quantity="one"><xliff:g id="count">%d</xliff:g> h</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> h</item>
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> секунда</item>
+    <item quantity="few"><xliff:g id="count">%d</xliff:g> секунды</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> секунд</item>
   </plurals>
 </resources>
