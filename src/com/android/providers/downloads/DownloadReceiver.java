@@ -87,7 +87,8 @@ public class DownloadReceiver extends BroadcastReceiver {
                 }
             });
 
-        } else if (Constants.ACTION_RETRY.equals(action)) {
+        } else if (action.equals(Constants.ACTION_RETRY) ||
+                       action.equals(Constants.ACTION_RESUME)) {
             startService(context);
 
         } else if (Constants.ACTION_OPEN.equals(action)

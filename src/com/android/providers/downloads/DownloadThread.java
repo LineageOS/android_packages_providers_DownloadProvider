@@ -103,6 +103,21 @@ public class DownloadThread implements Runnable {
     private final DownloadNotifier mNotifier;
 
     private final long mId;
+    private volatile boolean mPolicyDirty;
+
+    // Add for carrier feature - download breakpoint continuing.
+    // Support continuing download after the download is broken
+    // although HTTP Server doesn't contain etag in its response.
+    private final static String QRD_ETAG = "qrd_magic_etag";
+
+    public DownloadThread(Context context, SystemFacade systemFacade, DownloadInfo info,
+            StorageManager storageManager, DownloadNotifier notifier) {
+        mContext = context;
+        mSystemFacade = systemFacade;
+        mInfo = info;
+        mStorageManager = storageManager;
+        mNotifier = notifier;
+    }
 
     /**
      * Info object that should be treated as read-only. Any potentially mutated
@@ -655,6 +670,11 @@ public class DownloadThread implements Runnable {
             if (mInfo.mStatus == Downloads.Impl.STATUS_CANCELED || mInfo.mDeleted) {
                 throw new StopRequestException(Downloads.Impl.STATUS_CANCELED, "download canceled");
             }
+
+            if (mInfo.mStatus == Downloads.Impl.STATUS_PAUSED_BY_MANUAL) {
+                // user pauses the download by manual, here send exception and stop data transfer.
+                throw new StopRequestException(Downloads.Impl.STATUS_PAUSED_BY_MANUAL, "download paused by manual");
+            }
         }
 
         // if policy has been changed, trigger connectivity check
@@ -727,6 +747,12 @@ public class DownloadThread implements Runnable {
             mInfoDelta.mMimeType = Intent.normalizeMimeType(conn.getContentType());
         }
 
+       state.mHeaderETag = conn.getHeaderField("ETag");
+
+        if (state.mHeaderETag == null) {
+            state.mHeaderETag = QRD_ETAG;
+        }
+
         final String transferEncoding = conn.getHeaderField("Transfer-Encoding");
         if (transferEncoding == null) {
             mInfoDelta.mTotalBytes = getHeaderFieldLong(conn, "Content-Length", -1);
@@ -775,9 +801,16 @@ public class DownloadThread implements Runnable {
         // easily resume partial downloads.
         conn.setRequestProperty("Accept-Encoding", "identity");
 
+
         if (resuming) {
             if (mInfoDelta.mETag != null) {
                 conn.addRequestProperty("If-Match", mInfoDelta.mETag);
+        }
+        if (state.mContinuingDownload) {
+            if (state.mHeaderETag != null) {
+                if (!state.mHeaderETag.equals(QRD_ETAG)) {
+                    conn.addRequestProperty("If-Match", state.mHeaderETag);
+                }
             }
             conn.addRequestProperty("Range", "bytes=" + mInfoDelta.mCurrentBytes + "-");
         }
