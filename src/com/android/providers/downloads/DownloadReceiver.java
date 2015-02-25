@@ -76,6 +76,7 @@ public class DownloadReceiver extends BroadcastReceiver {
             if (info != null && info.isConnected()) {
                 startService(context);
             }
+<<<<<<< HEAD
 
         } else if (Intent.ACTION_UID_REMOVED.equals(action)) {
             final PendingResult result = goAsync();
@@ -88,6 +89,10 @@ public class DownloadReceiver extends BroadcastReceiver {
             });
 
         } else if (Constants.ACTION_RETRY.equals(action)) {
+=======
+        } else if (action.equals(Constants.ACTION_RETRY) ||
+                       action.equals(Constants.ACTION_RESUME)) {
+>>>>>>> ded2da1... DownloadProvider: add to support pause/resume download by manual
             startService(context);
 
         } else if (Constants.ACTION_OPEN.equals(action)
