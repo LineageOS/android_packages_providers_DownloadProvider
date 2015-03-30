@@ -39,7 +39,7 @@
   <string name="wifi_required_title">Download ze grouss fir d\'Provider-Netzwierk</string>
   <string name="wifi_required_body">Du muss WLAN benotze fir dëse Fichier vu(n) <xliff:g id="size" example="12.3KB">%s</xliff:g> erofzelueden. \n\nDréck <xliff:g id="queue_text" example="Queue">%s</xliff:g> fir de Fichier erofzeluede wann s du déi nächst Kéier mat engem WLAN-Netzwierk connectéiert bass.</string>
   <string name="wifi_recommended_title">An d\'Waardeschläif fir spéider setzen?</string>
-  <string name="wifi_recommended_body">D\'Erofluede vum Fichier vu(n) <xliff:g id="size" example="12.3KB">%s</xliff:g> kéint deng Akkulafzäit verkierzen an/oder däin Dateverbrauch excessiv steigeren, wat jee no Tariff zu héije Käschte bei dengem mobilen Provider kéint féieren.\n\n Dréck <xliff:g id="queue_text" example="Queue">%s</xliff:g> fir de Fichier erofzeluede wann s du déi nächst Kéier mat engem WLAN-Netzwierk connectéiert bass.</string>
+  <string name="wifi_recommended_body">D\'Erofluede vum Fichier vu(n) <xliff:g id="size" example="12.3KB">%s</xliff:g> kéint deng Akkulafzäit verkierzen an/oder däin Dateverbrauch excessiv steigeren, wat jee no Tariff zu héije Käschte bei dengem mobile Provider kéint féieren.\n\n Dréck <xliff:g id="queue_text" example="Queue">%s</xliff:g> fir de Fichier erofzeluede wann s du déi nächst Kéier mat engem WLAN-Netzwierk connectéiert bass.</string>
   <string name="button_queue_for_wifi">Waardeschläif</string>
   <string name="button_cancel_download">Ofbriechen</string>
   <string name="button_start_now">Elo starten</string>
