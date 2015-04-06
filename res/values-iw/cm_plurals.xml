@@ -17,15 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="duration_seconds">
-    <item quantity="one">שנייה אחת</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> שניות</item>
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> שנ\'</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> שנ\'</item>
   </plurals>
   <plurals name="duration_minutes">
-    <item quantity="one">דקה אחת</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> דקות</item>
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> דק\'</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> דק\'</item>
   </plurals>
   <plurals name="duration_hours">
-    <item quantity="one">שעה אחת</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> שעות</item>
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> ש\'</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> ש\'</item>
   </plurals>
 </resources>
