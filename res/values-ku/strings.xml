@@ -73,7 +73,6 @@
   <string name="button_queue_for_wifi">نۆرە</string>
   <string name="button_cancel_download">هەڵوەشاندنەوە</string>
   <string name="button_start_now">ئێستا ده‌ست پێ بکه‌</string>
-  <string name="download_percent"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <plurals name="notif_summary_active">
     <item quantity="one">1 پەڕگە دائەبەزێنرێت</item>
     <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە دائەبەزێنرێن</item>
@@ -88,5 +87,4 @@
   <string name="download_queued">لە نۆرەدایە</string>
   <string name="download_running">لە کارادایە</string>
   <string name="download_error">سه‌رکه‌وتوونه‌بوو</string>
-  <string name="download_running_percent">لە کارادایە, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
 </resources>

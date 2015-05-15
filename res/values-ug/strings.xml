@@ -48,5 +48,4 @@
   <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> قالدى</string>
   <string name="download_queued">قاتاردا</string>
   <string name="download_running">داۋاملىشىۋاتىدۇ</string>
-  <string name="download_running_percent">داۋاملىشىۋاتىدۇ، <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
 </resources>

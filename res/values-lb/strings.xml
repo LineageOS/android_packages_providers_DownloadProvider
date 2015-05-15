@@ -43,7 +43,6 @@
   <string name="button_queue_for_wifi">Waardeschläif</string>
   <string name="button_cancel_download">Ofbriechen</string>
   <string name="button_start_now">Elo starten</string>
-  <string name="download_percent"><xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <plurals name="notif_summary_active">
     <item quantity="one">1 Fichier gëtt erofgelueden</item>
     <item quantity="other"><xliff:g id="number">%d</xliff:g> Fichiere ginn erofgelueden</item>
@@ -58,5 +57,4 @@
   <string name="download_queued">An der Waardeschläif</string>
   <string name="download_running">Am Gaang</string>
   <string name="download_error">Net erfollegräich</string>
-  <string name="download_running_percent">Am Gaang, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
 </resources>
