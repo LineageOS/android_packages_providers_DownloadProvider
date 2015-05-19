@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_1dc75413",
+        "filename": "src/com/android/providers/downloads/DownloadThread.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 9444
+      },
+      "writtenOn": "2015-05-19T11:00:24Z",
+      "side": 1,
+      "message": "nit: conditionals with side effects (in this case an update to the db) is smelly and harder to read.\nsuggestion: \n  int numRowsUpdated \u003d update(...)\n  if (numRowsUpdated \u003d\u003d 0) {\n     throw new StopRequestException(....)\n  }",
+      "revId": "78ffbd1e45f1718dbd41e713c91cde7940c09c98",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
