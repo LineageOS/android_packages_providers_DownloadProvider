@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da4df55a_51f1f4cc",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 9813
+      },
+      "writtenOn": "2015-06-09T11:05:04Z",
+      "side": 1,
+      "message": "fwiw, signatureOrSystem is deprecated\nuse signature|system canonicalization.",
+      "revId": "bd74ce5912a7b5b409e0914bd64cb25657161152",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
