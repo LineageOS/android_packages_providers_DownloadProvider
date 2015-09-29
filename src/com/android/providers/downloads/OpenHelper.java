@@ -32,6 +32,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.Downloads.Impl.RequestHeaders;
 import android.util.Log;
+import android.webkit.MimeTypeMap;
 
 import java.io.File;
 
@@ -75,6 +76,14 @@ public class OpenHelper {
             final Uri localUri = getCursorUri(cursor, COLUMN_LOCAL_URI);
             final File file = getCursorFile(cursor, COLUMN_LOCAL_FILENAME);
             String mimeType = getCursorString(cursor, COLUMN_MEDIA_TYPE);
+            if ("application/octet-stream".equals(mimeType)) {
+                MimeTypeMap m = MimeTypeMap.getSingleton();
+                String guess = m.getMimeTypeFromExtension(
+                        m.getFileExtensionFromUrl(localUri.toString()));
+                if (guess != null) {
+                    mimeType = guess;
+                }
+            }
             mimeType = DownloadDrmHelper.getOriginalMimeType(context, file, mimeType);
 
             final Intent intent = new Intent(Intent.ACTION_VIEW);
