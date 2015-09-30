@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9f436f4f_52939250",
+        "filename": "src/com/android/providers/downloads/OpenHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-09-30T04:08:07Z",
+      "side": 1,
+      "message": "Unfortunately, not that I found -- see the code below where they do something similar -- when in Rome.",
+      "parentUuid": "9f436f4f_52a5d2b4",
+      "revId": "05ddd7d61eeba138cb40b5e2d96e0582a818e724",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f436f4f_72a0d6a6",
         "filename": "src/com/android/providers/downloads/OpenHelper.java",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-30T03:58:49Z",
       "side": 1,
       "message": "100 char",
+      "revId": "05ddd7d61eeba138cb40b5e2d96e0582a818e724",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f436f4f_32980e69",
+        "filename": "src/com/android/providers/downloads/OpenHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 13760
+      },
+      "writtenOn": "2015-09-30T04:08:07Z",
+      "side": 1,
+      "message": "oops.",
+      "parentUuid": "9f436f4f_72a0d6a6",
       "revId": "05ddd7d61eeba138cb40b5e2d96e0582a818e724",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
