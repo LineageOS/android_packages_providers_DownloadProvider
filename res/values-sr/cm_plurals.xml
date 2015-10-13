@@ -19,19 +19,16 @@
   <plurals name="duration_seconds">
     <item quantity="one"><xliff:g id="count">%d</xliff:g> секунда</item>
     <item quantity="few"><xliff:g id="count">%d</xliff:g> секунде</item>
-    <item quantity="many"><xliff:g id="count">%d</xliff:g> секунди</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> секунде</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> секунди</item>
   </plurals>
   <plurals name="duration_minutes">
     <item quantity="one"><xliff:g id="count">%d</xliff:g> минут</item>
     <item quantity="few"><xliff:g id="count">%d</xliff:g> минута</item>
-    <item quantity="many"><xliff:g id="count">%d</xliff:g> минута</item>
     <item quantity="other"><xliff:g id="count">%d</xliff:g> минута</item>
   </plurals>
   <plurals name="duration_hours">
     <item quantity="one"><xliff:g id="count">%d</xliff:g> сат</item>
     <item quantity="few"><xliff:g id="count">%d</xliff:g> сата</item>
-    <item quantity="many"><xliff:g id="count">%d</xliff:g> сати</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> сата</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> сати</item>
   </plurals>
 </resources>

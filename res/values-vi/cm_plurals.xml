@@ -19,4 +19,10 @@
   <plurals name="duration_seconds">
     <item quantity="other"><xliff:g id="count">%d</xliff:g> giây</item>
   </plurals>
+  <plurals name="duration_minutes">
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> phút</item>
+  </plurals>
+  <plurals name="duration_hours">
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> giờ</item>
+  </plurals>
 </resources>
