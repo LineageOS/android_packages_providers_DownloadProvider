@@ -39,12 +39,6 @@
   <string name="wifi_recommended_title">سەل تۇرۇپ چۈشۈرۈش قاتارىغا قوشامدۇ؟</string>
   <string name="wifi_recommended_body">دەرھال بۇ <xliff:g id="size" example="12.3KB">%s</xliff:g> چۈشۈرۈشنى باشلىغاندا توكداننىڭ ئىشلىتىلىش ۋاقتىنى قىسقارتىشى ۋە ياكى سانلىق مەلۇمات ئىشلىتىش نورمىسىدىن ئاشۇرۇۋېتىشى مۇمكىن، بۇنداق بولغاندا تېلېفون سودىگىرى ئېشىپ كەتكەن سانلىق مەلۇمات ئېقىمىغا ئاساسەن سىزگە ھەق ھېسابلايدۇ.\n\nتۆۋەندىكى <xliff:g id="queue_text" example="Queue">%s</xliff:g> نى چەكسىڭىز كېيىنكى قېتىم WiFi تورىغا باغلانغاندا بۇنى چۈشۈرۈشنى باشلايدۇ.</string>
   <string name="button_queue_for_wifi">قاتار</string>
-  <plurals name="notif_summary_active">
-    <item quantity="other"><xliff:g id="number">%d</xliff:g> ھۆججەتنى چۈشۈرۈۋاتىدۇ</item>
-  </plurals>
-  <plurals name="notif_summary_waiting">
-    <item quantity="other"><xliff:g id="number">%d</xliff:g> ھۆججەت كۈتۈۋاتىدۇ</item>
-  </plurals>
   <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> قالدى</string>
   <string name="download_queued">قاتاردا</string>
   <string name="download_running">داۋاملىشىۋاتىدۇ</string>

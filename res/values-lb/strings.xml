@@ -43,14 +43,6 @@
   <string name="button_queue_for_wifi">Waardeschläif</string>
   <string name="button_cancel_download">Ofbriechen</string>
   <string name="button_start_now">Elo starten</string>
-  <plurals name="notif_summary_active">
-    <item quantity="one">1 Fichier gëtt erofgelueden</item>
-    <item quantity="other"><xliff:g id="number">%d</xliff:g> Fichiere ginn erofgelueden</item>
-  </plurals>
-  <plurals name="notif_summary_waiting">
-    <item quantity="one">1 Fichier waart</item>
-    <item quantity="other"><xliff:g id="number">%d</xliff:g> Fichiere waarden</item>
-  </plurals>
   <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> iwwreg</string>
   <string name="download_no_application_title">Fichier kann net opgemaach ginn</string>
   <string name="root_downloads">Downloads</string>
