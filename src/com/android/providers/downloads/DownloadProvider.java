@@ -875,7 +875,7 @@ public final class DownloadProvider extends ContentProvider {
             if (projection == null) {
                 projection = sAppReadableColumnsArray.clone();
             } else {
-                // check the validity of the columns in projection 
+                // check the validity of the columns in projection
                 for (int i = 0; i < projection.length; ++i) {
                     if (!sAppReadableColumnsSet.contains(projection[i]) &&
                             !downloadManagerColumnsList.contains(projection[i])) {
@@ -1221,11 +1221,17 @@ public final class DownloadProvider extends ContentProvider {
         if (path == null) {
             throw new FileNotFoundException("No filename found.");
         }
-        if (!Helpers.isFilenameValid(getContext(), path, mDownloadsDataDir)) {
-            throw new FileNotFoundException("Invalid filename: " + path);
+
+        final File file;
+        try {
+            file = new File(path).getCanonicalFile();
+        } catch (IOException e) {
+            throw new FileNotFoundException(e.getMessage());
         }
 
-        final File file = new File(path);
+        if (!Helpers.isFilenameValid(getContext(), file)) {
+            throw new FileNotFoundException("Invalid file path: " + file);
+        }
         if ("r".equals(mode)) {
             return ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY);
         } else {

@@ -769,14 +769,20 @@ public class DownloadThread implements Runnable {
                 Log.i(Constants.TAG, "have run thread before for id: " + mInfo.mId +
                         ", and state.mFilename: " + state.mFilename);
             }
-            if (!Helpers.isFilenameValid(mContext, state.mFilename,
-                    mStorageManager.getDownloadDataDirectory())) {
+
+            File f;
+            try {
+                f = new File(state.mFilename).getCanonicalFile();
+            } catch (IOException e) {
+                throw new StopRequestException(Downloads.Impl.STATUS_FILE_ERROR,
+                        e.getMessage());
+            }
+            if (!Helpers.isFilenameValid(mContext, f)) {
                 // this should never happen
                 throw new StopRequestException(Downloads.Impl.STATUS_FILE_ERROR,
                         "found invalid internal destination filename");
             }
             // We're resuming a download that got interrupted
-            File f = new File(state.mFilename);
             if (f.exists()) {
                 if (Constants.LOGV) {
                     Log.i(Constants.TAG, "resuming download for id: " + mInfo.mId +
