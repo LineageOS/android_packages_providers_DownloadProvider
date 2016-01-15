@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fcbff3d_39a48208",
+        "filename": "src/com/android/providers/downloads/DownloadNotifier.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 13542
+      },
+      "writtenOn": "2016-01-15T09:29:47Z",
+      "side": 1,
+      "message": "change to false",
+      "revId": "6c7e9f739e08b121262c36683b16ee34fc6b7827",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
