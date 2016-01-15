@@ -16,6 +16,24 @@
       "revId": "6c7e9f739e08b121262c36683b16ee34fc6b7827",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1fcbff3d_f926fa16",
+        "filename": "src/com/android/providers/downloads/DownloadNotifier.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2016-01-15T17:06:30Z",
+      "side": 1,
+      "message": "No, that\u0027s a hack to paper over the problem. The correct solution is to remove the notification when deleting the download.",
+      "parentUuid": "1fcbff3d_39a48208",
+      "revId": "6c7e9f739e08b121262c36683b16ee34fc6b7827",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
