@@ -167,7 +167,15 @@
          [CHAR LIMIT=25] -->
   <string name="button_start_now">ئێستا ده‌ست پێ بکه‌</string>
   <!-- Title summarizing active downloads. [CHAR LIMIT=32] -->
+  <plurals name="notif_summary_active">
+    <item quantity="one">1 پەڕگە دائەبەزێنرێت</item>
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە دائەبەزێنرێن</item>
+  </plurals>
   <!-- Title summarizing waiting downloads. [CHAR LIMIT=32] -->
+  <plurals name="notif_summary_waiting">
+    <item quantity="one">1 پەڕگە چاوەڕوانە</item>
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە چاوەڕوانن</item>
+  </plurals>
   <!-- Time remaining until download is complete. [CHAR LIMIT=32] -->
   <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> چەپ</string>
   <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
