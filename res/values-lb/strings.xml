@@ -137,7 +137,15 @@
          [CHAR LIMIT=25] -->
   <string name="button_start_now">Elo starten</string>
   <!-- Title summarizing active downloads. [CHAR LIMIT=32] -->
+  <plurals name="notif_summary_active">
+    <item quantity="one">1 Fichier gëtt erofgelueden</item>
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> Fichiere ginn erofgelueden</item>
+  </plurals>
   <!-- Title summarizing waiting downloads. [CHAR LIMIT=32] -->
+  <plurals name="notif_summary_waiting">
+    <item quantity="one">1 Fichier waart</item>
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> Fichiere waarden</item>
+  </plurals>
   <!-- Time remaining until download is complete. [CHAR LIMIT=32] -->
   <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> iwwreg</string>
   <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
