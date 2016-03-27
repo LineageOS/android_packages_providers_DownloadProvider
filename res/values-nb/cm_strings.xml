@@ -21,5 +21,7 @@
         individual item in the download list.  [CHAR LIMIT=24] -->
   <string name="download_paused">Satt på pause</string>
   <!-- Representation of download progress percentage when paused. [CHAR LIMIT=24] -->
+  <string name="download_paused_percent">Pauset, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
   <!-- Representation of download progress percentage when queued. [CHAR LIMIT=24] -->
+  <string name="download_queued_percent">I kø, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
 </resources>
