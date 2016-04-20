@@ -15,36 +15,93 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- The name of the application that appears in the launcher [CHAR LIMIT=15] -->
   <string name="app_label">Descargues</string>
+  <!-- The title that appears at the top of the activity listing downloads sorted by date [CHAR LIMIT=40] -->
   <string name="download_title_sorted_by_date">Descargues - Ordenaes por data</string>
+  <!-- The title that appears at the top of the activity listing downloads sorted by size [CHAR LIMIT=40] -->
   <string name="download_title_sorted_by_size">Descargues - Ordenaes por tamañu</string>
+  <!-- Appears in lieu of the list of downloads if there are no downloads to view
+         [CHAR LIMIT=200] -->
   <string name="no_downloads">Nun hai descargues.</string>
+  <!-- Default title for an item in the download list for which no title was provided by the app.
+         [CHAR LIMIT=20] -->
   <string name="missing_title">&lt;Desconocíu&gt;</string>
+  <!-- Button to display sort-by-size option [CHAR LIMIT=25] -->
   <string name="button_sort_by_size">Ordenar por tamañu</string>
+  <!-- Button to display sort-by-date option [CHAR LIMIT=25] -->
   <string name="button_sort_by_date">Ordenar por data</string>
+  <!-- Status messages -->
+  <!-- Status indicating that the download has been queued to start in the future.  Appears for an
+         individual item in the download list.  [CHAR LIMIT=11] -->
   <string name="download_queued">En cola</string>
+  <!-- Status indicating that the system is currently downloading the file.  Appears for an
+         individual item in the download list.  [CHAR LIMIT=11] -->
   <string name="download_running">En progresu</string>
+  <!-- Status indicating that the download has completed successfully. Appears for an individual
+         item in the download list.  [CHAR LIMIT=11] -->
   <string name="download_success">Completu</string>
+  <!-- Status indicating that the download has ended without completing successfully.  Appears for
+         an individual item in the download list.  [CHAR LIMIT=11] -->
   <string name="download_error">Con fallu</string>
+  <!-- Dialog/toast messages -->
+  <!-- Title of dialog that is shown when the user clicks a download for which no file is
+         available, either because the download hasn't started or because the download failed
+         [CHAR LIMIT=25] -->
   <string name="dialog_title_not_available">Nun pudo descargase</string>
+  <!-- Text for dialog when user clicks on a download that failed [CHAR LIMIT=200] -->
   <string name="dialog_failed_body">Quies reintentar la descarga dempués o desanicialu de la cola?</string>
+  <!-- Title for dialog when user clicks on a download that has not yet begun, but will be started
+         in the future. [CHAR LIMIT=25] -->
   <string name="dialog_title_queued_body">Ficheru en cola</string>
+  <!-- Text for dialog when user clicks on a download that has not yet begun, but will be started
+         in the future. [CHAR LIMIT=200] -->
   <string name="dialog_queued_body">Esti ficheru ta na cola pa una descarga nel futuru, polo que nun ta disponible.</string>
+  <!-- Text for dialog when user clicks on a completed download but the file is missing
+         [CHAR LIMIT=200] -->
   <string name="dialog_file_missing_body">Nun pue atopase\'l ficheru descargáu.</string>
+  <!-- Text for dialog when user clicks on a download that failed due to insufficient space on
+         external storage [CHAR LIMIT=200] -->
   <string name="dialog_insufficient_space_on_external">Nun pue descargase. Nun hai bastante espaciu nel almacenamientu esternu.</string>
+  <!-- Text for dialog when user clicks on a download that failed due to insufficient space on
+         the internal download cache [CHAR LIMIT=200] -->
   <string name="dialog_insufficient_space_on_cache">Nun pue descargase. Nun hai bastante espaciu nel almacenamientu internu.</string>
+  <!-- Text for dialog when user clicks on a download that failed because it was interrupted and
+         the server doesn't support resuming downloads [CHAR LIMIT=200] -->
   <string name="dialog_cannot_resume">Encaboxóse la descarga y nun pue reanudase.</string>
+  <!-- Text for dialog when user clicks on a download that failed because the requested
+         destination file already exists [CHAR LIMIT=200] -->
   <string name="dialog_file_already_exists">Nun pue descargase. El ficheru de destín yá esiste.
     </string>
+  <!-- Text for dialog when user clicks on a download that failed because it was requested to go
+         on the external media, which is not mounted [CHAR LIMIT=200] -->
   <string name="dialog_media_not_found">Nun pue descargase. El mediu esternu nun ta disponible.</string>
+  <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
+         that there is no application on the device that can open the file that was downloaded
+         [CHAR LIMIT=200] -->
   <string name="download_no_application_title">Nun pue abrise\'l ficheru</string>
+  <!-- Buttons -->
+  <!-- Text for button to remove the entry for a download that has not yet begun or that has
+         failed [CHAR LIMIT=25] -->
   <string name="remove_download">Desaniciar</string>
+  <!-- Text for button to delete a download that has completed, or to delete multiple download
+         entries [CHAR LIMIT=25] -->
   <string name="delete_download">Desaniciar</string>
+  <!-- Text for button to keep a download that has not yet begun [CHAR LIMIT=25] -->
   <string name="keep_queued_download">Caltener</string>
+  <!-- Text for button to cancel a download that is currently in progress [CHAR LIMIT=25] -->
   <string name="cancel_running_download">Encaboxar</string>
+  <!-- Text for button appearing in a dialog to restart a download, either one that failed or one
+         for which the downloaded file is now missing [CHAR LIMIT=25] -->
   <string name="retry_download">Reintentar</string>
+  <!-- Text for button appearing in the pop-up selection menu to deselect all currently selected
+    downloads in the download list [CHAR LIMIT=25] -->
   <string name="deselect_all">Desmarcalo too</string>
+  <!-- Text for menu to select all downloads in the download list [CHAR LIMIT=25] -->
   <string name="select_all">Esbillalo too</string>
+  <!-- number of downloads selected [CHAR LIMIT=50] -->
   <string name="selected_count">Esbillasti <xliff:g id="NUMBER">%1$d</xliff:g> de <xliff:g id="TOTAL">%2$d</xliff:g></string>
+  <!-- title shown when displaying list of apps to choose from when share is clicked on
+        [CHAR LIMIT = 20] -->
   <string name="download_share_dialog">Compartir a traviés de</string>
 </resources>
