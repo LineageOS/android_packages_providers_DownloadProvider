@@ -20,7 +20,7 @@
   <plurals name="duration_seconds">
     <item quantity="one"><xliff:g id="count">%d</xliff:g> секунда</item>
     <item quantity="few"><xliff:g id="count">%d</xliff:g> секунде</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> секунде</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> секунди</item>
   </plurals>
   <!-- Phrase describing a time duration using minutes [CHAR LIMIT=16] -->
   <plurals name="duration_minutes">
