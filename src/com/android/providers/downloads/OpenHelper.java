@@ -89,7 +89,11 @@ public class OpenHelper {
 
             final Intent intent = new Intent(Intent.ACTION_VIEW);
 
-            if ("application/vnd.android.package-archive".equals(mimeType)) {
+            if (mimeType == null) {
+                Log.w(TAG, "MimeType was null!");
+                intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                intent.setData(localUri);
+            } else if ("application/vnd.android.package-archive".equals(mimeType)) {
                 // PackageInstaller doesn't like content URIs, so open file
                 intent.setDataAndType(localUri, mimeType);
 
