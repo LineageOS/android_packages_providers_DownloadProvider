@@ -16,6 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- This is the name of the Download Manager application. -->
+  <string name="app_label">Спампоўкі</string>
   <!-- This is the short description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
@@ -47,6 +48,7 @@
         applications that their downloads have completed. -->
   <!-- Title for permission to see all downloads to EXTERNAL [CHAR LIMIT=25] -->
   <!-- Title for permission to see all downloads to EXTERNAL -->
+  <string name="permlab_seeAllExternal" product="default">Усе спампоўкі на SD-картку</string>
   <!-- Description for the permission to see all downloads to EXTERNAL -->
   <!-- The label for the permission to download files to the download cache
     that can't be automatically deleted by the download manager to free up
