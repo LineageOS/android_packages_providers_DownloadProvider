@@ -98,7 +98,8 @@ public class OpenHelper {
                 intent.putExtra(Intent.EXTRA_ORIGINATING_URI, remoteUri);
                 intent.putExtra(Intent.EXTRA_REFERRER, getRefererUri(context, id));
                 intent.putExtra(Intent.EXTRA_ORIGINATING_UID, getOriginatingUid(context, id));
-            } else if (mimeType.startsWith("image/") && !isNull(cursor, COLUMN_MEDIAPROVIDER_URI)) {
+            } else if (mimeType != null && mimeType.startsWith("image/") && !isNull(cursor,
+                    COLUMN_MEDIAPROVIDER_URI)) {
                 final Uri mediaUri = getCursorUri(cursor, COLUMN_MEDIAPROVIDER_URI);
                 intent.setDataAndType(mediaUri, mimeType);
                 intent.putExtra("SingleItemOnly", true);
