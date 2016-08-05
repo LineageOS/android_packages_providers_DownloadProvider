@@ -26,6 +26,6 @@
   </plurals>
   <!-- Phrase describing a time duration using hours [CHAR LIMIT=16] -->
   <plurals name="duration_hours">
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> ชั่วโมง</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> ชม.</item>
   </plurals>
 </resources>

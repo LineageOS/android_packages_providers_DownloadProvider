@@ -133,7 +133,13 @@
          the carrier-specified recommended maximum size for downloads over the mobile connection
          [CHAR LIMIT=25] -->
   <!-- Title summarizing active downloads. [CHAR LIMIT=32] -->
+  <plurals name="notif_summary_active">
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> ھۆججەتنى چۈشۈرۈۋاتىدۇ</item>
+  </plurals>
   <!-- Title summarizing waiting downloads. [CHAR LIMIT=32] -->
+  <plurals name="notif_summary_waiting">
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> ھۆججەت كۈتۈۋاتىدۇ</item>
+  </plurals>
   <!-- Time remaining until download is complete. [CHAR LIMIT=32] -->
   <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> قالدى</string>
   <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
