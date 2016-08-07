@@ -28,7 +28,7 @@
   </plurals>
   <!-- Phrase describing a time duration using hours [CHAR LIMIT=16] -->
   <plurals name="duration_hours">
-    <item quantity="one"><xliff:g id="count">%d</xliff:g> h</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> h</item>
+    <item quantity="one"><xliff:g id="count">%d</xliff:g> t</item>
+    <item quantity="other"><xliff:g id="count">%d</xliff:g> t</item>
   </plurals>
 </resources>
