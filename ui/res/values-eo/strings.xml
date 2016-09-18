@@ -22,6 +22,7 @@
          [CHAR LIMIT=200] -->
   <!-- Default title for an item in the download list for which no title was provided by the app.
          [CHAR LIMIT=20] -->
+  <string name="missing_title">&lt;Nekonata&gt;</string>
   <!-- Button to display sort-by-size option [CHAR LIMIT=25] -->
   <!-- Button to display sort-by-date option [CHAR LIMIT=25] -->
   <!-- Status messages -->
@@ -60,10 +61,13 @@
   <!-- Buttons -->
   <!-- Text for button to remove the entry for a download that has not yet begun or that has
          failed [CHAR LIMIT=25] -->
+  <string name="remove_download">Forigi</string>
   <!-- Text for button to delete a download that has completed, or to delete multiple download
          entries [CHAR LIMIT=25] -->
+  <string name="delete_download">Forigi</string>
   <!-- Text for button to keep a download that has not yet begun [CHAR LIMIT=25] -->
   <!-- Text for button to cancel a download that is currently in progress [CHAR LIMIT=25] -->
+  <string name="cancel_running_download">Nuligi</string>
   <!-- Text for button appearing in a dialog to restart a download, either one that failed or one
          for which the downloaded file is now missing [CHAR LIMIT=25] -->
   <!-- Text for button appearing in the pop-up selection menu to deselect all currently selected
@@ -72,4 +76,5 @@
   <!-- number of downloads selected [CHAR LIMIT=50] -->
   <!-- title shown when displaying list of apps to choose from when share is clicked on
         [CHAR LIMIT = 20] -->
+  <string name="download_share_dialog">Konigi per</string>
 </resources>
