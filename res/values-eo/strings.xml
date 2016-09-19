@@ -66,6 +66,7 @@
     [CHAR LIMIT=160] -->
   <!-- This is the title that is used when displaying the notification
     for a download that doesn't have a title associated with it. -->
+  <string name="download_unknown_title">&lt;Sentitola&gt;</string>
   <!-- When a download completes, a notification is displayed, and this
         string is used to indicate that the download successfully completed.
         Note that such a download could have been initiated by a variety of
@@ -105,6 +106,7 @@
         -->
   <!-- Text for button to cancel a download because it's too large to proceed over the mobile
          network and the user does not want to queue it for Wi-Fi [CHAR LIMIT=25] -->
+  <string name="button_cancel_download">Nuligi</string>
   <!-- Text for button to start a download over the mobile connection now, even though it's over
          the carrier-specified recommended maximum size for downloads over the mobile connection
          [CHAR LIMIT=25] -->
