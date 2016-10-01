@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_d1cf4e55",
+        "filename": "src/com/android/providers/downloads/DownloadThread.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2016-10-01T12:52:39Z",
+      "side": 0,
+      "message": "I don\u0027t know how useful this change is. The pause/resume feature should be the main thing we want here, hence I\u0027m not sure whether it should be kept.",
+      "revId": "711e5a84bc81fb319ced69cc92e20d1da46cfde0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
