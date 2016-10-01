@@ -114,6 +114,26 @@ public class DownloadReceiver extends BroadcastReceiver {
             NotificationManager notifManager = (NotificationManager) context.getSystemService(
                     Context.NOTIFICATION_SERVICE);
             notifManager.cancel(notifTag, 0);
+        } else if (Constants.ACTION_PAUSE.equals(action)) {
+            long[] downloadIds = intent.getLongArrayExtra(
+                    DownloadManager.EXTRA_NOTIFICATION_CLICK_DOWNLOAD_IDS);
+            DownloadManager manager = (DownloadManager) context.getSystemService(
+                    Context.DOWNLOAD_SERVICE);
+            for (long id : downloadIds) {
+                manager.pauseDownload(id);
+            }
+        } else if (Constants.ACTION_RESUME_QUEUE.equals(action)) {
+            long[] downloadIds = intent.getLongArrayExtra(
+                    DownloadManager.EXTRA_NOTIFICATION_CLICK_DOWNLOAD_IDS);
+            DownloadManager manager = (DownloadManager) context.getSystemService(
+                    Context.DOWNLOAD_SERVICE);
+            for (long id : downloadIds) {
+                manager.resumeDownload(id);
+                Helpers.scheduleJob(context, DownloadInfo.queryDownloadInfo(context, id));
+            }
+        } else if (Constants.ACTION_RESUME.equals(action)) {
+            long id = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
+            Helpers.scheduleJob(context, DownloadInfo.queryDownloadInfo(context, id));
         }
     }
 
