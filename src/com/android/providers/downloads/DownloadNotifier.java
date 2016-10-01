@@ -19,6 +19,7 @@ package com.android.providers.downloads;
 import static android.app.DownloadManager.Request.VISIBILITY_VISIBLE;
 import static android.app.DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED;
 import static android.app.DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_ONLY_COMPLETION;
+import static android.provider.Downloads.Impl.STATUS_PAUSED_MANUAL;
 import static android.provider.Downloads.Impl.STATUS_QUEUED_FOR_WIFI;
 import static android.provider.Downloads.Impl.STATUS_RUNNING;
 
@@ -47,6 +48,7 @@ import android.util.LongSparseLongArray;
 
 import com.android.internal.util.ArrayUtils;
 
+import java.lang.StringBuilder;
 import java.text.NumberFormat;
 
 import javax.annotation.concurrent.GuardedBy;
@@ -193,9 +195,25 @@ public class DownloadNotifier {
             }
             builder.setWhen(firstShown);
 
+            // If *all* current downloads in the cluster are manually paused,
+            // display the appropriate notification icon and content.
+            int numPaused = 0;
+            for (int j = 0; j < cluster.size(); j++) {
+                cursor.moveToPosition(cluster.get(j));
+                int status = cursor.getInt(UpdateQuery.STATUS);
+                if (status == Downloads.Impl.STATUS_PAUSED_MANUAL) {
+                    numPaused++;
+                }
+            }
+            boolean isClusterPaused = numPaused == cluster.size();
+
             // Show relevant icon
             if (type == TYPE_ACTIVE) {
-                builder.setSmallIcon(android.R.drawable.stat_sys_download);
+                if (isClusterPaused) {
+                    builder.setSmallIcon(R.drawable.download_pause);
+                } else {
+                    builder.setSmallIcon(android.R.drawable.stat_sys_download);
+                }
             } else if (type == TYPE_WAITING) {
                 builder.setSmallIcon(android.R.drawable.stat_sys_warning);
             } else if (type == TYPE_COMPLETE) {
@@ -228,6 +246,34 @@ public class DownloadNotifier {
                     res.getString(R.string.button_cancel_download),
                     PendingIntent.getBroadcast(mContext,
                             0, cancelIntent, PendingIntent.FLAG_UPDATE_CURRENT));
+
+                if (isClusterPaused) {
+                    // Add a Resume action
+                    final Intent resumeIntent = new Intent(Constants.ACTION_RESUME_QUEUE,
+                            uri, mContext, DownloadReceiver.class);
+                    resumeIntent.putExtra(DownloadManager.EXTRA_NOTIFICATION_CLICK_DOWNLOAD_IDS,
+                            downloadIds);
+
+                    builder.addAction(
+                            com.android.internal.R.drawable.ic_media_play,
+                            res.getQuantityString(
+                                    R.plurals.button_resume_download, cluster.size()),
+                            PendingIntent.getBroadcast(mContext,
+                                    0, resumeIntent, PendingIntent.FLAG_UPDATE_CURRENT));
+                } else {
+                    // Add a Pause action
+                    final Intent pauseIntent = new Intent(Constants.ACTION_PAUSE,
+                            uri, mContext, DownloadReceiver.class);
+                    pauseIntent.putExtra(DownloadManager.EXTRA_NOTIFICATION_CLICK_DOWNLOAD_IDS,
+                            downloadIds);
+
+                    builder.addAction(
+                            com.android.internal.R.drawable.ic_media_pause,
+                            res.getQuantityString(
+                                    R.plurals.button_pause_download, cluster.size()),
+                            PendingIntent.getBroadcast(mContext,
+                                    0, pauseIntent, PendingIntent.FLAG_UPDATE_CURRENT));
+                }
 
             } else if (type == TYPE_COMPLETE) {
                 cursor.moveToPosition(cluster.get(0));
@@ -327,7 +373,9 @@ public class DownloadNotifier {
                 builder.setContentTitle(getDownloadTitle(res, cursor));
 
                 if (type == TYPE_ACTIVE) {
-                    if (speedAsSizeText != null) {
+                    if (isClusterPaused) {
+                        builder.setContentText(res.getText(R.string.download_paused));
+                    } else if (speedAsSizeText != null) {
                         builder.setContentText(res.getString(R.string.download_speed_text,
                                 remainingText, speedAsSizeText));
                     } else {
@@ -365,8 +413,20 @@ public class DownloadNotifier {
                 }
 
                 if (type == TYPE_ACTIVE) {
-                    builder.setContentTitle(res.getQuantityString(
-                            R.plurals.notif_summary_active, cluster.size(), cluster.size()));
+                    if (isClusterPaused) {
+                        builder.setContentTitle(res.getString(R.string.download_paused));
+                    } else if (numPaused > 0) {
+                        StringBuilder stringBuilder = new StringBuilder(res.getQuantityString(
+                                R.plurals.notif_summary_active,
+                                cluster.size() - numPaused, cluster.size()));
+                        stringBuilder.append(", ");
+                        stringBuilder.append(res.getQuantityString(
+                                R.plurals.notif_summary_paused, numPaused, numPaused));
+                        builder.setContentTitle(stringBuilder.toString());
+                    } else {
+                        builder.setContentTitle(res.getQuantityString(
+                                R.plurals.notif_summary_active, cluster.size(), cluster.size()));
+                    }
                     builder.setContentText(remainingText);
                     builder.setContentInfo(res.getString(R.string.download_speed_text,
                             percentText, speedAsSizeText));
@@ -465,7 +525,7 @@ public class DownloadNotifier {
     }
 
     private static boolean isActiveAndVisible(int status, int visibility) {
-        return status == STATUS_RUNNING &&
+        return (status == STATUS_RUNNING || status == STATUS_PAUSED_MANUAL) &&
                 (visibility == VISIBILITY_VISIBLE
                 || visibility == VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
     }

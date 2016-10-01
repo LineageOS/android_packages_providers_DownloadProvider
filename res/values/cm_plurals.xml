@@ -32,4 +32,22 @@
         <item quantity="one"><xliff:g id="count">%d</xliff:g> hr</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> hrs</item>
     </plurals>
+
+    <!-- Text for button to manually resume all manually paused downloads [CHAR LIMIT=25] -->
+    <plurals name="button_resume_download">
+        <item quantity="one">Resume</item>
+        <item quantity="other">Resume all</item>
+    </plurals>
+
+    <!-- Text for button to manually manually pause all running downloads [CHAR LIMIT=25] -->
+    <plurals name="button_pause_download">
+        <item quantity="one">Pause</item>
+        <item quantity="other">Pause all</item>
+    </plurals>
+
+    <!-- Title summarizing paused downloads. [CHAR LIMIT=32] -->
+    <plurals name="notif_summary_paused">
+        <item quantity="one">1 file paused</item>
+        <item quantity="other"><xliff:g id="number">%d</xliff:g> files paused</item>
+    </plurals>
 </resources>
