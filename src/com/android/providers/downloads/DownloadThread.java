@@ -26,6 +26,7 @@ import static android.provider.Downloads.Impl.STATUS_CANNOT_RESUME;
 import static android.provider.Downloads.Impl.STATUS_FILE_ERROR;
 import static android.provider.Downloads.Impl.STATUS_HTTP_DATA_ERROR;
 import static android.provider.Downloads.Impl.STATUS_PAUSED_BY_APP;
+import static android.provider.Downloads.Impl.STATUS_PAUSED_MANUAL;
 import static android.provider.Downloads.Impl.STATUS_QUEUED_FOR_WIFI;
 import static android.provider.Downloads.Impl.STATUS_RUNNING;
 import static android.provider.Downloads.Impl.STATUS_SUCCESS;
@@ -95,8 +96,7 @@ import javax.net.ssl.SSLContext;
  * persisting data to disk, and updating {@link DownloadProvider}.
  * <p>
  * To know if a download is successful, we need to know either the final content
- * length to expect, or the transfer to be chunked. To resume an interrupted
- * download, we need an ETag.
+ * length to expect, or the transfer to be chunked.
  * <p>
  * Failed network requests are retried several times before giving up. Local
  * disk errors fail immediately and are not retried.
@@ -154,9 +154,11 @@ public class DownloadThread extends Thread {
         private static final String NOT_DELETED = COLUMN_DELETED + " == '0'";
         private static final String NOT_PAUSED = "(" + COLUMN_CONTROL + " IS NULL OR "
                 + COLUMN_CONTROL + " != '" + CONTROL_PAUSED + "')";
+        private static final String NOT_PAUSED_MANUAL = COLUMN_STATUS + " != '"
+                + STATUS_PAUSED_MANUAL + "'";
 
         private static final String SELECTION_VALID = NOT_CANCELED + " AND " + NOT_DELETED + " AND "
-                + NOT_PAUSED;
+                + NOT_PAUSED + " AND " + NOT_PAUSED_MANUAL;
 
         public DownloadInfoDelta(DownloadInfo info) {
             mUri = info.mUri;
@@ -206,6 +208,8 @@ public class DownloadThread extends Thread {
                     buildContentValues(), SELECTION_VALID, null) == 0) {
                 if (mInfo.queryDownloadControl() == CONTROL_PAUSED) {
                     throw new StopRequestException(STATUS_PAUSED_BY_APP, "Download paused!");
+                } else if (mInfo.queryDownloadStatus() == STATUS_PAUSED_MANUAL) {
+                    throw new StopRequestException(STATUS_PAUSED_MANUAL, "Download paused manually!");
                 } else {
                     throw new StopRequestException(STATUS_CANCELED, "Download deleted or missing!");
                 }
@@ -344,10 +348,7 @@ public class DownloadThread extends Thread {
                         mInfoDelta.mStatus = STATUS_WAITING_FOR_NETWORK;
                     }
 
-                    if ((mInfoDelta.mETag == null && mMadeProgress)
-                            || DownloadDrmHelper.isDrmConvertNeeded(mInfoDelta.mMimeType)) {
-                        // However, if we wrote data and have no ETag to verify
-                        // contents against later, we can't actually resume.
+                    if (DownloadDrmHelper.isDrmConvertNeeded(mInfoDelta.mMimeType)) {
                         mInfoDelta.mStatus = STATUS_CANNOT_RESUME;
                     }
                 }
