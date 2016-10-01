@@ -26,4 +26,20 @@
 
     <!-- Phrase describing a time duration using hours [CHAR LIMIT=16] -->
     <string name="duration_hours"><xliff:g id="count">%d</xliff:g> h</string>
+
+    <!-- Status indicating that the download has been paused to start in the future.  Appears for an
+        individual item in the download list.  [CHAR LIMIT=24] -->
+    <string name="download_paused">Paused</string>
+
+    <!-- Representation of download progress percentage when paused. [CHAR LIMIT=24] -->
+    <string name="download_paused_percent">Paused, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+
+    <!-- Text for button to manually resume all manually paused downloads [CHAR LIMIT=25] -->
+    <string name="button_resume_download">Resume</string>
+
+    <!-- Text for button to manually manually pause all running downloads [CHAR LIMIT=25] -->
+    <string name="button_pause_download">pause</string>
+
+    <!-- Title summarizing paused downloads. [CHAR LIMIT=32] -->
+    <string name="notif_summary_paused"><xliff:g id="number">%d</xliff:g> paused</string>
 </resources>
