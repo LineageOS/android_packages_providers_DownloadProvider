@@ -653,6 +653,10 @@ public class DownloadStorageProvider extends FileSystemProvider {
         int extraFlags = Document.FLAG_PARTIAL;
         final int status = cursor.getInt(
                 cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_STATUS));
+        final long progress = cursor.getLong(cursor.getColumnIndexOrThrow(
+                DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
+        final int reason = cursor.getInt(
+                cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_REASON));
         switch (status) {
             case DownloadManager.STATUS_SUCCESSFUL:
                 // Verify that the document still exists in external storage. This is necessary
@@ -664,14 +668,21 @@ public class DownloadStorageProvider extends FileSystemProvider {
                 extraFlags = Document.FLAG_SUPPORTS_RENAME;  // only successful is non-partial
                 break;
             case DownloadManager.STATUS_PAUSED:
-                summary = getContext().getString(R.string.download_queued);
+                if (reason == DownloadManager.PAUSED_MANUAL) {
+                    if (size > 0) {
+                        long percent = progress * 100 / size;
+                        summary = getContext().getString(R.string.download_paused_percent, percent);
+                    } else {
+                        summary = getContext().getString(R.string.download_paused);
+                    }
+                } else {
+                    summary = getContext().getString(R.string.download_queued);
+                }
                 break;
             case DownloadManager.STATUS_PENDING:
                 summary = getContext().getString(R.string.download_queued);
                 break;
             case DownloadManager.STATUS_RUNNING:
-                final long progress = cursor.getLong(cursor.getColumnIndexOrThrow(
-                        DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
                 if (size > 0) {
                     String percent =
                             NumberFormat.getPercentInstance().format((double) progress / size);
