@@ -16,7 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- This is the name of the Download Manager application. -->
-  <string name="app_label">Спампоўкі</string>
   <!-- This is the short description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
@@ -48,7 +47,6 @@
         applications that their downloads have completed. -->
   <!-- Title for permission to see all downloads to EXTERNAL [CHAR LIMIT=25] -->
   <!-- Title for permission to see all downloads to EXTERNAL -->
-  <string name="permlab_seeAllExternal" product="default">Усе спампоўкі на SD-картку</string>
   <!-- Description for the permission to see all downloads to EXTERNAL -->
   <!-- The label for the permission to download files to the download cache
     that can't be automatically deleted by the download manager to free up
@@ -68,6 +66,7 @@
     [CHAR LIMIT=160] -->
   <!-- This is the title that is used when displaying the notification
     for a download that doesn't have a title associated with it. -->
+  <string name="download_unknown_title">&lt;Sentitola&gt;</string>
   <!-- When a download completes, a notification is displayed, and this
         string is used to indicate that the download successfully completed.
         Note that such a download could have been initiated by a variety of
@@ -107,6 +106,7 @@
         -->
   <!-- Text for button to cancel a download because it's too large to proceed over the mobile
          network and the user does not want to queue it for Wi-Fi [CHAR LIMIT=25] -->
+  <string name="button_cancel_download">Nuligi</string>
   <!-- Text for button to start a download over the mobile connection now, even though it's over
          the carrier-specified recommended maximum size for downloads over the mobile connection
          [CHAR LIMIT=25] -->
