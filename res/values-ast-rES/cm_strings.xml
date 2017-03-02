@@ -22,7 +22,6 @@
   <!-- Phrase describing a time duration using hours [CHAR LIMIT=16] -->
   <!-- Status indicating that the download has been paused to start in the future.  Appears for an
         individual item in the download list.  [CHAR LIMIT=24] -->
-  <string name="download_paused">Posáu</string>
   <!-- Representation of download progress percentage when paused. [CHAR LIMIT=24] -->
   <!-- Text for button to manually resume all manually paused downloads [CHAR LIMIT=25] -->
   <!-- Text for button to manually manually pause all running downloads [CHAR LIMIT=25] -->
