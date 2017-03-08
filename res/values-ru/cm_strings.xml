@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Notification text containing download duration left and download speed -->
-  <string name="text_download_speed">Ост. время: %1$s, %2$s/с</string>
+  <string name="text_download_speed">%1$s, %2$s/с</string>
   <!-- Phrase describing a time duration using seconds [CHAR LIMIT=16] -->
   <string name="duration_seconds">%d сек.</string>
   <!-- Phrase describing a time duration using minutes [CHAR LIMIT=16] -->
