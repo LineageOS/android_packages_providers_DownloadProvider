@@ -118,6 +118,10 @@
     <item quantity="other">Baxando <xliff:g id="number">%d</xliff:g> ficheros</item>
   </plurals>
   <!-- Title summarizing waiting downloads. [CHAR LIMIT=32] -->
+  <plurals name="notif_summary_waiting">
+    <item quantity="one">1 ficheru n\'espera</item>
+    <item quantity="other"><xliff:g id="number">%d</xliff:g> ficheros n\'espera</item>
+  </plurals>
   <!-- Time remaining until download is complete. [CHAR LIMIT=32] -->
   <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
          that there is no application on the device that can open the file that was downloaded
