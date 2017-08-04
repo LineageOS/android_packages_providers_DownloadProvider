@@ -57,6 +57,8 @@
     manager to free up space [CHAR LIMIT=160] -->
   <!-- The label for the permission to download files through the download
     manager without any notification being shown to the user [CHAR LIMIT=50] -->
+  <string name="permlab_downloadWithoutNotification">baxar ficheros ensin
+        avisar</string>
   <!-- The full sentence description for the permission to download files
     through the download manager without any notification being shown to the
     user [CHAR LIMIT=160] -->
