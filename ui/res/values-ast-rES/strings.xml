@@ -16,14 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- The name of the application that appears in the launcher [CHAR LIMIT=15] -->
-  <string name="app_label">Descargues</string>
   <!-- The title that appears at the top of the activity listing downloads sorted by date [CHAR LIMIT=40] -->
   <string name="download_title_sorted_by_date">Descargues - Ordenaes pela data</string>
   <!-- The title that appears at the top of the activity listing downloads sorted by size [CHAR LIMIT=40] -->
   <string name="download_title_sorted_by_size">Descargues - Ordenaes pel tamañu</string>
   <!-- Appears in lieu of the list of downloads if there are no downloads to view
          [CHAR LIMIT=200] -->
-  <string name="no_downloads">Nun hai descargues.</string>
   <!-- Default title for an item in the download list for which no title was provided by the app.
          [CHAR LIMIT=20] -->
   <!-- Button to display sort-by-size option [CHAR LIMIT=25] -->
@@ -80,18 +78,13 @@
   <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
          that there is no application on the device that can open the file that was downloaded
          [CHAR LIMIT=200] -->
-  <string name="download_no_application_title">Nun pue abrise\'l ficheru</string>
   <!-- Buttons -->
   <!-- Text for button to remove the entry for a download that has not yet begun or that has
          failed [CHAR LIMIT=25] -->
-  <string name="remove_download">Desaniciar</string>
   <!-- Text for button to delete a download that has completed, or to delete multiple download
          entries [CHAR LIMIT=25] -->
-  <string name="delete_download">Desaniciar</string>
   <!-- Text for button to keep a download that has not yet begun [CHAR LIMIT=25] -->
-  <string name="keep_queued_download">Caltener</string>
   <!-- Text for button to cancel a download that is currently in progress [CHAR LIMIT=25] -->
-  <string name="cancel_running_download">Encaboxar</string>
   <!-- Text for button appearing in a dialog to restart a download, either one that failed or one
          for which the downloaded file is now missing [CHAR LIMIT=25] -->
   <string name="retry_download">Retentar</string>
