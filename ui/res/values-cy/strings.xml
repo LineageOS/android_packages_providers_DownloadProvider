@@ -69,6 +69,7 @@
   <!-- Text for button to start a download over the mobile connection now, even though it's over
         the carrier-specified recommended maximum size for downloads over the mobile connection
         [CHAR LIMIT=25] -->
+  <string name="start_now_download">Dechrau nawr</string>
   <!-- Text for button appearing in the pop-up selection menu to deselect all currently selected
     downloads in the download list [CHAR LIMIT=25] -->
   <!-- Text for menu to select all downloads in the download list [CHAR LIMIT=25] -->
