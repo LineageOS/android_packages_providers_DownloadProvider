@@ -39,8 +39,10 @@
   <string name="download_running">En cursu</string>
   <!-- Status indicating that the download has completed successfully. Appears for an individual
          item in the download list.  [CHAR LIMIT=11] -->
+  <string name="download_success">Completóse</string>
   <!-- Status indicating that the download has ended without completing successfully.  Appears for
          an individual item in the download list.  [CHAR LIMIT=11] -->
+  <string name="download_error">Con fallos</string>
   <!-- Dialog/toast messages -->
   <!-- Title of dialog that is shown when the user clicks a download for which no file is
          available, either because the download hasn't started or because the download failed
@@ -102,7 +104,9 @@
   <!-- Text for button appearing in the pop-up selection menu to deselect all currently selected
     downloads in the download list [CHAR LIMIT=25] -->
   <!-- Text for menu to select all downloads in the download list [CHAR LIMIT=25] -->
+  <string name="select_all">Esbillar too</string>
   <!-- number of downloads selected [CHAR LIMIT=50] -->
+  <string name="selected_count">Esbillesti <xliff:g id="number" example="3">%1$d</xliff:g> de <xliff:g id="total" example="15">%2$d</xliff:g></string>
   <!-- title shown when displaying list of apps to choose from when share is clicked on
         [CHAR LIMIT = 20] -->
   <string name="download_share_dialog">Compartir per</string>
