@@ -378,18 +378,18 @@ public class DownloadNotifier {
                         if (remainingMillis >= DateUtils.HOUR_IN_MILLIS) {
                             duration = (int) ((remainingMillis + 1800000)
                                     / DateUtils.HOUR_IN_MILLIS);
-                            durationResId = R.string.duration_hours;
+                            durationResId = R.plurals.duration_hours;
                         } else if (remainingMillis >= DateUtils.MINUTE_IN_MILLIS) {
                             duration = (int) ((remainingMillis + 30000)
                                     / DateUtils.MINUTE_IN_MILLIS);
-                            durationResId = R.string.duration_minutes;
+                            durationResId = R.plurals.duration_minutes;
                         } else {
                             duration = (int) ((remainingMillis + 500)
                                     / DateUtils.SECOND_IN_MILLIS);
-                            durationResId = R.string.duration_seconds;
+                            durationResId = R.plurals.duration_seconds;
                         }
                         remainingText = res.getString(R.string.download_remaining,
-                                res.getString(durationResId, duration));
+                                res.getQuantityString(durationResId, duration, duration));
                         speedAsSizeText = Formatter.formatFileSize(mContext, speed);
                     }
 
