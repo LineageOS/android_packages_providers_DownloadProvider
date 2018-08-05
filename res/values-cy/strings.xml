@@ -152,7 +152,7 @@
   <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
          that there is no application on the device that can open the file that was downloaded
          [CHAR LIMIT=200] -->
-  <string name="download_no_application_title">Methu agor y ffeil</string>
+  <string name="download_no_application_title">Methu ag agor y ffeil</string>
   <!-- Label describing Downloads as a storage root [CHAR LIMIT=32] -->
   <string name="root_downloads">Llwythi</string>
   <!-- Status indicating that the download has been queued to start in the future.  Appears for an
