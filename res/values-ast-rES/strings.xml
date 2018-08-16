@@ -82,6 +82,7 @@
     [CHAR LIMIT=160] -->
   <!-- This is the title that is used when displaying the notification
     for a download that doesn't have a title associated with it. -->
+  <string name="download_unknown_title">&lt;Ensin títulu&gt;</string>
   <!-- When a download completes, a notification is displayed, and this
         string is used to indicate that the download successfully completed.
         Note that such a download could have been initiated by a variety of
@@ -128,10 +129,6 @@
          [CHAR LIMIT=25] -->
   <string name="button_start_now">Aniciar agora</string>
   <!-- Title summarizing active downloads. [CHAR LIMIT=32] -->
-  <plurals name="notif_summary_active">
-    <item quantity="one">Baxando 1 ficheru</item>
-    <item quantity="other">Baxando <xliff:g id="number">%d</xliff:g> ficheros</item>
-  </plurals>
   <!-- Title summarizing waiting downloads. [CHAR LIMIT=32] -->
   <plurals name="notif_summary_waiting">
     <item quantity="one">1 ficheru n\'espera</item>
