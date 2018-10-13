@@ -17,9 +17,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Notification text containing download duration left and download speed -->
-  <!-- Phrase describing a time duration using seconds [CHAR LIMIT=16] -->
-  <!-- Phrase describing a time duration using minutes [CHAR LIMIT=16] -->
-  <!-- Phrase describing a time duration using hours [CHAR LIMIT=16] -->
   <!-- Status indicating that the download has been paused to start in the future.  Appears for an
         individual item in the download list.  [CHAR LIMIT=24] -->
   <!-- Representation of download progress percentage when paused. [CHAR LIMIT=24] -->
