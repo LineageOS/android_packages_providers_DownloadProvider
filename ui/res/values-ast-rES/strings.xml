@@ -26,6 +26,7 @@
   <string name="no_downloads">Nun hai descargues.</string>
   <!-- Default title for an item in the download list for which no title was provided by the app.
          [CHAR LIMIT=20] -->
+  <string name="missing_title">&lt;Desconozse&gt;</string>
   <!-- Button to display sort-by-size option [CHAR LIMIT=25] -->
   <string name="button_sort_by_size">Ordenar pel tamañu</string>
   <!-- Button to display sort-by-date option [CHAR LIMIT=25] -->
