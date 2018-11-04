@@ -15,185 +15,185 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- This is the name of the Download Manager application. -->
-  <string name="app_label">بەڕێوەبەری داگرتن</string>
-  <!-- Short description shown client applications describing storage location-->
-  <string name="storage_description">داگرتنەکان</string>
-  <!-- This is the short description of a permission associated with the
+    <!-- This is the name of the Download Manager application. -->
+    <string name="app_label">بەڕێوەبەری داگرتن</string>
+    <!-- Short description shown client applications describing storage location-->
+    <string name="storage_description">داگرتنەکان</string>
+    <!-- This is the short description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
         This specific permission controls access to the Download Manager by
         applications that initiate downloads. -->
-  <string name="permlab_downloadManager">ڕێگەدانی بەڕێوەبەری داگرتن.</string>
-  <!-- This is the long description of a permission associated with the
+    <string name="permlab_downloadManager">ڕێگەدانی بەڕێوەبەری داگرتن.</string>
+    <!-- This is the long description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
         This specific permission controls access to the Download Manager by
         applications that initiate downloads. -->
-  <string name="permdesc_downloadManager">ڕێگە بە نەرمەواڵا بدە بۆ
+    <string name="permdesc_downloadManager">ڕێگە بە نەرمەواڵا بدە بۆ
         دەست گەیاندن بە بەڕێوەبەری داگرتن و بەکار هێنانی بۆ دابەزاندنی فایلەکان.
         نەرمەواڵا زیانبەخشەکان ئەتوانن ئەم تایبەتمەندییە بەکار بهێنن بۆ ڕاگرتنی دابەزاندنەکان
         دەست گەیاندن بە زانیارییە نهێنییەکان.</string>
-  <!-- This is the short description of a permission associated with the
+    <!-- This is the short description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
         This specific permission controls access to some advanced (and
         dangerous) features from the Download Manager that are needed by
         system applications but aren't necessary for regular applications
         that just initiate plain downloads. -->
-  <string name="permlab_downloadManagerAdvanced">کردارە پێشکەوتووەکانی
+    <string name="permlab_downloadManagerAdvanced">کردارە پێشکەوتووەکانی
         بەڕێوەبەری داگرتن.</string>
-  <!-- This is the long description of a permission associated with the
+    <!-- This is the long description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
         This specific permission controls access to some advanced (and
         dangerous) features from the Download Manager that are needed by
         system applications but aren't necessary for regular applications
         that just initiate plain downloads. -->
-  <string name="permdesc_downloadManagerAdvanced">ڕێگە بە نەرمەواڵا بدە بۆ
+    <string name="permdesc_downloadManagerAdvanced">ڕێگە بە نەرمەواڵا بدە بۆ
         دەست گەیاندن بە هەموو کردارە پێشکەوتووەکانی بەڕێوەبەری داگرتن.
         نەرمەواڵا زیانبەخشەکان ئەتوانن ئەم تایبەتمەندییە بەکار بهێنن بۆ ڕاگرتنی دابەزاندنەکان و
         زانیارییە نهێنییەکان.</string>
-  <string name="permlab_downloadCompletedIntent">ناردنی تێبینییەکانی
+    <string name="permlab_downloadCompletedIntent">ناردنی تێبینییەکانی
         داگرتن.</string>
-  <!-- This is the long description of a permission associated with the
+    <!-- This is the long description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
         This specific permission allows an application to tell other
         applications that their downloads have completed. -->
-  <string name="permdesc_downloadCompletedIntent">ڕێگە بە نەرمەواڵا بدە بۆ
+    <string name="permdesc_downloadCompletedIntent">ڕێگە بە نەرمەواڵا بدە بۆ
         بۆ ناردنی تێبینییەکان لەبارەی داگرتنە تەواوەکان. نەرمەواڵا زیانبەخشەکان
         ئەتوانن ئەم تایبەتمەندییە بەکار بهێنن بۆ سەر لێ شێواندنی دیکەی نەرمەواڵاکان کە
         فایلەکان دادەبەزێنن.</string>
-  <!-- Title for permission to see all downloads to EXTERNAL [CHAR LIMIT=25] -->
-  <string name="permlab_seeAllExternal" product="nosdcard">بینینی هەموو داگرتنەکان لە ناو بیرگەی USB</string>
-  <!-- Title for permission to see all downloads to EXTERNAL -->
-  <string name="permlab_seeAllExternal" product="default">بینینی هەموو داگرتنەکان لە ناو بیرگەی هەڵگرتنی</string>
-  <!-- Description for the permission to see all downloads to EXTERNAL -->
-  <string name="permdesc_seeAllExternal">ڕێگە بە بەرنامە بدە بۆ بینینی هەموویی
+    <!-- Title for permission to see all downloads to EXTERNAL [CHAR LIMIT=25] -->
+    <string name="permlab_seeAllExternal" product="nosdcard">بینینی هەموو داگرتنەکان لە ناو بیرگەی USB</string>
+    <!-- Title for permission to see all downloads to EXTERNAL -->
+    <string name="permlab_seeAllExternal" product="default">بینینی هەموو داگرتنەکان لە ناو بیرگەی هەڵگرتنی</string>
+    <!-- Description for the permission to see all downloads to EXTERNAL -->
+    <string name="permdesc_seeAllExternal">ڕێگە بە بەرنامە بدە بۆ بینینی هەموویی
         داگرتنەکان لە ناو بیرگەی هەڵگرتنی، بێگوێدانە ئەوەی کە کام نەرمەواڵایە ئەوانەی
         داگرتووە.</string>
-  <!-- The label for the permission to download files to the download cache
+    <!-- The label for the permission to download files to the download cache
     that can't be automatically deleted by the download manager to free up
     space [CHAR LIMIT=50] -->
-  <string name="permlab_downloadCacheNonPurgeable">هێشتنەوەی بۆشایی لە ناو
+    <string name="permlab_downloadCacheNonPurgeable">هێشتنەوەی بۆشایی لە ناو
     حەشارگەی داگرتن</string>
-  <!-- The full sentence description for the permission to download files to
+    <!-- The full sentence description for the permission to download files to
     the download cache that can't be automatically deleted by the download
     manager to free up space [CHAR LIMIT=160] -->
-  <string name="permdesc_downloadCacheNonPurgeable">ڕێگە بە نەرمەواڵا بدە بۆ
+    <string name="permdesc_downloadCacheNonPurgeable">ڕێگە بە نەرمەواڵا بدە بۆ
     دابەزاندنی فایلەکان بۆ ناو حەشارگەی داگرتن، کە بە شێوەی خۆکار ناسڕێنەوە
     کاتێک کە بەڕێوەبەری داگرتن بۆشایی زۆرتری پێویستە.</string>
-  <!-- The label for the permission to download files through the download
+    <!-- The label for the permission to download files through the download
     manager without any notification being shown to the user [CHAR LIMIT=50] -->
-  <string name="permlab_downloadWithoutNotification">دابەزاندنی فایلەکان بێ
+    <string name="permlab_downloadWithoutNotification">دابەزاندنی فایلەکان بێ
         تێبینی</string>
-  <!-- The full sentence description for the permission to download files
+    <!-- The full sentence description for the permission to download files
     through the download manager without any notification being shown to the
     user [CHAR LIMIT=160] -->
-  <string name="permdesc_downloadWithoutNotification">ڕێگە بە نەرمەواڵا بدە
+    <string name="permdesc_downloadWithoutNotification">ڕێگە بە نەرمەواڵا بدە
     فایلەکان لە ڕێگەی بەڕێوەبەری داگرتن دابەزێنێت بەبێ هیچ تێبینییەک
     کە پیشانی بەکارهێنەرەکە بدرێت.</string>
-  <!-- The label for the permission to access all downloads in the download
+    <!-- The label for the permission to access all downloads in the download
     manager, not just those owned by the calling user [CHAR LIMIT=50] -->
-  <string name="permlab_accessAllDownloads">دەست گەیشتن بە هەموو داگرتنەکانی
+    <string name="permlab_accessAllDownloads">دەست گەیشتن بە هەموو داگرتنەکانی
     سیستەم</string>
-  <!-- The full sentence description for the permission to access all
+    <!-- The full sentence description for the permission to access all
     downloads in the download manager, not just those owned by the calling user
     [CHAR LIMIT=160] -->
-  <string name="permdesc_accessAllDownloads">ڕێگە بە نەرمەواڵاکە بدە بۆ بینین و
+    <string name="permdesc_accessAllDownloads">ڕێگە بە نەرمەواڵاکە بدە بۆ بینین و
     دەستکاری کردنی هەموو ئەو داگرتنانەی کە بە نەرمەواڵایەکی سیستەم ڕێکخراون.</string>
-  <!-- This is the title that is used when displaying the notification
+    <!-- This is the title that is used when displaying the notification
     for a download that doesn't have a title associated with it. -->
-  <string name="download_unknown_title">&lt;بێ سەردێڕ&gt;</string>
-  <!-- When a download completes, a notification is displayed, and this
+    <string name="download_unknown_title">&lt;بێ سەردێڕ&gt;</string>
+    <!-- When a download completes, a notification is displayed, and this
         string is used to indicate that the download successfully completed.
         Note that such a download could have been initiated by a variety of
         applications, including (but not limited to) the browser, an email
         application, a content marketplace. -->
-  <string name="notification_download_complete">داگرتن تەواو بوو.</string>
-  <!-- When a download completes, a notification is displayed, and this
+    <string name="notification_download_complete">داگرتن تەواو بوو.</string>
+    <!-- When a download completes, a notification is displayed, and this
         string is used to indicate that the download failed.
         Note that such a download could have been initiated by a variety of
         applications, including (but not limited to) the browser, an email
         application, a content marketplace. -->
-  <string name="notification_download_failed">داگرتن سەرکەوتوو نەبوو.</string>
-  <!-- When a download is paused because it's too large to download over a
+    <string name="notification_download_failed">داگرتن سەرکەوتوو نەبوو.</string>
+    <!-- When a download is paused because it's too large to download over a
         mobile connection, and Wi-Fi is unavailable, this string is displayed in
         the system notification for the running download, beneath the download
         title and description.  Note that such a download could have been
         initiated by a variety of applications, including (but not limited to)
         the browser, an email application, a content marketplace.
         [CHAR LIMIT=24] -->
-  <string name="notification_need_wifi_for_size">قەبارەی داگرتن پێویستیی ئەکات بۆ Wi-Fi.</string>
-  <!-- Notification shown when a download has been paused because a user policy
+    <string name="notification_need_wifi_for_size">قەبارەی داگرتن پێویستیی ئەکات بۆ Wi-Fi.</string>
+    <!-- Notification shown when a download has been paused because a user policy
         has blocked network access to applications running in background. [CHAR LIMIT=24] -->
-  <string name="notification_paused_in_background">لە پشتەوە وەستێنراوە.</string>
-  <!-- Title for dialog when a download exceeds the carrier-specified maximum size of downloads
+    <string name="notification_paused_in_background">لە پشتەوە وەستێنراوە.</string>
+    <!-- Title for dialog when a download exceeds the carrier-specified maximum size of downloads
         over the mobile network and Wi-Fi is required.  The user has the choice to either queue the
         download to start next time Wi-Fi is available or cancel the download altogether. [CHAR
         LIMIT=50] -->
-  <string name="wifi_required_title">داگرتنەکە زۆر گەورەیە بۆ ئینتەرنێتی مۆبایل</string>
-  <!-- Text for dialog when a download exceeds the carrier-specified maximum size of downloads
+    <string name="wifi_required_title">داگرتنەکە زۆر گەورەیە بۆ ئینتەرنێتی مۆبایل</string>
+    <!-- Text for dialog when a download exceeds the carrier-specified maximum size of downloads
         over the mobile network and Wi-Fi is required.  The user has the choice to either queue the
         download to start next time Wi-Fi is available or cancel the download altogether. [CHAR
         LIMIT=200] -->
-  <string name="wifi_required_body">دەبێ wI-fI بەکار بهێنیت بۆ ئەم
+    <string name="wifi_required_body">دەبێ wI-fI بەکار بهێنیت بۆ ئەم
         <xliff:g id="size" example="12.3KB">%s
         </xliff:g> داگرتنە. \n\nدەست لێدە <xliff:g id="queue_text" example="Queue">%s
         </xliff:g> بۆ دەستپێکردنی دابەزاندنەکە، جاری دوایی کە تۆ بەسترایتەوە بە تۆڕی
         Wi-fi.</string>
-  <!-- Title for dialog when a download exceeds the carrier-specified recommended maximum size of
+    <!-- Title for dialog when a download exceeds the carrier-specified recommended maximum size of
         downloads over the mobile network, and the user may choose to start the download over mobile
         anyway or to queue for download to start next time a Wi-Fi connection is available [CHAR
         LIMIT=50] -->
-  <string name="wifi_recommended_title">ئەیخەیتە نۆرەوە بۆ داگرتنی دوایی؟</string>
-  <!-- Text for dialog when a download exceeds the carrier-specified recommended maximum size of
+    <string name="wifi_recommended_title">ئەیخەیتە نۆرەوە بۆ داگرتنی دوایی؟</string>
+    <!-- Text for dialog when a download exceeds the carrier-specified recommended maximum size of
         downloads over the mobile network, and the user may choose to start the download over mobile
         anyway or to queue for download to start next time a Wi-Fi connection is available [CHAR
         LIMIT=200] -->
-  <string name="wifi_recommended_body">بە دەستپێکردنی <xliff:g id="size" example="12.3KB">%s
+    <string name="wifi_recommended_body">بە دەستپێکردنی <xliff:g id="size" example="12.3KB">%s
         </xliff:g> ئەم داگرتنە لەوانەیە تەمەنی باترییەکەت کورت بکەیتەوە یانببێتە هۆی
         بەکار هێنانی بەڕادەبەدەری ئیتەرنێتی مۆبایلەکەت، کە ئەیوانێت باڵانسی سیمکارتەکەت بخوات
         کە بەستراوە بە پلانی بەکارهێنانی ئینتەرنێتی مۆبایلەکەت.\n\n
         دەست لێدە <xliff:g id="queue_text" example="Queue">%s</xliff:g> بۆ دەستپێکردنی ئەم داگرتنە
         جاری دوایی کە بەسترایتەوە بە تۆڕیکی Wi-Fi.</string>
-  <!-- Text for button to queue a download to start next time Wi-Fi is available [CHAR LIMIT=25]
+    <!-- Text for button to queue a download to start next time Wi-Fi is available [CHAR LIMIT=25]
         -->
-  <string name="button_queue_for_wifi">نۆرە</string>
-  <!-- Text for button to cancel a download because it's too large to proceed over the mobile
+    <string name="button_queue_for_wifi">نۆرە</string>
+    <!-- Text for button to cancel a download because it's too large to proceed over the mobile
          network and the user does not want to queue it for Wi-Fi [CHAR LIMIT=25] -->
-  <string name="button_cancel_download">هەڵوەشاندنەوە</string>
-  <!-- Text for button to start a download over the mobile connection now, even though it's over
+    <string name="button_cancel_download">هەڵوەشاندنەوە</string>
+    <!-- Text for button to start a download over the mobile connection now, even though it's over
          the carrier-specified recommended maximum size for downloads over the mobile connection
          [CHAR LIMIT=25] -->
-  <string name="button_start_now">ئێستا ده‌ست پێ بکه‌</string>
-  <!-- Title summarizing active downloads. [CHAR LIMIT=32] -->
-  <plurals name="notif_summary_active">
-    <item quantity="one">1 پەڕگە دائەبەزێنرێت</item>
-    <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە دائەبەزێنرێن</item>
-  </plurals>
-  <!-- Title summarizing waiting downloads. [CHAR LIMIT=32] -->
-  <plurals name="notif_summary_waiting">
-    <item quantity="one">1 پەڕگە چاوەڕوانە</item>
-    <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە چاوەڕوانن</item>
-  </plurals>
-  <!-- Time remaining until download is complete. [CHAR LIMIT=32] -->
-  <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> چەپ</string>
-  <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
+    <string name="button_start_now">ئێستا ده‌ست پێ بکه‌</string>
+    <!-- Title summarizing active downloads. [CHAR LIMIT=32] -->
+    <plurals name="notif_summary_active">
+        <item quantity="one">1 پەڕگە دائەبەزێنرێت</item>
+        <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە دائەبەزێنرێن</item>
+    </plurals>
+    <!-- Title summarizing waiting downloads. [CHAR LIMIT=32] -->
+    <plurals name="notif_summary_waiting">
+        <item quantity="one">1 پەڕگە چاوەڕوانە</item>
+        <item quantity="other"><xliff:g id="number">%d</xliff:g> پەڕگە چاوەڕوانن</item>
+    </plurals>
+    <!-- Time remaining until download is complete. [CHAR LIMIT=32] -->
+    <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> چەپ</string>
+    <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
          that there is no application on the device that can open the file that was downloaded
          [CHAR LIMIT=200] -->
-  <string name="download_no_application_title">ناتوانێت په‌ڕگه‌ بکاتەوە</string>
-  <!-- Label describing Downloads as a storage root [CHAR LIMIT=32] -->
-  <string name="root_downloads">داگرتنەکان</string>
-  <!-- Status indicating that the download has been queued to start in the future.  Appears for an
+    <string name="download_no_application_title">ناتوانێت په‌ڕگه‌ بکاتەوە</string>
+    <!-- Label describing Downloads as a storage root [CHAR LIMIT=32] -->
+    <string name="root_downloads">داگرتنەکان</string>
+    <!-- Status indicating that the download has been queued to start in the future.  Appears for an
          individual item in the download list.  [CHAR LIMIT=24] -->
-  <string name="download_queued">لە نۆرەدایە</string>
-  <!-- Status indicating that the system is currently downloading the file.  Appears for an
+    <string name="download_queued">لە نۆرەدایە</string>
+    <!-- Status indicating that the system is currently downloading the file.  Appears for an
          individual item in the download list.  [CHAR LIMIT=24] -->
-  <string name="download_running">لە کارادایە</string>
-  <!-- Status indicating that the download has ended without completing successfully.  Appears for
+    <string name="download_running">لە کارادایە</string>
+    <!-- Status indicating that the download has ended without completing successfully.  Appears for
          an individual item in the download list.  [CHAR LIMIT=24] -->
-  <string name="download_error">سه‌رکه‌وتوونه‌بوو</string>
-  <!-- Representation of download progress percentage when running. [CHAR LIMIT=24] -->
+    <string name="download_error">سه‌رکه‌وتوونه‌بوو</string>
+    <!-- Representation of download progress percentage when running. [CHAR LIMIT=24] -->
 </resources>
