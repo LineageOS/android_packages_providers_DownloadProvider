@@ -24,6 +24,8 @@ import static android.provider.Downloads.Impl.COLUMN_OTHER_UID;
 import static android.provider.Downloads.Impl.DESTINATION_NON_DOWNLOADMANAGER_DOWNLOAD;
 import static android.provider.Downloads.Impl.PERMISSION_ACCESS_ALL;
 import static android.provider.Downloads.Impl._DATA;
+import static android.net.NetworkPolicyManager.POLICY_REJECT_ON_DATA;
+import static android.net.NetworkPolicyManager.POLICY_REJECT_ON_WLAN;
 
 import android.app.AppOpsManager;
 import android.app.DownloadManager;
@@ -45,6 +47,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
+import android.net.NetworkPolicyManager;
 import android.net.Uri;
 import android.os.Binder;
 import android.os.ParcelFileDescriptor;
@@ -513,6 +516,12 @@ public final class DownloadProvider extends ContentProvider {
      */
     @Override
     public Uri insert(final Uri uri, final ContentValues values) {
+
+        if (checkCallingUidBanned()) {
+            // must return Uri, this one can never be valid because rowID starts at one
+            return ContentUris.withAppendedId(Downloads.Impl.CONTENT_URI, 0L);
+        }
+
         checkInsertPermissions(values);
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
 
@@ -760,6 +769,22 @@ public final class DownloadProvider extends ContentProvider {
 
         } else {
             throw new SecurityException("Unsupported path " + file);
+        }
+    }
+
+    /**
+     * Check that the requesting app is allowed to access the internet.
+     */
+    private boolean checkCallingUidBanned() {
+        final NetworkPolicyManager networkPolicy =
+                getContext().getSystemService(NetworkPolicyManager.class);
+        int uid = Binder.getCallingUid();
+        // checks if wlan and data are revoked
+        if (networkPolicy.getUidPolicy(uid) & (POLICY_REJECT_ON_DATA | POLICY_REJECT_ON_DATA)) {
+            Log.d(Constants.TAG, "App with UID " + uid + " banned from accessing the internet!");
+            return true;
+        } else {
+            return false;
         }
     }
 
