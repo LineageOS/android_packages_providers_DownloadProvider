@@ -71,10 +71,10 @@
     <string name="dialog_cannot_resume">Wedi ymyrraeth, nid yw\'n bosib parhau a\'r lawrlwytho.</string>
     <!-- Text for dialog when user clicks on a download that failed because the requested
          destination file already exists [CHAR LIMIT=200] -->
-    <string name="dialog_file_already_exists">Methu â lawrlwytho; Mae\'r ffeil yn bodoli eisoes.</string>
+    <string name="dialog_file_already_exists">Methu â lawrlwytho; Mae\'r ffeil yn bodoli eisoes.    </string>
     <!-- Text for dialog when user clicks on a download that failed because it was requested to go
          on the external media, which is not mounted [CHAR LIMIT=200] -->
-    <string name="dialog_media_not_found">Methu â lawrlwytho; Dyw\'r cyfrwng allanol ddim ar gael.</string>
+    <string name="dialog_media_not_found">Methu â lawrlwytho; Dyw\'r cyfrwng allanol ddim ar gael.    </string>
     <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
          that there is no application on the device that can open the file that was downloaded
          [CHAR LIMIT=200] -->
