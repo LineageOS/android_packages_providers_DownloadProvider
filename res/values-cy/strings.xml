@@ -24,6 +24,7 @@
         of any application that was granted that permission.
         This specific permission controls access to the Download Manager by
         applications that initiate downloads. -->
+    <string name="permlab_downloadManager">Mynediad at y rheolwr lawrlwytho.</string>
     <!-- This is the long description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
@@ -37,6 +38,8 @@
         dangerous) features from the Download Manager that are needed by
         system applications but aren't necessary for regular applications
         that just initiate plain downloads. -->
+    <string name="permlab_downloadManagerAdvanced">Swyddogaethau uwch y
+        rheolwr lawrlwytho.</string>
     <!-- This is the long description of a permission associated with the
         Android Download Manager. It is displayed as part of the description
         of any application that was granted that permission.
@@ -61,6 +64,8 @@
     <!-- The label for the permission to download files to the download cache
     that can't be automatically deleted by the download manager to free up
     space [CHAR LIMIT=50] -->
+    <string name="permlab_downloadCacheNonPurgeable">Cadw lle yn y 
+storfa lawrlwytho</string>
     <!-- The full sentence description for the permission to download files to
     the download cache that can't be automatically deleted by the download
     manager to free up space [CHAR LIMIT=160] -->
@@ -74,22 +79,27 @@
     <string name="permdesc_downloadWithoutNotification">Mae\'n caniatáu i\'r ap lawrlwytho ffeiliau trwy\'r rheolwr lawrlwytho heb ddangos unrhyw hysbysiad i\'r defnyddiwr.</string>
     <!-- The label for the permission to access all downloads in the download
     manager, not just those owned by the calling user [CHAR LIMIT=50] -->
+    <string name="permlab_accessAllDownloads">Mynediad at holl
+    lwythi system</string>
     <!-- The full sentence description for the permission to access all
     downloads in the download manager, not just those owned by the calling user
     [CHAR LIMIT=160] -->
     <string name="permdesc_accessAllDownloads">Mae\'n caniatáu i\'r ap weld ac addasu unrhyw lawrlwythi gan unrhyw ap ar y system.</string>
     <!-- This is the title that is used when displaying the notification
     for a download that doesn't have a title associated with it. -->
+    <string name="download_unknown_title">&lt;Di-deitl&gt;</string>
     <!-- When a download completes, a notification is displayed, and this
         string is used to indicate that the download successfully completed.
         Note that such a download could have been initiated by a variety of
         applications, including (but not limited to) the browser, an email
         application, a content marketplace. -->
+    <string name="notification_download_complete">Lawrlwytho wedi\'i gwblhau.</string>
     <!-- When a download completes, a notification is displayed, and this
         string is used to indicate that the download failed.
         Note that such a download could have been initiated by a variety of
         applications, including (but not limited to) the browser, an email
         application, a content marketplace. -->
+    <string name="notification_download_failed">Lawrlwytho aflwyddiannus.</string>
     <!-- When a download is paused because it's too large to download over a
         mobile connection, and Wi-Fi is unavailable, this string is displayed in
         the system notification for the running download, beneath the download
@@ -100,10 +110,12 @@
     <string name="notification_need_wifi_for_size">Mae angen gysylltiad Wi-Fi oherwydd maint y llwyth.</string>
     <!-- Notification shown when a download has been paused because a user policy
         has blocked network access to applications running in background. [CHAR LIMIT=24] -->
+    <string name="notification_paused_in_background">Wedi oedi yn y cefndir.</string>
     <!-- Title for dialog when a download exceeds the carrier-specified maximum size of downloads
         over the mobile network and Wi-Fi is required.  The user has the choice to either queue the
         download to start next time Wi-Fi is available or cancel the download altogether. [CHAR
         LIMIT=50] -->
+    <string name="wifi_required_title">Maint i\'w lawrlwytho yn ormod i\'r darparwr rhwydwaith</string>
     <!-- Text for dialog when a download exceeds the carrier-specified maximum size of downloads
         over the mobile network and Wi-Fi is required.  The user has the choice to either queue the
         download to start next time Wi-Fi is available or cancel the download altogether. [CHAR
