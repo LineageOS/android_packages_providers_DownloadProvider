@@ -104,6 +104,7 @@
     <string name="start_now_download">Aniciar agora</string>
     <!-- Text for button appearing in the pop-up selection menu to deselect all currently selected
     downloads in the download list [CHAR LIMIT=25] -->
+    <string name="deselect_all">Desmarcalo too</string>
     <!-- Text for menu to select all downloads in the download list [CHAR LIMIT=25] -->
     <string name="select_all">Esbillar too</string>
     <!-- number of downloads selected [CHAR LIMIT=50] -->

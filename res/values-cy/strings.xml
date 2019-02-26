@@ -64,12 +64,11 @@
     <!-- The label for the permission to download files to the download cache
     that can't be automatically deleted by the download manager to free up
     space [CHAR LIMIT=50] -->
-    <string name="permlab_downloadCacheNonPurgeable">Cadw lle yn y 
-storfa lawrlwytho</string>
+    <string name="permlab_downloadCacheNonPurgeable">Cadw lle yn y cuddstôr lawrlwytho</string>
     <!-- The full sentence description for the permission to download files to
     the download cache that can't be automatically deleted by the download
     manager to free up space [CHAR LIMIT=160] -->
-    <string name="permdesc_downloadCacheNonPurgeable">Mae\'n caniatáu i\'r ap lawrlwytho ffeiliau i\'r cof llwythi dros dro, na sy\'n bosib eu dileu yn awtomatig pan fo angen rhagor o le ar y rheolwr lawrlwytho.</string>
+    <string name="permdesc_downloadCacheNonPurgeable">Mae\'n caniatáu i\'r ap lawrlwytho ffeiliau i\'r cuddstôr, na sy\'n bosib eu dileu yn awtomatig pan fo angen rhagor o le ar y rheolwr lawrlwytho.</string>
     <!-- The label for the permission to download files through the download
     manager without any notification being shown to the user [CHAR LIMIT=50] -->
     <string name="permlab_downloadWithoutNotification">lawrlwytho ffeiliau heb roi hysbysiad</string>

@@ -26,6 +26,7 @@
     <!-- Text for button to manually resume all manually paused downloads [CHAR LIMIT=25] -->
     <string name="button_resume_download">回復</string>
     <!-- Text for button to manually manually pause all running downloads [CHAR LIMIT=25] -->
+    <string name="button_pause_download">暫停</string>
     <!-- Title summarizing paused downloads. [CHAR LIMIT=32] -->
     <string name="notif_summary_paused">%d 已暫停</string>
 </resources>
