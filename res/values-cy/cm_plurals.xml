@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Phrase describing a time duration using seconds [CHAR LIMIT=16] -->
     <plurals name="duration_seconds">
         <item quantity="zero"><xliff:g id="count">%d</xliff:g> eil</item>
         <item quantity="one"><xliff:g id="count">%d</xliff:g> eil</item>
@@ -25,7 +24,6 @@
         <item quantity="many"><xliff:g id="count">%d</xliff:g> eil</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> eil</item>
     </plurals>
-    <!-- Phrase describing a time duration using minutes [CHAR LIMIT=16] -->
     <plurals name="duration_minutes">
         <item quantity="zero"><xliff:g id="count">%d</xliff:g> mun</item>
         <item quantity="one"><xliff:g id="count">%d</xliff:g> mun</item>
@@ -34,7 +32,6 @@
         <item quantity="many"><xliff:g id="count">%d</xliff:g> mun</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> mun</item>
     </plurals>
-    <!-- Phrase describing a time duration using hours [CHAR LIMIT=16] -->
     <plurals name="duration_hours">
         <item quantity="zero"><xliff:g id="count">%d</xliff:g> awr</item>
         <item quantity="one"><xliff:g id="count">%d</xliff:g> awr</item>

@@ -16,21 +16,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Phrase describing a time duration using seconds [CHAR LIMIT=16] -->
     <plurals name="duration_seconds">
         <item quantity="one">שנ\' <xliff:g id="count">%d</xliff:g></item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> שנ\'</item>
         <item quantity="many"><xliff:g id="count">%d</xliff:g> שנ\'</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> שנ\'</item>
     </plurals>
-    <!-- Phrase describing a time duration using minutes [CHAR LIMIT=16] -->
     <plurals name="duration_minutes">
         <item quantity="one">דק\' <xliff:g id="count">%d</xliff:g></item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> דק\'</item>
         <item quantity="many"><xliff:g id="count">%d</xliff:g> דק\'</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> דק\'</item>
     </plurals>
-    <!-- Phrase describing a time duration using hours [CHAR LIMIT=16] -->
     <plurals name="duration_hours">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> שע\'</item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> שע\'</item>
