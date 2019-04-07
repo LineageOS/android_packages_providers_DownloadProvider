@@ -16,5 +16,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="text_download_speed"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
     <string name="download_paused">En pausa</string>
+    <string name="download_paused_percent">Pausado, %d%%</string>
+    <string name="button_resume_download">Reanudar</string>
+    <string name="button_pause_download">Pausa</string>
+    <string name="notif_summary_paused">%d en pausa</string>
 </resources>

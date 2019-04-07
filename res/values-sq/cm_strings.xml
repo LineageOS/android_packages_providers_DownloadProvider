@@ -20,5 +20,6 @@
     <string name="download_paused">Në pauzë</string>
     <string name="download_paused_percent">Në pauzë, %d%%</string>
     <string name="button_resume_download">Rifillo</string>
+    <string name="button_pause_download">Pezullo</string>
     <string name="notif_summary_paused">%d në pauzë</string>
 </resources>

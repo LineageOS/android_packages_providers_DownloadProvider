@@ -20,5 +20,6 @@
     <string name="download_paused">Szüneteltetve</string>
     <string name="download_paused_percent">Felfüggesztett, %d%%</string>
     <string name="button_resume_download">Folytatás</string>
+    <string name="button_pause_download">Szüneteltetés</string>
     <string name="notif_summary_paused">%d szünetel</string>
 </resources>

@@ -20,5 +20,6 @@
     <string name="download_paused">Gepauzeerd</string>
     <string name="download_paused_percent">Gepauzeerd, %d%%</string>
     <string name="button_resume_download">Hervatten</string>
+    <string name="button_pause_download">Pauzeren</string>
     <string name="notif_summary_paused">%d gepauzeerd</string>
 </resources>
