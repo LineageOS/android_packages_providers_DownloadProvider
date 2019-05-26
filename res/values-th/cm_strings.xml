@@ -18,4 +18,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="text_download_speed"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
     <string name="download_paused">หยุดชั่วคราว</string>
+    <string name="download_paused_percent">หยุดชั่วคราว, %d%%</string>
+    <string name="button_resume_download">ดำเนินการต่อ</string>
+    <string name="button_pause_download">หยุดชั่วคราว</string>
+    <string name="notif_summary_paused">%d หยุดชั่วคราว</string>
 </resources>
