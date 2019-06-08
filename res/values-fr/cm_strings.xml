@@ -20,5 +20,6 @@
     <string name="download_paused">En pause</string>
     <string name="download_paused_percent">En pause, %d%%</string>
     <string name="button_resume_download">Reprendre</string>
+    <string name="button_pause_download">Pause</string>
     <string name="notif_summary_paused">%d en pause</string>
 </resources>

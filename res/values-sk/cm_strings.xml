@@ -20,5 +20,6 @@
     <string name="download_paused">Pozastavené</string>
     <string name="download_paused_percent">Pozastavené, %d%%</string>
     <string name="button_resume_download">Obnoviť</string>
+    <string name="button_pause_download">Pozastaviť</string>
     <string name="notif_summary_paused">%d pozastavené</string>
 </resources>
