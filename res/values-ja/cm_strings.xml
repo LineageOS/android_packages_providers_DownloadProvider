@@ -20,5 +20,6 @@
     <string name="download_paused">一時停止中</string>
     <string name="download_paused_percent">一時停止中 %d%%</string>
     <string name="button_resume_download">再開</string>
+    <string name="button_pause_download">一時停止</string>
     <string name="notif_summary_paused">%dで一時停止中</string>
 </resources>
