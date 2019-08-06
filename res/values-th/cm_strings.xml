@@ -16,5 +16,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="duration_seconds">%d วิ</string>
+    <string name="duration_minutes">%d นาที</string>
+    <string name="duration_hours">%d ชม.</string>
     <string name="download_paused">หยุดชั่วคราว</string>
+    <string name="download_paused_percent">หยุดชั่วคราว, %d%%</string>
+    <string name="button_resume_download">ดำเนินการต่อ</string>
+    <string name="button_pause_download">หยุดชั่วคราว</string>
+    <string name="notif_summary_paused">%d หยุดชั่วคราว</string>
 </resources>
