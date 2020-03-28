@@ -16,15 +16,21 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="duration_seconds">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> வினாடி</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> வினாடிகள்</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> diog</item>
+        <item quantity="two"><xliff:g id="count">%d</xliff:g> dhiog</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> diogan</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> diog</item>
     </plurals>
     <plurals name="duration_minutes">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> நிமிடம்</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> நிமிடங்கள்</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> mhion</item>
+        <item quantity="two"><xliff:g id="count">%d</xliff:g> mhion</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> mion</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> mion</item>
     </plurals>
     <plurals name="duration_hours">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> மணி</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> மணி நேரங்கள்</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> uair</item>
+        <item quantity="two"><xliff:g id="count">%d</xliff:g> uair</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> uair</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> uair</item>
     </plurals>
 </resources>

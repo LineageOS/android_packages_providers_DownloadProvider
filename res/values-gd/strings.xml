@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2013-2016 The CyanogenMod Project
+<!-- Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,8 +14,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="download_paused">In pàusa</string>
-    <string name="download_paused_percent">In pàusa, %d%%</string>
-    <string name="button_resume_download">Sighi</string>
-    <string name="notif_summary_paused">%d in pàusa</string>
+    <string name="download_unknown_title">&lt;Gun tiotal&gt;</string>
+    <string name="button_queue_for_wifi">Ciudha</string>
+    <string name="download_queued">Sa chiutha</string>
 </resources>
