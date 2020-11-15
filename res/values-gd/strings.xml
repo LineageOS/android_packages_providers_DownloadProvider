@@ -14,7 +14,66 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label">Manaidsear nan luchdaidhean a-nuas</string>
+    <string name="storage_description">Luchdaidhean a-nuas</string>
+    <string name="permlab_downloadManager">Manaidsear nan luchdaidhean a-nuas inntrigeadh.</string>
+    <string name="permdesc_downloadManager">Leigidh seo leis an aplacaid
+        manaidsear nan luchdaidhean a-nuas inntrigeadh agus a chleachdadh airson faidhlichean a luchdadh a-nuas.
+        ’S urrainn do dh’aplacaidean droch-rùnach an cead seo a chleachdadh airson luchdaidhean a-nuas a bhriseadh agus
+        fiosrachadh pearsanta inntrigeadh.</string>
+    <string name="permlab_downloadManagerAdvanced">Gleusan adhartach aig
+        manaidsear nan luchdaidhean a-nuas.</string>
+    <string name="permdesc_downloadManagerAdvanced">Leigidh seo leis an aplacaid
+        na gleusan adhartach aig manaidsear nan luchdaidhean a-nuas inntrigeadh.
+        ’S urrainn do dh’aplacaidean droch-rùnach an cead seo a chleachdadh airson luchdaidhean a-nuas a bhriseadh agus
+        fiosrachadh pearsanta inntrigeadh.</string>
+    <string name="permlab_downloadCompletedIntent">Brathan luchdaidh a-nuas
+        a chur.</string>
+    <string name="permdesc_downloadCompletedIntent">Leigidh seo leis an aplacaid
+        brathan a chur mu luchdaidhean a-nuas a chaidh a choileanadh. ’S urrainn do dh’aplacaidean droch-rùnach
+        an cead seo a chleachdadh airson am breisleach a chur air aplacaidean eile a nì luchdadh a-nuas
+        fhaidhlichean.</string>
+    <string name="permlab_downloadCacheNonPurgeable">Àite a ghlèidheadh
+    ann an tasgadan nan luchdaidhean a-nuas</string>
+    <string name="permdesc_downloadCacheNonPurgeable">Leigidh seo leis an aplacaid
+    faidhlichean a luchdadh a-nuas gu tasgadan nan luchdaidhean a-nuas agus cha ghabh an sguabadh às gu fèin-obrachail
+    nuair a bhios àite a dhìth air manaidsear nan luchdaidhean a-nuas.</string>
+    <string name="permlab_downloadWithoutNotification">faidhlichean a luchdadh a-nuas
+        às aonais brath</string>
+    <string name="permdesc_downloadWithoutNotification">Leigidh seo leis an aplacaid
+    faidhlichean a luchdadh a-nuas le manaidsear nam faidhlichean
+    gun a bhith ’ga innse dhan chleachdaiche.</string>
+    <string name="permlab_accessAllDownloads">Gach luchdadh a-nuas an t-siostam
+    inntrigeadh</string>
+    <string name="permdesc_accessAllDownloads">Leigidh seo leis an aplacaid
+    gach luchdadh a-nuas fhaicinn agus atharrachadh air an t-siostam ge b’ e cò an aplacaid a thòisich air an luchdadh a-nuas.</string>
     <string name="download_unknown_title">&lt;Gun tiotal&gt;</string>
-    <string name="button_queue_for_wifi">Ciudha</string>
+    <string name="notification_download_complete">Tha an luchdadh a-nuas deiseil.</string>
+    <string name="notification_download_failed">Dh’fhàillig an luchdadh a-nuas.</string>
+    <string name="notification_need_wifi_for_size">Tha meud an luchdaidh a-nuas feumach air WiFi.</string>
+    <string name="notification_paused_in_background">Chaidh a chur ’na stad sa chùlaibh.</string>
+    <string name="wifi_required_title">Tha an luchdadh a-nuas ro mhòr airson lìonra a’ ghiùlanair</string>
+    <string name="wifi_recommended_title">An cuir thu dhan chiudha e airson a luchdadh a-nuas uaireigin eile?</string>
+    <string name="button_queue_for_wifi">Cuir dhan chiudha</string>
+    <string name="button_cancel_download">Sguir dheth</string>
+    <string name="button_start_now">Tòisich an-dràsta</string>
+    <plurals name="notif_summary_active">
+        <item quantity="one">Tha <xliff:g id="number">%d</xliff:g> fhaidhle ’ga luchdadh a-nuas</item>
+        <item quantity="two">Tha <xliff:g id="number">%d</xliff:g> fhaidhle ’gan luchdadh a-nuas</item>
+        <item quantity="few">Tha <xliff:g id="number">%d</xliff:g> faidhlichean ’gan luchdadh a-nuas</item>
+        <item quantity="other">Tha <xliff:g id="number">%d</xliff:g> faidhle ’gan luchdadh a-nuas</item>
+    </plurals>
+    <plurals name="notif_summary_waiting">
+        <item quantity="one">Tha <xliff:g id="number">%d</xliff:g> fhaidhle a’ feitheamh</item>
+        <item quantity="two">Tha <xliff:g id="number">%d</xliff:g> fhaidhle a’ feitheamh</item>
+        <item quantity="few">Tha <xliff:g id="number">%d</xliff:g> faidhlichean a’ feitheamh</item>
+        <item quantity="other">Tha <xliff:g id="number">%d</xliff:g> faidhle a’ feitheamh</item>
+    </plurals>
+    <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> air fhàgail</string>
+    <string name="download_no_application_title">Chan urrainn dhuinn am faidhle fhosgladh</string>
+    <string name="root_downloads">Luchdaidhean a-nuas</string>
     <string name="download_queued">Sa chiutha</string>
+    <string name="download_running">’Ga luchdadh a-nuas</string>
+    <string name="download_error">Cha deach leis</string>
+    <string name="download_running_percent">’Ga luchdadh a-nuas, <xliff:g id="percentage" example="50%">%s</xliff:g></string>
 </resources>
