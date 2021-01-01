@@ -42,6 +42,11 @@
     <string name="notification_need_wifi_for_size">El tamañu de la descarga rique Wi-Fi</string>
     <string name="notification_paused_in_background">Posáu en segundu planu.</string>
     <string name="wifi_required_title">Descarga enforma grande pa la rede del operador</string>
+    <string name="wifi_required_body">Has usar la Wi-Fi pa completar esta
+        <xliff:g id="size" example="12.3KB">%1$s
+        </xliff:g> descarga. \n\nToca <xliff:g id="queue_text" example="Queue">%2$s
+        </xliff:g> p\'aniciar la descarga la próxima vegada que te conoeutes a una
+        rede Wi-Fi.</string>
     <string name="wifi_recommended_title">¿Poner na cola pa baxar más sero?</string>
     <string name="button_queue_for_wifi">Cola</string>
     <string name="button_cancel_download">Encaboxar</string>
