@@ -23,6 +23,7 @@ import static android.provider.Downloads.Impl.COLUMN_DELETED;
 import static android.provider.Downloads.Impl.COLUMN_STATUS;
 import static android.provider.Downloads.Impl.CONTROL_PAUSED;
 import static android.provider.Downloads.Impl.STATUS_BAD_REQUEST;
+import static android.provider.Downloads.Impl.STATUS_BLOCKED;
 import static android.provider.Downloads.Impl.STATUS_CANCELED;
 import static android.provider.Downloads.Impl.STATUS_CANNOT_RESUME;
 import static android.provider.Downloads.Impl.STATUS_FILE_ERROR;
@@ -58,6 +59,7 @@ import android.content.Intent;
 import android.drm.DrmManagerClient;
 import android.drm.DrmOutputStream;
 import android.net.ConnectivityManager;
+import android.net.IConnectivityManager;
 import android.net.INetworkPolicyListener;
 import android.net.Network;
 import android.net.NetworkCapabilities;
@@ -67,6 +69,7 @@ import android.net.TrafficStats;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.os.Process;
+import android.os.ServiceManager;
 import android.os.SystemClock;
 import android.os.storage.StorageManager;
 import android.provider.Downloads;
@@ -121,6 +124,7 @@ public class DownloadThread extends Thread {
     private final Context mContext;
     private final SystemFacade mSystemFacade;
     private final DownloadNotifier mNotifier;
+    private final IConnectivityManager mConnectivityManager;
     private final NetworkPolicyManager mNetworkPolicy;
     private final StorageManager mStorage;
 
@@ -255,6 +259,8 @@ public class DownloadThread extends Thread {
         mSystemFacade = Helpers.getSystemFacade(mContext);
         mNotifier = Helpers.getDownloadNotifier(mContext);
         mNetworkPolicy = mContext.getSystemService(NetworkPolicyManager.class);
+        mConnectivityManager = IConnectivityManager.Stub.asInterface(
+                    ServiceManager.getService(Context.CONNECTIVITY_SERVICE));
         mStorage = mContext.getSystemService(StorageManager.class);
 
         mJobService = service;
@@ -297,6 +303,11 @@ public class DownloadThread extends Thread {
             if (mNetwork == null) {
                 throw new StopRequestException(STATUS_WAITING_FOR_NETWORK,
                         "No network associated with requesting UID");
+            }
+
+            if (mConnectivityManager.isUidIsolated(mInfo.mUid)) {
+                throw new StopRequestException(STATUS_BLOCKED,
+                        "Download blocked by network policy for requesting UID");
             }
 
             // Remember which network this download started on; used to
