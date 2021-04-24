@@ -80,12 +80,6 @@ public class Constants {
 
     public static final String PROVIDER_PACKAGE_NAME = "com.android.providers.downloads";
 
-    /**
-     * When a number has to be appended to the filename, this string is used to separate the
-     * base filename from the sequence number
-     */
-    public static final String FILENAME_SEQUENCE_SEPARATOR = "-";
-
     /** A magic filename that is allowed to exist within the system cache */
     public static final String RECOVERY_DIRECTORY = "recovery";
 
