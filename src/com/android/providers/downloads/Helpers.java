@@ -292,11 +292,9 @@ public class Helpers {
         }
 
         synchronized (sUniqueLock) {
-            name = generateAvailableFilenameLocked(parentTest, prefix, suffix);
-
             // Claim this filename inside lock to prevent other threads from
             // clobbering us. We're not paranoid enough to use O_EXCL.
-            final File file = new File(parent, name);
+            final File file = FileUtils.buildUniqueFile(parent, mimeType, prefix);
             file.createNewFile();
             return file.getAbsolutePath();
         }
@@ -459,41 +457,6 @@ public class Helpers {
         }
 
         return true;
-    }
-
-    private static String generateAvailableFilenameLocked(
-            File[] parents, String prefix, String suffix) throws IOException {
-        String name = prefix + suffix;
-        if (isFilenameAvailableLocked(parents, name)) {
-            return name;
-        }
-
-        /*
-        * This number is used to generate partially randomized filenames to avoid
-        * collisions.
-        * It starts at 1.
-        * The next 9 iterations increment it by 1 at a time (up to 10).
-        * The next 9 iterations increment it by 1 to 10 (random) at a time.
-        * The next 9 iterations increment it by 1 to 100 (random) at a time.
-        * ... Up to the point where it increases by 100000000 at a time.
-        * (the maximum value that can be reached is 1000000000)
-        * As soon as a number is reached that generates a filename that doesn't exist,
-        *     that filename is used.
-        * If the filename coming in is [base].[ext], the generated filenames are
-        *     [base]-[sequence].[ext].
-        */
-        int sequence = 1;
-        for (int magnitude = 1; magnitude < 1000000000; magnitude *= 10) {
-            for (int iteration = 0; iteration < 9; ++iteration) {
-                name = prefix + Constants.FILENAME_SEQUENCE_SEPARATOR + sequence + suffix;
-                if (isFilenameAvailableLocked(parents, name)) {
-                    return name;
-                }
-                sequence += sRandom.nextInt(magnitude) + 1;
-            }
-        }
-
-        throw new IOException("Failed to generate an available filename");
     }
 
     public static Uri convertToMediaStoreDownloadsUri(Uri mediaStoreUri) {
