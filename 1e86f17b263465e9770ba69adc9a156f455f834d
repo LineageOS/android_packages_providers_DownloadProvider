@@ -46,6 +46,30 @@
       "revId": "1e86f17b263465e9770ba69adc9a156f455f834d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "daaba75a_58da3151",
+        "filename": "src/com/android/providers/downloads/DownloadThread.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-05-07T13:21:38Z",
+      "side": 1,
+      "message": "Ah right, can we still move it to ctor?",
+      "parentUuid": "66562f94_8138ea33",
+      "range": {
+        "startLine": 306,
+        "startChar": 0,
+        "endLine": 308,
+        "endChar": 49
+      },
+      "revId": "1e86f17b263465e9770ba69adc9a156f455f834d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
