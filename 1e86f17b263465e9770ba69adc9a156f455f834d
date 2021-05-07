@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41d31c4d_2ce0f872",
+        "filename": "src/com/android/providers/downloads/DownloadThread.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-05-07T12:43:55Z",
+      "side": 1,
+      "message": "mConnectivityManager \u003d mContext.getSystemService(ConnectivityManager.class); in ctor",
+      "range": {
+        "startLine": 306,
+        "startChar": 0,
+        "endLine": 308,
+        "endChar": 49
+      },
+      "revId": "1e86f17b263465e9770ba69adc9a156f455f834d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
