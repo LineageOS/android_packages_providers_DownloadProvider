@@ -53,7 +53,18 @@
     <string name="notification_need_wifi_for_size">Tha meud an luchdaidh a-nuas feumach air WiFi.</string>
     <string name="notification_paused_in_background">Chaidh a chur ’na stad sa chùlaibh.</string>
     <string name="wifi_required_title">Tha an luchdadh a-nuas ro mhòr airson lìonra a’ ghiùlanair</string>
+    <string name="wifi_required_body">Feumaidh tu WiFi a chleachdadh airson an luchdadh a-nuas seo de
+        <xliff:g id="size" example="12.3KB">%1$s
+        </xliff:g> a choileanadh. \n\nSuath ri <xliff:g id="queue_text" example="Queue">%2$s
+        </xliff:g> ach an tòisich an luchdadh a-nuas seo an ath-thuras a nì thu ceangal ri
+        lìonra WiFi.</string>
     <string name="wifi_recommended_title">An cuir thu dhan chiudha e airson a luchdadh a-nuas uaireigin eile?</string>
+    <string name="wifi_recommended_body">Ma thòisicheas tu air an luchdadh a-nuas seo de <xliff:g id="size" example="12.3KB">%1$s
+        </xliff:g>, dh’fhaoidte gun caith sin cus dhen bhataraidh agus/no dhen
+        cheangal dàta mobile agad agus iarraidh an giùlanair mobile agad
+        airgead ort a-rèir a’ phlana dàta agad.\n\n
+        Suath ri <xliff:g id="queue_text" example="Queue">%2$s</xliff:g> ach an tòisich an luchdadh a-nuas seo
+        an ath-thuras a nì thu ceangal ri lìonra WiFi.</string>
     <string name="button_queue_for_wifi">Cuir dhan chiudha</string>
     <string name="button_cancel_download">Sguir dheth</string>
     <string name="button_start_now">Tòisich an-dràsta</string>
