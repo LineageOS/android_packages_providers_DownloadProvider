@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26c2cb3b_7c8b89ed",
+        "filename": "src/com/android/providers/downloads/DownloadNotifier.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 18220
+      },
+      "writtenOn": "2021-10-10T13:40:58Z",
+      "side": 1,
+      "message": "PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE ?\n\nCrash logs: https://katb.in/supagugecop",
+      "revId": "335fe5197de599efdf49e2c52eeb2d401f30ccdb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ff6e062_b714d622",
+        "filename": "src/com/android/providers/downloads/DownloadNotifier.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 18220
+      },
+      "writtenOn": "2021-10-10T13:40:58Z",
+      "side": 1,
+      "message": "Same as above",
+      "revId": "335fe5197de599efdf49e2c52eeb2d401f30ccdb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
