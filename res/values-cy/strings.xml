@@ -17,7 +17,7 @@
     <string name="app_label">Rheolwr Lawrlwytho</string>
     <string name="storage_description">Llwythi</string>
     <string name="permlab_downloadManager">Mynediad at y rheolwr lawrlwytho.</string>
-    <string name="permdesc_downloadManager">Mae\'n caniatáu i\'r ap gael mynediad i\'r rheolwr lawrlwytho a\'i defnyddio i lawrlwytho ffeiliau. Gall apiau maleisus ei ddefnyddio i ymyrryd mewn lawrlwytho a chael mynediad at wybodaeth breifat.</string>
+    <string name="permdesc_downloadManager">Mae\'n caniatáu i\'r ap gael mynediad at y rheolwr lawrlwytho a\'i defnyddio i lawrlwytho ffeiliau. Gall apiau maleisus ei ddefnyddio i ymyrryd mewn lawrlwytho a chael mynediad at wybodaeth breifat.</string>
     <string name="permlab_downloadManagerAdvanced">Swyddogaethau uwch y
         rheolwr lawrlwytho.</string>
     <string name="permdesc_downloadManagerAdvanced">Mae\'n caniatáu i\'r ap gael mynediad at nodweddion uwch y rheolwr lawrlwytho.  Gall apiau maleisus ei ddefnyddio i ymyrryd mewn lawrlwytho a chael mynediad at wybodaeth breifat.</string>
