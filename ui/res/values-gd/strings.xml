@@ -31,11 +31,9 @@
     <string name="dialog_title_queued_body">Fhaidhle sa chiudha</string>
     <string name="dialog_queued_body">Tha am faidhle seo ann an ciutha nan luchdaidhean a-nuas ’s chan eil e ri fhaighinn fhathast.</string>
     <string name="dialog_file_missing_body">Cha do lorg sinn am faidhle a chaidh a luchdadh a-nuas.</string>
-    <string name="dialog_insufficient_space_on_external">Chan urrainn dhuinn an luchdadh a-nuas a choileanadh. Tha àite a dhìth
-        air an an stòras air an taobh a-muigh.</string>
-    <string name="dialog_insufficient_space_on_cache">Chan urrainn dhuinn an luchdadh a-nuas a choileanadh. Tha àite a dhìth
-        air an an stòras air an taobh a-staigh.</string>
-    <string name="dialog_cannot_resume">Bhris rudeigin a-steach air an luchdadh a-nuas seo agus gha ghabh leantainn air adhart leis.</string>
+    <string name="dialog_insufficient_space_on_external">Chan urrainn dhuinn an luchdadh a-nuas a choileanadh. Tha àite a dhìth air an stòras air an taobh a-muigh.</string>
+    <string name="dialog_insufficient_space_on_cache">Chan urrainn dhuinn an luchdadh a-nuas a choileanadh. Tha àite a dhìth air an stòras air an taobh a-staigh.</string>
+    <string name="dialog_cannot_resume">Bhris rudeigin a-steach air an luchdadh a-nuas seo agus cha ghabh leantainn air adhart leis.</string>
     <string name="dialog_file_already_exists">Cha ghabh a luchdadh a-nuas. Tha am faidhle-uidhe ann mu thràth.
     </string>
     <string name="dialog_media_not_found">Cha ghabh a luchdadh a-nuas. Chan eil am meadhan air an taobh a-muigh ri fhaighinn.
