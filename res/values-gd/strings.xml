@@ -14,77 +14,182 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- This is the name of the Download Manager application. -->
     <string name="app_label">Manaidsear nan luchdaidhean a-nuas</string>
+    <!-- Short description shown client applications describing storage location-->
     <string name="storage_description">Luchdaidhean a-nuas</string>
+    <!-- This is the short description of a permission associated with the
+        Android Download Manager. It is displayed as part of the description
+        of any application that was granted that permission.
+        This specific permission controls access to the Download Manager by
+        applications that initiate downloads. -->
     <string name="permlab_downloadManager">Manaidsear nan luchdaidhean a-nuas inntrigeadh.</string>
+    <!-- This is the long description of a permission associated with the
+        Android Download Manager. It is displayed as part of the description
+        of any application that was granted that permission.
+        This specific permission controls access to the Download Manager by
+        applications that initiate downloads. -->
     <string name="permdesc_downloadManager">Leigidh seo leis an aplacaid
         manaidsear nan luchdaidhean a-nuas inntrigeadh agus a chleachdadh airson faidhlichean a luchdadh a-nuas.
         ’S urrainn do dh’aplacaidean droch-rùnach an cead seo a chleachdadh airson luchdaidhean a-nuas a bhriseadh agus
         fiosrachadh pearsanta inntrigeadh.</string>
+    <!-- This is the short description of a permission associated with the
+        Android Download Manager. It is displayed as part of the description
+        of any application that was granted that permission.
+        This specific permission controls access to some advanced (and
+        dangerous) features from the Download Manager that are needed by
+        system applications but aren't necessary for regular applications
+        that just initiate plain downloads. -->
     <string name="permlab_downloadManagerAdvanced">Gleusan adhartach aig
         manaidsear nan luchdaidhean a-nuas.</string>
+    <!-- This is the long description of a permission associated with the
+        Android Download Manager. It is displayed as part of the description
+        of any application that was granted that permission.
+        This specific permission controls access to some advanced (and
+        dangerous) features from the Download Manager that are needed by
+        system applications but aren't necessary for regular applications
+        that just initiate plain downloads. -->
     <string name="permdesc_downloadManagerAdvanced">Leigidh seo leis an aplacaid
         na gleusan adhartach aig manaidsear nan luchdaidhean a-nuas inntrigeadh.
         ’S urrainn do dh’aplacaidean droch-rùnach an cead seo a chleachdadh airson luchdaidhean a-nuas a bhriseadh agus
         fiosrachadh pearsanta inntrigeadh.</string>
     <string name="permlab_downloadCompletedIntent">Brathan luchdaidh a-nuas
         a chur.</string>
+    <!-- This is the long description of a permission associated with the
+        Android Download Manager. It is displayed as part of the description
+        of any application that was granted that permission.
+        This specific permission allows an application to tell other
+        applications that their downloads have completed. -->
     <string name="permdesc_downloadCompletedIntent">Leigidh seo leis an aplacaid
         brathan a chur mu luchdaidhean a-nuas a chaidh a choileanadh. ’S urrainn do dh’aplacaidean droch-rùnach
         an cead seo a chleachdadh airson am breisleach a chur air aplacaidean eile a nì luchdadh a-nuas
         fhaidhlichean.</string>
+    <!-- The label for the permission to download files to the download cache
+    that can't be automatically deleted by the download manager to free up
+    space [CHAR LIMIT=50] -->
     <string name="permlab_downloadCacheNonPurgeable">Àite a ghlèidheadh
     ann an tasgadan nan luchdaidhean a-nuas</string>
+    <!-- The full sentence description for the permission to download files to
+    the download cache that can't be automatically deleted by the download
+    manager to free up space [CHAR LIMIT=160] -->
     <string name="permdesc_downloadCacheNonPurgeable">Leigidh seo leis an aplacaid
     faidhlichean a luchdadh a-nuas gu tasgadan nan luchdaidhean a-nuas agus cha ghabh an sguabadh às gu fèin-obrachail
     nuair a bhios àite a dhìth air manaidsear nan luchdaidhean a-nuas.</string>
+    <!-- The label for the permission to download files through the download
+    manager without any notification being shown to the user [CHAR LIMIT=50] -->
     <string name="permlab_downloadWithoutNotification">faidhlichean a luchdadh a-nuas
         às aonais brath</string>
+    <!-- The full sentence description for the permission to download files
+    through the download manager without any notification being shown to the
+    user [CHAR LIMIT=160] -->
     <string name="permdesc_downloadWithoutNotification">Leigidh seo leis an aplacaid
     faidhlichean a luchdadh a-nuas le manaidsear nam faidhlichean
     gun a bhith ’ga innse dhan chleachdaiche.</string>
+    <!-- The label for the permission to access all downloads in the download
+    manager, not just those owned by the calling user [CHAR LIMIT=50] -->
     <string name="permlab_accessAllDownloads">Gach luchdadh a-nuas an t-siostam
     inntrigeadh</string>
+    <!-- The full sentence description for the permission to access all
+    downloads in the download manager, not just those owned by the calling user
+    [CHAR LIMIT=160] -->
     <string name="permdesc_accessAllDownloads">Leigidh seo leis an aplacaid
     gach luchdadh a-nuas fhaicinn agus atharrachadh air an t-siostam ge b’ e cò an aplacaid a thòisich air an luchdadh a-nuas.</string>
+    <!-- This is the title that is used when displaying the notification
+    for a download that doesn't have a title associated with it. -->
     <string name="download_unknown_title">&lt;Gun tiotal&gt;</string>
+    <!-- When a download completes, a notification is displayed, and this
+        string is used to indicate that the download successfully completed.
+        Note that such a download could have been initiated by a variety of
+        applications, including (but not limited to) the browser, an email
+        application, a content marketplace. -->
     <string name="notification_download_complete">Tha an luchdadh a-nuas deiseil.</string>
+    <!-- When a download completes, a notification is displayed, and this
+        string is used to indicate that the download failed.
+        Note that such a download could have been initiated by a variety of
+        applications, including (but not limited to) the browser, an email
+        application, a content marketplace. -->
     <string name="notification_download_failed">Dh’fhàillig an luchdadh a-nuas.</string>
+    <!-- When a download is paused because it's too large to download over a
+        mobile connection, and Wi-Fi is unavailable, this string is displayed in
+        the system notification for the running download, beneath the download
+        title and description.  Note that such a download could have been
+        initiated by a variety of applications, including (but not limited to)
+        the browser, an email application, a content marketplace.
+        [CHAR LIMIT=24] -->
     <string name="notification_need_wifi_for_size">Tha meud an luchdaidh a-nuas feumach air WiFi.</string>
+    <!-- Notification shown when a download has been paused because a user policy
+        has blocked network access to applications running in background. [CHAR LIMIT=24] -->
     <string name="notification_paused_in_background">Chaidh a chur ’na stad sa chùlaibh.</string>
+    <!-- Title for dialog when a download exceeds the carrier-specified maximum size of downloads
+        over the mobile network and Wi-Fi is required.  The user has the choice to either queue the
+        download to start next time Wi-Fi is available or cancel the download altogether. [CHAR
+        LIMIT=50] -->
     <string name="wifi_required_title">Tha an luchdadh a-nuas ro mhòr airson lìonra a’ ghiùlanair</string>
+    <!-- Text for dialog when a download exceeds the carrier-specified maximum size of downloads
+        over the mobile network and Wi-Fi is required.  The user has the choice to either queue the
+        download to start next time Wi-Fi is available or cancel the download altogether. [CHAR
+        LIMIT=200] -->
     <string name="wifi_required_body">Feumaidh tu WiFi a chleachdadh airson an luchdadh a-nuas seo de
         <xliff:g id="size" example="12.3KB">%1$s
         </xliff:g> a choileanadh. \n\nSuath ri <xliff:g id="queue_text" example="Queue">%2$s
         </xliff:g> ach an tòisich an luchdadh a-nuas seo an ath-thuras a nì thu ceangal ri
         lìonra WiFi.</string>
+    <!-- Title for dialog when a download exceeds the carrier-specified recommended maximum size of
+        downloads over the mobile network, and the user may choose to start the download over mobile
+        anyway or to queue for download to start next time a Wi-Fi connection is available [CHAR
+        LIMIT=50] -->
     <string name="wifi_recommended_title">An cuir thu dhan chiudha e airson a luchdadh a-nuas uaireigin eile?</string>
+    <!-- Text for dialog when a download exceeds the carrier-specified recommended maximum size of
+        downloads over the mobile network, and the user may choose to start the download over mobile
+        anyway or to queue for download to start next time a Wi-Fi connection is available [CHAR
+        LIMIT=200] -->
     <string name="wifi_recommended_body">Ma thòisicheas tu air an luchdadh a-nuas seo de <xliff:g id="size" example="12.3KB">%1$s
         </xliff:g>, dh’fhaoidte gun caith sin cus dhen bhataraidh agus/no dhen
         cheangal dàta mobile agad agus iarraidh an giùlanair mobile agad
         airgead ort a-rèir a’ phlana dàta agad.\n\n
         Suath ri <xliff:g id="queue_text" example="Queue">%2$s</xliff:g> ach an tòisich an luchdadh a-nuas seo
         an ath-thuras a nì thu ceangal ri lìonra WiFi.</string>
+    <!-- Text for button to queue a download to start next time Wi-Fi is available [CHAR LIMIT=25]
+        -->
     <string name="button_queue_for_wifi">Cuir dhan chiudha</string>
+    <!-- Text for button to cancel a download because it's too large to proceed over the mobile
+         network and the user does not want to queue it for Wi-Fi [CHAR LIMIT=25] -->
     <string name="button_cancel_download">Sguir dheth</string>
+    <!-- Text for button to start a download over the mobile connection now, even though it's over
+         the carrier-specified recommended maximum size for downloads over the mobile connection
+         [CHAR LIMIT=25] -->
     <string name="button_start_now">Tòisich an-dràsta</string>
+    <!-- Title summarizing active downloads. [CHAR LIMIT=32] -->
     <plurals name="notif_summary_active">
         <item quantity="one">Tha <xliff:g id="number">%d</xliff:g> fhaidhle ’ga luchdadh a-nuas</item>
         <item quantity="two">Tha <xliff:g id="number">%d</xliff:g> fhaidhle ’gan luchdadh a-nuas</item>
         <item quantity="few">Tha <xliff:g id="number">%d</xliff:g> faidhlichean ’gan luchdadh a-nuas</item>
         <item quantity="other">Tha <xliff:g id="number">%d</xliff:g> faidhle ’gan luchdadh a-nuas</item>
     </plurals>
+    <!-- Title summarizing waiting downloads. [CHAR LIMIT=32] -->
     <plurals name="notif_summary_waiting">
         <item quantity="one">Tha <xliff:g id="number">%d</xliff:g> fhaidhle a’ feitheamh</item>
         <item quantity="two">Tha <xliff:g id="number">%d</xliff:g> fhaidhle a’ feitheamh</item>
         <item quantity="few">Tha <xliff:g id="number">%d</xliff:g> faidhlichean a’ feitheamh</item>
         <item quantity="other">Tha <xliff:g id="number">%d</xliff:g> faidhle a’ feitheamh</item>
     </plurals>
+    <!-- Time remaining until download is complete. [CHAR LIMIT=32] -->
     <string name="download_remaining"><xliff:g id="duration" example="3 minutes">%s</xliff:g> air fhàgail</string>
+    <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
+         that there is no application on the device that can open the file that was downloaded
+         [CHAR LIMIT=200] -->
     <string name="download_no_application_title">Chan urrainn dhuinn am faidhle fhosgladh</string>
+    <!-- Label describing Downloads as a storage root [CHAR LIMIT=32] -->
     <string name="root_downloads">Luchdaidhean a-nuas</string>
+    <!-- Status indicating that the download has been queued to start in the future.  Appears for an
+         individual item in the download list.  [CHAR LIMIT=24] -->
     <string name="download_queued">Sa chiutha</string>
+    <!-- Status indicating that the system is currently downloading the file.  Appears for an
+         individual item in the download list.  [CHAR LIMIT=24] -->
     <string name="download_running">’Ga luchdadh a-nuas</string>
+    <!-- Status indicating that the download has ended without completing successfully.  Appears for
+         an individual item in the download list.  [CHAR LIMIT=24] -->
     <string name="download_error">Cha deach leis</string>
+    <!-- Representation of download progress percentage when running. [CHAR LIMIT=24] -->
     <string name="download_running_percent">’Ga luchdadh a-nuas, <xliff:g id="percentage" example="50%">%s</xliff:g></string>
 </resources>

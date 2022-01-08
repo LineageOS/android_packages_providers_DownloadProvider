@@ -14,39 +14,99 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- The name of the application that appears in the launcher [CHAR LIMIT=15] -->
     <string name="app_label">Luchdaidhean a-nuas</string>
+    <!-- The title that appears at the top of the activity listing downloads sorted by date [CHAR LIMIT=40] -->
     <string name="download_title_sorted_by_date">Luchdaidhean a-nuas – a-rèir cinn-là</string>
+    <!-- The title that appears at the top of the activity listing downloads sorted by size [CHAR LIMIT=40] -->
     <string name="download_title_sorted_by_size">Luchdaidhean a-nuas – a-rèir meud</string>
+    <!-- Appears in lieu of the list of downloads if there are no downloads to view
+         [CHAR LIMIT=200] -->
     <string name="no_downloads">Chan eil luchdadh a-nuas ann.</string>
+    <!-- Default title for an item in the download list for which no title was provided by the app.
+         [CHAR LIMIT=20] -->
     <string name="missing_title">&lt;Neo-aithnichte&gt;</string>
+    <!-- Button to display sort-by-size option [CHAR LIMIT=25] -->
     <string name="button_sort_by_size">Seòrsaich a-rèir meud</string>
+    <!-- Button to display sort-by-date option [CHAR LIMIT=25] -->
     <string name="button_sort_by_date">Seòrsaich a-rèir cinn-là</string>
+    <!-- Status messages -->
+    <!-- Status indicating that the download has been queued to start in the future.  Appears for an
+         individual item in the download list.  [CHAR LIMIT=11] -->
     <string name="download_queued">Sa chiutha</string>
+    <!-- Status indicating that the system is currently downloading the file.  Appears for an
+         individual item in the download list.  [CHAR LIMIT=11] -->
     <string name="download_running">’Ga luchdadh a-nuas</string>
+    <!-- Status indicating that the download has completed successfully. Appears for an individual
+         item in the download list.  [CHAR LIMIT=11] -->
     <string name="download_success">Deiseil</string>
+    <!-- Status indicating that the download has ended without completing successfully.  Appears for
+         an individual item in the download list.  [CHAR LIMIT=11] -->
     <string name="download_error">Cha deach leis</string>
+    <!-- Dialog/toast messages -->
+    <!-- Title of dialog that is shown when the user clicks a download for which no file is
+         available, either because the download hasn't started or because the download failed
+         [CHAR LIMIT=25] -->
     <string name="dialog_title_not_available">Cha deach seo a luchdadh a-nuas</string>
+    <!-- Text for dialog when user clicks on a download that failed [CHAR LIMIT=200] -->
     <string name="dialog_failed_body">Am feuch thu ri luchdadh a-nuas an fhaidhle uaireigin eile
           no an sguab thu às on chiutha e?</string>
+    <!-- Title for dialog when user clicks on a download that has not yet begun, but will be started
+         in the future. [CHAR LIMIT=25] -->
     <string name="dialog_title_queued_body">Fhaidhle sa chiudha</string>
+    <!-- Text for dialog when user clicks on a download that has not yet begun, but will be started
+         in the future. [CHAR LIMIT=200] -->
     <string name="dialog_queued_body">Tha am faidhle seo ann an ciutha nan luchdaidhean a-nuas ’s chan eil e ri fhaighinn fhathast.</string>
+    <!-- Text for dialog when user clicks on a completed download but the file is missing
+         [CHAR LIMIT=200] -->
     <string name="dialog_file_missing_body">Cha do lorg sinn am faidhle a chaidh a luchdadh a-nuas.</string>
+    <!-- Text for dialog when user clicks on a download that failed due to insufficient space on
+         external storage [CHAR LIMIT=200] -->
     <string name="dialog_insufficient_space_on_external">Chan urrainn dhuinn an luchdadh a-nuas a choileanadh. Tha àite a dhìth air an stòras air an taobh a-muigh.</string>
+    <!-- Text for dialog when user clicks on a download that failed due to insufficient space on
+         the internal download cache [CHAR LIMIT=200] -->
     <string name="dialog_insufficient_space_on_cache">Chan urrainn dhuinn an luchdadh a-nuas a choileanadh. Tha àite a dhìth air an stòras air an taobh a-staigh.</string>
+    <!-- Text for dialog when user clicks on a download that failed because it was interrupted and
+         the server doesn't support resuming downloads [CHAR LIMIT=200] -->
     <string name="dialog_cannot_resume">Bhris rudeigin a-steach air an luchdadh a-nuas seo agus cha ghabh leantainn air adhart leis.</string>
+    <!-- Text for dialog when user clicks on a download that failed because the requested
+         destination file already exists [CHAR LIMIT=200] -->
     <string name="dialog_file_already_exists">Cha ghabh a luchdadh a-nuas. Tha am faidhle-uidhe ann mu thràth.
     </string>
+    <!-- Text for dialog when user clicks on a download that failed because it was requested to go
+         on the external media, which is not mounted [CHAR LIMIT=200] -->
     <string name="dialog_media_not_found">Cha ghabh a luchdadh a-nuas. Chan eil am meadhan air an taobh a-muigh ri fhaighinn.
     </string>
+    <!-- Text for a toast appearing when a user clicks on a completed download, informing the user
+         that there is no application on the device that can open the file that was downloaded
+         [CHAR LIMIT=200] -->
     <string name="download_no_application_title">Chan urrainn dhuinn am faidhle fhosgladh</string>
+    <!-- Buttons -->
+    <!-- Text for button to remove the entry for a download that has not yet begun or that has
+         failed [CHAR LIMIT=25] -->
     <string name="remove_download">Thoir air falbh</string>
+    <!-- Text for button to delete a download that has completed, or to delete multiple download
+         entries [CHAR LIMIT=25] -->
     <string name="delete_download">Sguab às</string>
+    <!-- Text for button to keep a download that has not yet begun [CHAR LIMIT=25] -->
     <string name="keep_queued_download">Cùm</string>
+    <!-- Text for button to cancel a download that is currently in progress [CHAR LIMIT=25] -->
     <string name="cancel_running_download">Sguir dheth</string>
+    <!-- Text for button appearing in a dialog to restart a download, either one that failed or one
+         for which the downloaded file is now missing [CHAR LIMIT=25] -->
     <string name="retry_download">Feuch ris a-rithist</string>
+    <!-- Text for button to start a download over the mobile connection now, even though it's over
+        the carrier-specified recommended maximum size for downloads over the mobile connection
+        [CHAR LIMIT=25] -->
     <string name="start_now_download">Tòisich an-dràsta</string>
+    <!-- Text for button appearing in the pop-up selection menu to deselect all currently selected
+    downloads in the download list [CHAR LIMIT=25] -->
     <string name="deselect_all">Dì-thagh na h-uile</string>
+    <!-- Text for menu to select all downloads in the download list [CHAR LIMIT=25] -->
     <string name="select_all">Tagh na h-uile</string>
+    <!-- number of downloads selected [CHAR LIMIT=50] -->
     <string name="selected_count">Chaidh <xliff:g id="number" example="3">%1$d</xliff:g> à <xliff:g id="total" example="15">%2$d</xliff:g>a thaghadh</string>
+    <!-- title shown when displaying list of apps to choose from when share is clicked on
+        [CHAR LIMIT = 20] -->
     <string name="download_share_dialog">Co-roinn slighe</string>
 </resources>
