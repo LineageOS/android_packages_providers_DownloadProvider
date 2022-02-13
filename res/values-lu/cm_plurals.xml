@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2013-2016 The CyanogenMod Project
+     Copyright (C) 2014 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,7 +15,16 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="text_download_speed"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
-    <string name="download_paused">En posa</string>
-    <string name="button_pause_download">Posar</string>
+    <plurals name="duration_seconds">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> Sek.</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> Sek.</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> Min.</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> Min.</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> St.</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> St.</item>
+    </plurals>
 </resources>

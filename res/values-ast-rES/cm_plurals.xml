@@ -16,15 +16,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="duration_seconds">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> seg</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> segs</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> s</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> s</item>
     </plurals>
     <plurals name="duration_minutes">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> min</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> mins</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> m</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> m</item>
     </plurals>
     <plurals name="duration_hours">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> hr</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> hrs</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> h</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> h</item>
     </plurals>
 </resources>
