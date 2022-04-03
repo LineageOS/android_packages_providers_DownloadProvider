@@ -16,8 +16,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="duration_seconds">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> ಸೆಕೆಂಡ್</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಸೆಕೆಂಡ್ಸ್</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> ಕ್ಷಣ</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಕ್ಷಣ</item>
     </plurals>
     <plurals name="duration_minutes">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> ನಿಮಿಷ</item>
@@ -25,6 +25,6 @@
     </plurals>
     <plurals name="duration_hours">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> ಗಂಟೆ</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಗಂಟೆಗಳು</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಗಂಟೆ</item>
     </plurals>
 </resources>

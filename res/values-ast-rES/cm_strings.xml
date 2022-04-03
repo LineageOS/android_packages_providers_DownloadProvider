@@ -16,9 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="text_download_speed"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
-    <string name="download_paused">Posáu</string>
-    <string name="download_paused_percent">Posóse, %d%%</string>
+    <string name="download_paused">En posa</string>
+    <string name="download_paused_percent">En posa, %d%%</string>
     <string name="button_resume_download">Siguir</string>
     <string name="button_pause_download">Posar</string>
-    <string name="notif_summary_paused">%d elementos posaos</string>
+    <string name="notif_summary_paused">%d en posa</string>
 </resources>
