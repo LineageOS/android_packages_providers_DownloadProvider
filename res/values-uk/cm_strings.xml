@@ -19,5 +19,6 @@
     <string name="download_paused">Призупинено</string>
     <string name="download_paused_percent">Призупинено, %d%%</string>
     <string name="button_resume_download">Продовжити</string>
+    <string name="button_pause_download">Призупинити</string>
     <string name="notif_summary_paused">%d призупинено</string>
 </resources>
