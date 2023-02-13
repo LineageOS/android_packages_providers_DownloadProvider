@@ -19,18 +19,18 @@
         <item quantity="one"><xliff:g id="count">%d</xliff:g> секунда</item>
         <item quantity="few"><xliff:g id="count">%d</xliff:g> секунды</item>
         <item quantity="many"><xliff:g id="count">%d</xliff:g> секунд</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> секунд</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> секунды</item>
     </plurals>
     <plurals name="duration_minutes">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> хвіліна</item>
         <item quantity="few"><xliff:g id="count">%d</xliff:g> хвіліны</item>
         <item quantity="many"><xliff:g id="count">%d</xliff:g> хвілін</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> хвілін</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> хвіліны</item>
     </plurals>
     <plurals name="duration_hours">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> гадзіна</item>
         <item quantity="few"><xliff:g id="count">%d</xliff:g> гадзіны</item>
         <item quantity="many"><xliff:g id="count">%d</xliff:g> гадзін</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> гадзін</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> гадзіны</item>
     </plurals>
 </resources>
