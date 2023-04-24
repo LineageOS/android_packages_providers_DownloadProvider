@@ -15,16 +15,16 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <plurals name="duration_seconds">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> ಕ್ಷಣ</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಕ್ಷಣ</item>
-    </plurals>
     <plurals name="duration_minutes">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> ನಿಮಿಷ</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ನಿಮಿಷಗಳು</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> хвилина</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> хвилини</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> хвилин</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> хвилин</item>
     </plurals>
     <plurals name="duration_hours">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> ಗಂಟೆ</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> ಗಂಟೆ</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> година</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> години</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> годин</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> годин</item>
     </plurals>
 </resources>
