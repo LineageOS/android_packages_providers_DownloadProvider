@@ -245,34 +245,21 @@ public class DownloadStorageProvider extends FileSystemProvider {
         }
     }
 
-    @Override
-    public Cursor queryChildDocuments(String parentDocId, String[] projection, String sortOrder)
-            throws FileNotFoundException {
-        return queryChildDocuments(parentDocId, projection, sortOrder, false);
-    }
-
-    @Override
-    public Cursor queryChildDocumentsForManage(
-            String parentDocId, String[] projection, String sortOrder)
-            throws FileNotFoundException {
-        return queryChildDocuments(parentDocId, projection, sortOrder, true);
-    }
-
-    private Cursor queryChildDocuments(String parentDocId, String[] projection,
-            String sortOrder, boolean manage) throws FileNotFoundException {
+    protected Cursor queryChildDocuments(String documentId, String[] projection,
+            String sortOrder, boolean includeHidden) throws FileNotFoundException {
 
         // Delegate to real provider
         final long token = Binder.clearCallingIdentity();
         Cursor cursor = null;
         try {
-            if (RawDocumentsHelper.isRawDocId(parentDocId)) {
-                return super.queryChildDocuments(parentDocId, projection, sortOrder);
+            if (RawDocumentsHelper.isRawDocId(documentId)) {
+                return super.queryChildDocuments(documentId, projection, sortOrder);
             }
 
-            assert (DOC_ID_ROOT.equals(parentDocId));
+            assert (DOC_ID_ROOT.equals(documentId));
             final DownloadsCursor result = new DownloadsCursor(projection,
                     getContext().getContentResolver());
-            if (manage) {
+            if (includeHidden) {
                 cursor = mDm.query(
                         new DownloadManager.Query().setOnlyIncludeVisibleInDownloadsUi(true));
             } else {
