@@ -19,5 +19,6 @@
     <string name="download_paused">Sat på pause</string>
     <string name="download_paused_percent">Suspenderet, %d%%</string>
     <string name="button_resume_download">Genoptag</string>
+    <string name="button_pause_download">Pause</string>
     <string name="notif_summary_paused">%d suspenderet</string>
 </resources>

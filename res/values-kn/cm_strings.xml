@@ -18,4 +18,5 @@
     <string name="text_download_speed"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
     <string name="download_paused">ವಿರಾಮಿಸಲಾಗಿದೆ</string>
     <string name="button_pause_download">ವಿರಾಮ</string>
+    <string name="notif_summary_paused">%d ವಿರಾಮಿಸಿದೆ</string>
 </resources>
