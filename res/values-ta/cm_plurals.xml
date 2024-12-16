@@ -16,15 +16,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="duration_seconds">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> வினாடி</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> வினாடிகள்</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> நொடி</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> நொடி</item>
     </plurals>
     <plurals name="duration_minutes">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> நிமிடம்</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> நிமிடங்கள்</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> நுணுத்தம்</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> நுணுத்தம்</item>
     </plurals>
     <plurals name="duration_hours">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> மணி</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> மணி நேரங்கள்</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> மணிநேரம்</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> மணிநேரம்</item>
     </plurals>
 </resources>
