@@ -1199,6 +1199,8 @@ public final class DownloadProvider extends ContentProvider {
         } else {
             throw new SecurityException("Unsupported path " + file);
         }
+        // check whether record already exists in MP or getCallingPackage owns this file
+        checkWhetherCallingAppHasAccess(file.getPath(), Binder.getCallingUid());
     }
 
     private int getCallingPackageTargetSdkVersion() {
@@ -1216,6 +1218,44 @@ public final class DownloadProvider extends ContentProvider {
         }
         return Build.VERSION_CODES.CUR_DEVELOPMENT;
     }
+
+    private void checkWhetherCallingAppHasAccess(String filePath, int uid) {
+        try (ContentProviderClient client = getContext().getContentResolver()
+                .acquireContentProviderClient(MediaStore.AUTHORITY)) {
+            if (client == null) {
+                Log.w(Constants.TAG, "Failed to acquire ContentProviderClient for MediaStore");
+                return;
+            }
+
+            final Uri filesUri = MediaStore.setIncludePending(
+                    MediaStore.Files.getContentUriForPath(filePath));
+
+            try (Cursor cursor = client.query(filesUri,
+                    new String[]{MediaStore.Files.FileColumns._ID,
+                            MediaStore.Files.FileColumns.OWNER_PACKAGE_NAME},
+                    MediaStore.Files.FileColumns.DATA + "=?", new String[]{filePath},
+                    null)) {
+                if (cursor != null && cursor.moveToFirst()) {
+                    String fetchedOwnerPackageName = cursor.getString(
+                            cursor.getColumnIndexOrThrow(
+                                    MediaStore.Files.FileColumns.OWNER_PACKAGE_NAME));
+                    String[] packageNames = getContext().getPackageManager().getPackagesForUid(uid);
+
+                    if (fetchedOwnerPackageName != null && packageNames != null) {
+                        boolean isCallerAuthorized = Arrays.asList(packageNames)
+                                .contains(fetchedOwnerPackageName);
+                        if (!isCallerAuthorized) {
+                            throw new SecurityException("Caller does not have access to this path");
+                        }
+                    }
+                }
+            }
+        } catch (RemoteException e) {
+            Log.w(Constants.TAG, "Failed to query MediaStore: " + e.getMessage());
+        }
+    }
+
+
 
     /**
      * Apps with the ACCESS_DOWNLOAD_MANAGER permission can access this provider freely, subject to
