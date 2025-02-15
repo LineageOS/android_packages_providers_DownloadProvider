@@ -16,4 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="text_download_speed"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/ثانیه</string>
+    <string name="download_paused">متوقف شده</string>
+    <string name="download_paused_percent">متوقف شده است، %d%%</string>
+    <string name="button_resume_download">ادامه</string>
+    <string name="button_pause_download">مکث</string>
+    <string name="notif_summary_paused">%d متوقف شده است</string>
 </resources>
