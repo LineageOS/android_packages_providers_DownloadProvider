@@ -16,9 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="text_download_speed"><xliff:g id="text">%1$s</xliff:g>, <xliff:g id="size" example="230 kB">%2$s</xliff:g>/s</string>
-    <string name="download_paused">Pausa</string>
+    <string name="download_paused">Pausado</string>
     <string name="download_paused_percent">Pausado, %d%%</string>
-    <string name="button_resume_download">Continuar</string>
+    <string name="button_resume_download">Retomar</string>
     <string name="button_pause_download">Pausar</string>
-    <string name="notif_summary_paused">%d em pausa</string>
+    <string name="notif_summary_paused">%d pausados</string>
 </resources>
