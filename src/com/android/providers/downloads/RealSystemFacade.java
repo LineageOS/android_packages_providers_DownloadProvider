@@ -31,6 +31,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.security.NetworkSecurityPolicy;
 import android.security.net.config.ApplicationConfig;
+import android.security.net.config.ConfigNetworkSecurityPolicy;
 
 import com.android.internal.util.ArrayUtils;
 
@@ -98,6 +99,10 @@ class RealSystemFacade implements SystemFacade {
         } catch (NameNotFoundException e) {
             // Unknown package -- fallback to the default SSLContext
             return SSLContext.getDefault();
+        }
+        if (com.android.org.conscrypt.net.flags.Flags.certificateTransparencyDefaultEnabled()) {
+            libcore.net.NetworkSecurityPolicy.setInstance(
+                    new ConfigNetworkSecurityPolicy(appConfig));
         }
         SSLContext ctx = SSLContext.getInstance("TLS");
         ctx.init(null, new TrustManager[]{appConfig.getTrustManager()}, null);

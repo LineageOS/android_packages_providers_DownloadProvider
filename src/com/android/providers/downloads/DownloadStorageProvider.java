@@ -251,7 +251,13 @@ public class DownloadStorageProvider extends FileSystemProvider {
 
             displayName = FileUtils.buildValidFatFilename(displayName);
             if (isMediaStoreDownload(docId)) {
-                return renameMediaStoreDownload(docId, displayName);
+                String newDocId = renameMediaStoreDownload(docId, displayName);
+                if (newDocId.equals(docId)) {
+                    // DocumentsProvider#renameDocument should return null if the document id is the
+                    // same after renaming.
+                    return null;
+                }
+                return newDocId;
             } else {
                 final long id = Long.parseLong(docId);
                 if (!mDm.rename(getContext(), id, displayName)) {
