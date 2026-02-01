@@ -19,6 +19,10 @@
         <item quantity="one"><xliff:g id="count">%d</xliff:g> seg</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> seg</item>
     </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> min</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> min</item>
+    </plurals>
     <plurals name="duration_hours">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> ora</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> oras</item>
