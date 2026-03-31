@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "862b23b6_1207d6e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17656
+      },
+      "writtenOn": "2026-03-31T16:40:19Z",
+      "side": 1,
+      "message": "I\u0027ve pushed a revert in P and Q - this backport is not correct. THis patch simply does not apply. Please check and consider abandoning:\nhttps://review.lineageos.org/c/LineageOS/android_packages_providers_DownloadProvider/+/479391",
+      "revId": "eddee24ac19101667b278a042ae8a674f31d61cc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
