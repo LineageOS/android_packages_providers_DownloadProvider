@@ -18,19 +18,16 @@
     <plurals name="duration_seconds">
         <item quantity="one">שניה <xliff:g id="count">%d</xliff:g></item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> שניות</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> שניות</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> שניות</item>
     </plurals>
     <plurals name="duration_minutes">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> דקה</item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> דקות</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> דקות</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> דקות</item>
     </plurals>
     <plurals name="duration_hours">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> שעה</item>
         <item quantity="two"><xliff:g id="count">%d</xliff:g> שעות</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> שעות</item>
         <item quantity="other"><xliff:g id="count">%d</xliff:g> שעות</item>
     </plurals>
 </resources>
