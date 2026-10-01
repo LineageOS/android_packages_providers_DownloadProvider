@@ -20,8 +20,10 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> sekund(er)</item>
     </plurals>
     <plurals name="duration_minutes">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> minutt(er)</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutt(er)</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> minutt(er)
+</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutt(er)
+</item>
     </plurals>
     <plurals name="duration_hours">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> time(r)</item>
