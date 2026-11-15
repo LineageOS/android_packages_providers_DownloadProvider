@@ -22,6 +22,6 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> 分鐘</item>
     </plurals>
     <plurals name="duration_hours">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> 個小時</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> 小時</item>
     </plurals>
 </resources>
